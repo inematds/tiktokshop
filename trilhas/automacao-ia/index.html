@@ -231,11 +231,12 @@
         <div class="max-w-md mx-auto mb-8">
           <div class="flex justify-between text-sm mb-2">
             <span class="text-neutral-400">Progresso da Trilha</span>
-            <span class="text-violet-400 font-semibold">0/6 modulos</span>
+            <span id="progress-text" class="text-violet-400 font-semibold">0%</span>
           </div>
           <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
-            <div class="progress-bar h-full rounded-full" style="width: 0%"></div>
+            <div id="progress-bar" class="progress-bar h-full rounded-full transition-all duration-500" style="width: 0%"></div>
           </div>
+          <p id="progress-modules" class="text-xs text-neutral-500 mt-2 text-center">0 de 6 módulos concluídos</p>
         </div>
 
         <!-- Stats Banner -->
@@ -307,12 +308,15 @@
       </div>
 
       <!-- Module 1: Orquestracao -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="1">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">01</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center hover:bg-cyan-500/30 transition-colors" data-module-check="1" title="Marcar como concluído">
+              <span class="module-number text-2xl">01</span>
+              <svg class="module-check-icon w-6 h-6 text-cyan-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Orquestracao com n8n e Make</h2>
               <p class="text-neutral-400">O cerebro da automacao - conectando todas as ferramentas</p>
@@ -428,12 +432,15 @@
       </div>
 
       <!-- Module 2: Roteiros IA -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="2">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">02</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center hover:bg-blue-500/30 transition-colors" data-module-check="2" title="Marcar como concluído">
+              <span class="module-number text-2xl">02</span>
+              <svg class="module-check-icon w-6 h-6 text-blue-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Geracao de Roteiros com IA</h2>
               <p class="text-neutral-400">ChatGPT, Claude e prompts otimizados para escala</p>
@@ -549,12 +556,15 @@
       </div>
 
       <!-- Module 3: Videos Avatar -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="3">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">03</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center hover:bg-purple-500/30 transition-colors" data-module-check="3" title="Marcar como concluído">
+              <span class="module-number text-2xl">03</span>
+              <svg class="module-check-icon w-6 h-6 text-purple-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Videos com Avatar (HeyGen + Opus)</h2>
               <p class="text-neutral-400">Crie videos "humanizados" em escala sem gravar</p>
@@ -664,12 +674,15 @@
       </div>
 
       <!-- Module 4: Videos Sem Rosto -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="4">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">04</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center hover:bg-pink-500/30 transition-colors" data-module-check="4" title="Marcar como concluído">
+              <span class="module-number text-2xl">04</span>
+              <svg class="module-check-icon w-6 h-6 text-pink-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Videos 100% Automatizados (Sem Rosto)</h2>
               <p class="text-neutral-400">Escala massiva com kie.ai, fal.ai e replicate</p>
@@ -779,12 +792,15 @@
       </div>
 
       <!-- Module 5: Publicacao Automatica -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="5">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">05</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center hover:bg-orange-500/30 transition-colors" data-module-check="5" title="Marcar como concluído">
+              <span class="module-number text-2xl">05</span>
+              <svg class="module-check-icon w-6 h-6 text-orange-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Publicacao Automatica (Botato)</h2>
               <p class="text-neutral-400">Agendamento em massa e rotacao de contas</p>
@@ -900,12 +916,15 @@
       </div>
 
       <!-- Module 6: Monitoramento -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="6">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">06</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center hover:bg-emerald-500/30 transition-colors" data-module-check="6" title="Marcar como concluído">
+              <span class="module-number text-2xl">06</span>
+              <svg class="module-check-icon w-6 h-6 text-emerald-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Monitoramento e Otimizacao</h2>
               <p class="text-neutral-400">Metricas automatizadas e melhoria continua</p>
@@ -1369,6 +1388,70 @@
         });
       }
     });
+
+    // Progress System
+    const TRILHA_KEY = 'trilha-automacao-ia-progress';
+    const TOTAL_MODULES = 6;
+
+    function getProgress() {
+      const saved = localStorage.getItem(TRILHA_KEY);
+      return saved ? JSON.parse(saved) : {};
+    }
+
+    function saveProgress(progress) {
+      localStorage.setItem(TRILHA_KEY, JSON.stringify(progress));
+    }
+
+    function updateProgressUI() {
+      const progress = getProgress();
+      const completedCount = Object.values(progress).filter(v => v).length;
+      const percentage = Math.round((completedCount / TOTAL_MODULES) * 100);
+
+      const progressBar = document.getElementById('progress-bar');
+      const progressText = document.getElementById('progress-text');
+      const progressModules = document.getElementById('progress-modules');
+
+      if (progressBar) progressBar.style.width = percentage + '%';
+      if (progressText) progressText.textContent = percentage + '%';
+      if (progressModules) progressModules.textContent = completedCount + ' de ' + TOTAL_MODULES + ' módulos concluídos';
+
+      document.querySelectorAll('.module-check-btn').forEach(btn => {
+        const moduleId = btn.dataset.moduleCheck;
+        const isCompleted = progress[moduleId];
+        const numberSpan = btn.querySelector('.module-number');
+        const checkIcon = btn.querySelector('.module-check-icon');
+        const moduleCard = btn.closest('.module-card');
+
+        if (isCompleted) {
+          numberSpan.classList.add('hidden');
+          checkIcon.classList.remove('hidden');
+          btn.classList.add('bg-violet-500/40');
+          if (moduleCard) moduleCard.classList.add('opacity-75');
+        } else {
+          numberSpan.classList.remove('hidden');
+          checkIcon.classList.add('hidden');
+          btn.classList.remove('bg-violet-500/40');
+          if (moduleCard) moduleCard.classList.remove('opacity-75');
+        }
+      });
+    }
+
+    function toggleModuleComplete(moduleId) {
+      const progress = getProgress();
+      progress[moduleId] = !progress[moduleId];
+      saveProgress(progress);
+      updateProgressUI();
+    }
+
+    document.querySelectorAll('.module-check-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const moduleId = this.dataset.moduleCheck;
+        toggleModuleComplete(moduleId);
+      });
+    });
+
+    updateProgressUI();
   </script>
 
 </body>

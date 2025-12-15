@@ -236,11 +236,12 @@
         <div class="max-w-md mx-auto mb-8">
           <div class="flex justify-between text-sm mb-2">
             <span class="text-neutral-400">Progresso da Trilha</span>
-            <span class="text-primary font-semibold">0%</span>
+            <span id="progress-text" class="text-primary font-semibold">0%</span>
           </div>
           <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
-            <div class="progress-bar h-full rounded-full" style="width: 0%"></div>
+            <div id="progress-bar" class="progress-bar h-full rounded-full transition-all duration-500" style="width: 0%"></div>
           </div>
+          <p id="progress-modules" class="text-xs text-neutral-500 mt-2 text-center">0 de 6 módulos concluídos</p>
         </div>
 
         <div class="flex flex-wrap justify-center gap-4 mb-8">
@@ -282,12 +283,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Module 1: Mentalidade Vencedora -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="1">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">01</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center hover:bg-primary/30 transition-colors" data-module-check="1" title="Marcar como concluído">
+              <span class="module-number text-2xl">01</span>
+              <svg class="module-check-icon w-6 h-6 text-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">A Mentalidade Vencedora</h2>
               <p class="text-neutral-400">A base psicologica para o sucesso no TikTok Shop</p>
@@ -383,12 +387,15 @@
       </div>
 
       <!-- Module 2: Os 5 Fatores do Algoritmo -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="2">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">02</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center hover:bg-primary/30 transition-colors" data-module-check="2" title="Marcar como concluído">
+              <span class="module-number text-2xl">02</span>
+              <svg class="module-check-icon w-6 h-6 text-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Decifrando o Algoritmo</h2>
               <p class="text-neutral-400">Os 5 fatores-chave que determinam seu alcance</p>
@@ -524,12 +531,15 @@
       </div>
 
       <!-- Module 3: Regras de Tempo -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="3">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">03</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center hover:bg-primary/30 transition-colors" data-module-check="3" title="Marcar como concluído">
+              <span class="module-number text-2xl">03</span>
+              <svg class="module-check-icon w-6 h-6 text-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">As Regras de Tempo Criticas</h2>
               <p class="text-neutral-400">Os limiares que definem viralidade ou invisibilidade</p>
@@ -634,12 +644,15 @@
       </div>
 
       <!-- Module 4: Engenharia de Conteudo -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="4">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">04</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center hover:bg-primary/30 transition-colors" data-module-check="4" title="Marcar como concluído">
+              <span class="module-number text-2xl">04</span>
+              <svg class="module-check-icon w-6 h-6 text-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Engenharia de Conteudo Viral</h2>
               <p class="text-neutral-400">Os 3 atributos essenciais validados pela TikTok</p>
@@ -755,12 +768,15 @@
       </div>
 
       <!-- Module 5: Gatilhos Emocionais -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow" data-module="5">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl">05</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center hover:bg-primary/30 transition-colors" data-module-check="5" title="Marcar como concluído">
+              <span class="module-number text-2xl">05</span>
+              <svg class="module-check-icon w-6 h-6 text-primary hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Os 5 Gatilhos Emocionais</h2>
               <p class="text-neutral-400">Engenharia de viralizacao intencional</p>
@@ -896,12 +912,15 @@
       </div>
 
       <!-- Module 6: Bonus - Roteiros Praticos -->
-      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-primary/30 card-glow">
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-primary/30 card-glow" data-module="6">
         <div class="flex items-start justify-between mb-6">
           <div class="flex items-center space-x-4">
-            <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
-              <span class="text-2xl text-accent">BONUS</span>
-            </div>
+            <button class="module-check-btn w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center hover:bg-accent/30 transition-colors" data-module-check="6" title="Marcar como concluído">
+              <span class="module-number text-xl text-accent">06</span>
+              <svg class="module-check-icon w-6 h-6 text-accent hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
             <div>
               <h2 class="text-2xl font-bold text-neutral-100">Roteiros Prontos para Usar</h2>
               <p class="text-neutral-400">5 templates testados para diferentes nichos</p>
@@ -2070,6 +2089,76 @@
         });
       }
     });
+
+    // Progress System
+    const TRILHA_KEY = 'trilha-fundamental-progress';
+    const TOTAL_MODULES = 6;
+
+    function getProgress() {
+      const saved = localStorage.getItem(TRILHA_KEY);
+      return saved ? JSON.parse(saved) : {};
+    }
+
+    function saveProgress(progress) {
+      localStorage.setItem(TRILHA_KEY, JSON.stringify(progress));
+    }
+
+    function updateProgressUI() {
+      const progress = getProgress();
+      const completedCount = Object.values(progress).filter(v => v).length;
+      const percentage = Math.round((completedCount / TOTAL_MODULES) * 100);
+
+      // Update progress bar
+      const progressBar = document.getElementById('progress-bar');
+      const progressText = document.getElementById('progress-text');
+      const progressModules = document.getElementById('progress-modules');
+
+      if (progressBar) progressBar.style.width = percentage + '%';
+      if (progressText) progressText.textContent = percentage + '%';
+      if (progressModules) progressModules.textContent = completedCount + ' de ' + TOTAL_MODULES + ' módulos concluídos';
+
+      // Update module buttons
+      document.querySelectorAll('.module-check-btn').forEach(btn => {
+        const moduleId = btn.dataset.moduleCheck;
+        const isCompleted = progress[moduleId];
+        const numberSpan = btn.querySelector('.module-number');
+        const checkIcon = btn.querySelector('.module-check-icon');
+        const moduleCard = btn.closest('.module-card');
+
+        if (isCompleted) {
+          numberSpan.classList.add('hidden');
+          checkIcon.classList.remove('hidden');
+          btn.classList.add('bg-primary/40');
+          btn.classList.remove('bg-primary/20');
+          if (moduleCard) moduleCard.classList.add('opacity-75');
+        } else {
+          numberSpan.classList.remove('hidden');
+          checkIcon.classList.add('hidden');
+          btn.classList.remove('bg-primary/40');
+          btn.classList.add('bg-primary/20');
+          if (moduleCard) moduleCard.classList.remove('opacity-75');
+        }
+      });
+    }
+
+    function toggleModuleComplete(moduleId) {
+      const progress = getProgress();
+      progress[moduleId] = !progress[moduleId];
+      saveProgress(progress);
+      updateProgressUI();
+    }
+
+    // Initialize progress system
+    document.querySelectorAll('.module-check-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const moduleId = this.dataset.moduleCheck;
+        toggleModuleComplete(moduleId);
+      });
+    });
+
+    // Load saved progress on page load
+    updateProgressUI();
   </script>
 
 </body>
