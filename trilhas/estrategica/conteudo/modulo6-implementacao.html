@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 6: Checklist de Implementação | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-emerald-400 font-semibold">Módulo 06</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 6 - IMPLEMENTAÇÃO
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">✅ Checklist de Implementação</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        O plano de ação completo para implementar tudo que você aprendeu na Trilha Estratégica.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">90</div>
+        <div class="text-xs text-neutral-400">Dias para Escala</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-purple-400">6</div>
+        <div class="text-xs text-neutral-400">Fases de Implementação</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-cyan-400">50+</div>
+        <div class="text-xs text-neutral-400">Tarefas Mapeadas</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-pink-400">100%</div>
+        <div class="text-xs text-neutral-400">Executável</div>
+      </div>
+    </div>
+
+    <!-- Introdução -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl p-8 border border-emerald-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🎯</span>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Como Usar Este Checklist</h2>
+            <p class="text-neutral-400">O guia prático para transformar conhecimento em resultado</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          Este módulo consolida <strong class="text-emerald-400">tudo que você aprendeu</strong> na Trilha Estratégica
+          em um plano de ação executável. Não tente fazer tudo de uma vez - siga a ordem, complete cada fase antes
+          de avançar.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-dark-700/50 rounded-xl p-4 text-center">
+            <span class="text-3xl">📋</span>
+            <p class="font-bold text-neutral-100 mt-2">Marque o que Completou</p>
+            <p class="text-xs text-neutral-400">Checkboxes interativos</p>
+          </div>
+          <div class="bg-dark-700/50 rounded-xl p-4 text-center">
+            <span class="text-3xl">📅</span>
+            <p class="font-bold text-neutral-100 mt-2">Siga as Fases</p>
+            <p class="text-xs text-neutral-400">Ordem é importante</p>
+          </div>
+          <div class="bg-dark-700/50 rounded-xl p-4 text-center">
+            <span class="text-3xl">🔄</span>
+            <p class="font-bold text-neutral-100 mt-2">Revise Semanalmente</p>
+            <p class="text-xs text-neutral-400">Ajuste conforme necessário</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fase 1: Fundação de Produto -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            1
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-orange-400">Fase 1: Fundação de Produto</h2>
+            <p class="text-neutral-400">Semana 1-2 | Baseado no Módulo 1</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">🏷️ Seleção de Produto</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Pesquisei produtos trending no TikTok Shop (Kalodata, Shoplus)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Identifiquei 3-5 produtos na faixa de R$50-100 (sweet spot)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Verifiquei margem mínima de 40% após todos os custos</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Confirmei capacidade de fulfillment em 1-2 dias úteis</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Produto tem fator "novidade" (nunca viu antes)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📦 Setup do Produto</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Cadastrei produto no TikTok Shop com fotos de alta qualidade</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Escrevi descrição com benefícios claros (não features)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Defini preço na faixa de compra por impulso (&lt;R$100)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Configurei política de frete (grátis acima de X ou fixo)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Testei fluxo de compra completo como cliente</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-orange-900/20 p-4 rounded-xl border border-orange-500/30">
+            <p class="text-sm text-orange-400 font-bold">✓ Marco da Fase 1:</p>
+            <p class="text-neutral-300">Pelo menos 1 produto ativo no TikTok Shop, pronto para receber tráfego</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fase 2: Volume de Conteúdo -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            2
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-purple-400">Fase 2: Volume de Conteúdo</h2>
+            <p class="text-neutral-400">Semana 3-4 | Baseado no Módulo 2</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">🎬 Setup de Produção</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Criei 5-10 templates de roteiro para meu nicho</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Montei kit de gravação (iluminação, tripé, microfone)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Defini cenário padrão para consistência visual</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Configurei CapCut com templates e presets salvos</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Estabeleci rotina de batch creation (1 dia/semana)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📈 Metas de Volume</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Semana 1: Publiquei 7 vídeos (1/dia)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Semana 2: Aumentei para 14 vídeos (2/dia)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Semana 3: Mantive 14+ vídeos com consistência</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Semana 4: Escalar para 21 vídeos (3/dia)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Identifiquei os 3 formatos que mais performam</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">🔄 Otimização</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Analisei watch time de cada vídeo (&gt;50% = bom)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Dobrei nos formatos que funcionam (repurpose)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Abandonei formatos com &lt;30% watch time</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Testei diferentes horários de postagem</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-purple-900/20 p-4 rounded-xl border border-purple-500/30">
+            <p class="text-sm text-purple-400 font-bold">✓ Marco da Fase 2:</p>
+            <p class="text-neutral-300">50+ vídeos publicados, identificados os formatos vencedores</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fase 3: Programa de Afiliados -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            3
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-pink-400">Fase 3: Programa de Afiliados</h2>
+            <p class="text-neutral-400">Semana 5-6 | Baseado no Módulo 3</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📋 Estrutura do Programa</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Defini tiers de comissão (10%, 15%, 20%, 25%)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Criei kit de onboarding (produtos + guia + briefing)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Preparei templates de abordagem personalizáveis</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Configurei sistema de tracking de afiliados</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Defini processo de pagamento (quinzenal/mensal)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">🎯 Recrutamento</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Listei 50+ criadores do meu nicho (1K-50K seguidores)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Enviei primeiras 20 DMs personalizadas</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Onboardei 5-10 primeiros afiliados</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Enviei produtos grátis para review</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Acompanhei primeiros conteúdos e dei feedback</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📈 Escala de Afiliados</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Semana 1: 10 afiliados ativos</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Semana 2: 20 afiliados ativos</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Identifiquei top 10% performers (Pareto)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Aumentei comissão dos top performers</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-pink-900/20 p-4 rounded-xl border border-pink-500/30">
+            <p class="text-sm text-pink-400 font-bold">✓ Marco da Fase 3:</p>
+            <p class="text-neutral-300">20+ afiliados ativos gerando conteúdo e vendas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fase 4: Analytics -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            4
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-blue-400">Fase 4: Analytics</h2>
+            <p class="text-neutral-400">Semana 7-8 | Baseado no Módulo 4</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📊 Setup de Métricas</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Conta TikTok Pro/Business ativada</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Dashboard personalizado criado (Sheets/Notion)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Defini metas para GMV, CVR, AOV</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Configurei alertas para métricas críticas</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📅 Rotinas de Análise</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Check diário: GMV, pedidos, vídeos top (10min)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Análise semanal: comparativo, afiliados, AOV (30min)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Review mensal: ROI, margem, projeções (1h)</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Sei identificar problemas via diagnóstico de métricas</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-blue-900/20 p-4 rounded-xl border border-blue-500/30">
+            <p class="text-sm text-blue-400 font-bold">✓ Marco da Fase 4:</p>
+            <p class="text-neutral-300">Dashboard funcionando, rotinas de análise estabelecidas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fase 5: Automação -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            5
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-cyan-400">Fase 5: Automação</h2>
+            <p class="text-neutral-400">Semana 9-10 | Baseado no Módulo 5</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">⚙️ Automações de Conteúdo</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Workflow de batch creation implementado</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Agendamento automático de posts configurado</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Templates no CapCut/Canva otimizados</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">IA configurada para ajudar com roteiros/copy</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">🤖 Automações de Comunicação</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Respostas automáticas para FAQ configuradas</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Sequência de onboarding de afiliados automatizada</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Email de tracking automático para clientes</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Follow-up pós-compra pedindo review</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📦 Automações Operacionais</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Alertas de estoque baixo configurados</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Relatórios automáticos semanais</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Integração Zapier/Make (se necessário)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-cyan-900/20 p-4 rounded-xl border border-cyan-500/30">
+            <p class="text-sm text-cyan-400 font-bold">✓ Marco da Fase 5:</p>
+            <p class="text-neutral-300">Tarefas repetitivas automatizadas, tempo liberado para estratégia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fase 6: Escala -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+            6
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Fase 6: Escala</h2>
+            <p class="text-neutral-400">Semana 11-12 | Consolidação</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">📈 Escala de Volume</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">50+ vídeos próprios por semana</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">50+ afiliados ativos gerando conteúdo</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">200+ vídeos/mês no ecossistema total</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">👥 Escala de Time</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Avaliado necessidade de primeiro contratado</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Testado freelancer para tarefa específica</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">SOPs documentados para delegação</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <h3 class="font-bold text-neutral-100 mb-4">💰 Metas de Resultado</h3>
+            <div class="space-y-3">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">GMV &gt; R$30K/mês</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Margem líquida &gt; 25%</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Crescimento mês a mês &gt; 20%</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" class="mt-1 mr-3 w-5 h-5 accent-primary flex-shrink-0">
+                <span class="text-neutral-300">Tempo em operação &lt; 4h/dia</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-emerald-900/20 p-4 rounded-xl border border-emerald-500/30">
+            <p class="text-sm text-emerald-400 font-bold">✓ Marco da Fase 6:</p>
+            <p class="text-neutral-300">Operação lucrativa e escalável, pronto para próximo nível</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo de Métricas -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-primary/20 to-dark-800 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">📊 Resumo de Metas (90 Dias)</h2>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-dark-600">
+                <th class="text-left py-3 px-4 text-neutral-400">Métrica</th>
+                <th class="text-center py-3 px-4 text-neutral-400">Dia 30</th>
+                <th class="text-center py-3 px-4 text-neutral-400">Dia 60</th>
+                <th class="text-center py-3 px-4 text-neutral-400">Dia 90</th>
+              </tr>
+            </thead>
+            <tbody class="text-neutral-300">
+              <tr class="border-b border-dark-700">
+                <td class="py-3 px-4 font-bold">Vídeos/semana (próprios)</td>
+                <td class="text-center py-3 px-4">14</td>
+                <td class="text-center py-3 px-4">21</td>
+                <td class="text-center py-3 px-4 text-emerald-400">50+</td>
+              </tr>
+              <tr class="border-b border-dark-700">
+                <td class="py-3 px-4 font-bold">Afiliados ativos</td>
+                <td class="text-center py-3 px-4">5</td>
+                <td class="text-center py-3 px-4">20</td>
+                <td class="text-center py-3 px-4 text-emerald-400">50+</td>
+              </tr>
+              <tr class="border-b border-dark-700">
+                <td class="py-3 px-4 font-bold">GMV mensal</td>
+                <td class="text-center py-3 px-4">R$5K</td>
+                <td class="text-center py-3 px-4">R$15K</td>
+                <td class="text-center py-3 px-4 text-emerald-400">R$30K+</td>
+              </tr>
+              <tr class="border-b border-dark-700">
+                <td class="py-3 px-4 font-bold">Conversão (CVR)</td>
+                <td class="text-center py-3 px-4">1%</td>
+                <td class="text-center py-3 px-4">2%</td>
+                <td class="text-center py-3 px-4 text-emerald-400">3%+</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold">Automações ativas</td>
+                <td class="text-center py-3 px-4">2</td>
+                <td class="text-center py-3 px-4">5</td>
+                <td class="text-center py-3 px-4 text-emerald-400">10+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Próximos Passos -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <h2 class="text-2xl font-bold text-neutral-100 mb-6 text-center">🚀 E Depois dos 90 Dias?</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-dark-700/50 rounded-xl p-6 text-center">
+            <span class="text-4xl">📦</span>
+            <h3 class="font-bold text-neutral-100 mt-4 mb-2">Expandir Catálogo</h3>
+            <p class="text-sm text-neutral-400">Adicionar novos produtos validados com a mesma metodologia</p>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6 text-center">
+            <span class="text-4xl">🎯</span>
+            <h3 class="font-bold text-neutral-100 mt-4 mb-2">TikTok Ads</h3>
+            <p class="text-sm text-neutral-400">Escalar com tráfego pago os vídeos que já performam organicamente</p>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6 text-center">
+            <span class="text-4xl">🏢</span>
+            <h3 class="font-bold text-neutral-100 mt-4 mb-2">Estruturar Time</h3>
+            <p class="text-sm text-neutral-400">Contratar e delegar para escalar para R$100K+/mês</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30 text-center">
+        <h2 class="text-2xl font-bold text-primary mb-4">🎉 Parabéns!</h2>
+        <p class="text-lg text-neutral-300 mb-6">
+          Você completou a <strong>Trilha Estratégica</strong> do TikTok Shop Academy 2025.<br>
+          Agora é hora de <strong>executar</strong>. Lembre-se: <em>volume é tudo</em>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="../index.html" class="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para Trilha</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="../../fundamental/index.html" class="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-dark-700 text-neutral-100 rounded-lg font-bold hover:bg-dark-600 transition-colors">
+            <span>Revisar Trilha Fundamental</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 6: Checklist de Implementação
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</body>
+</html>

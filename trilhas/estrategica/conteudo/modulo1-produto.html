@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1: Estratégia de Produto | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-blue-400 font-semibold">Módulo 01</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 1 - ESTRATÉGIA
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">🎯 Estratégia de Produto</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        O que vender, como precificar e por que produtos errados matam até o melhor conteúdo.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-blue-400">$20-30</div>
+        <div class="text-xs text-neutral-400">Sweet Spot</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-primary">1-2 dias</div>
+        <div class="text-xs text-neutral-400">Fulfillment</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-accent">83%</div>
+        <div class="text-xs text-neutral-400">Compra Impulso</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">$60</div>
+        <div class="text-xs text-neutral-400">Teto Máximo</div>
+      </div>
+    </div>
+
+    <!-- Conceito 1: Foco na Novidade -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-2xl p-8 border border-blue-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">✨</span>
+          <div>
+            <h2 class="text-2xl font-bold text-blue-400">O Feed é Movido pela Novidade</h2>
+            <p class="text-neutral-400">Por que produtos novos vencem best-sellers estabelecidos</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            O TikTok é uma plataforma de <strong class="text-blue-400">descoberta, não de busca</strong>.
+            As pessoas não entram procurando "o melhor aspirador de pó" - elas descobrem produtos que nunca imaginaram precisar.
+            Isso muda completamente a estratégia de seleção.
+          </p>
+
+          <!-- Comparação -->
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+              <h4 class="font-bold text-red-400 mb-4">❌ O Que NÃO Vender</h4>
+              <ul class="space-y-3 text-neutral-300">
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Best-sellers antigos:</strong> Produtos que você vende há anos</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Commodities:</strong> Produtos genéricos sem diferencial visual</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Produtos complexos:</strong> Que precisam de explicação longa</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Alto ticket:</strong> Acima de $60 (decisão racional)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+              <h4 class="font-bold text-emerald-400 mb-4">✓ O Que VENDER</h4>
+              <ul class="space-y-3 text-neutral-300">
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Produtos novos:</strong> Lançamentos, edições limitadas</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Sazonais:</strong> Que fazem sentido "agora"</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Visualmente impactantes:</strong> Design chamativo, cores, LED</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Demonstráveis:</strong> Efeito WOW em 5 segundos</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Insight Box -->
+          <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30">
+            <h4 class="font-bold text-blue-400 mb-3">💡 Insight Validado</h4>
+            <p class="text-neutral-300">
+              Dados da Viral Nation mostram que <strong>um design novo e chamativo pode superar um produto que você vende há anos</strong>.
+              No TikTok Shop, a novidade percebida é mais importante que o histórico de vendas.
+            </p>
+            <p class="text-xs text-neutral-500 mt-3">Fonte: Viral Nation - Inside TikTok Shop (2025)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 2: Precificação de Impulso -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">💰</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Precificação de Impulso</h2>
+            <p class="text-neutral-400">O sweet spot que maximiza conversão</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            <strong class="text-primary">83% das compras no TikTok Shop são por impulso.</strong>
+            Isso significa que você não está competindo por uma decisão racional - está capitalizando uma emoção momentânea.
+            O preço precisa ser baixo o suficiente para não "acordar" o comprador.
+          </p>
+
+          <!-- Faixas de Preço -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-primary mb-4">📊 Faixas de Preço e Performance</h3>
+
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">$10-20 (R$ 50-100)</span>
+                  <span class="text-sm text-emerald-400">Excelente - Impulso máximo</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-emerald-500 h-4 rounded-full" style="width: 95%"></div>
+                </div>
+                <p class="text-xs text-neutral-500 mt-1">Compra sem pensar. "Por esse preço, vou arriscar."</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">$20-30 (R$ 100-150)</span>
+                  <span class="text-sm text-primary">SWEET SPOT - Validado por dados</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-gradient-to-r from-emerald-500 to-primary h-4 rounded-full" style="width: 90%"></div>
+                </div>
+                <p class="text-xs text-neutral-500 mt-1">Melhor equilíbrio entre margem e conversão.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">$30-60 (R$ 150-300)</span>
+                  <span class="text-sm text-yellow-400">Bom - Precisa de prova social forte</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-yellow-500 h-4 rounded-full" style="width: 65%"></div>
+                </div>
+                <p class="text-xs text-neutral-500 mt-1">Funciona com reviews, demonstração impactante.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">$60+ (R$ 300+)</span>
+                  <span class="text-sm text-red-400">Difícil - Decisão racional ativada</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-red-500 h-4 rounded-full" style="width: 30%"></div>
+                </div>
+                <p class="text-xs text-neutral-500 mt-1">"Vou pesquisar antes" - impulso quebrado.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Psicologia do Preço -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-dark-700/50 p-6 rounded-xl">
+              <h4 class="font-bold text-primary mb-3">🧠 Psicologia do Impulso</h4>
+              <ul class="space-y-2 text-neutral-300 text-sm">
+                <li>• <strong>Abaixo de $30:</strong> Processamento emocional</li>
+                <li>• <strong>Acima de $60:</strong> Processamento racional ativa</li>
+                <li>• <strong>Dor de pagar:</strong> Reduzida em valores baixos</li>
+                <li>• <strong>Justificativa:</strong> Não precisa para compras pequenas</li>
+              </ul>
+            </div>
+            <div class="bg-dark-700/50 p-6 rounded-xl">
+              <h4 class="font-bold text-accent mb-3">📈 Impacto na Conversão</h4>
+              <ul class="space-y-2 text-neutral-300 text-sm">
+                <li>• <strong>$20:</strong> 4-6% taxa de conversão típica</li>
+                <li>• <strong>$50:</strong> 2-3% taxa de conversão típica</li>
+                <li>• <strong>$100:</strong> 0.5-1% taxa de conversão típica</li>
+                <li>• <strong>Cada $10 a mais:</strong> ~30% menos conversão</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 3: Fulfillment Rápido -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl p-8 border border-emerald-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🚀</span>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Fulfillment Rápido: O Impulso Precisa de Velocidade</h2>
+            <p class="text-neutral-400">Por que 1-2 dias de envio é crucial</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            A compra por impulso tem uma <strong class="text-emerald-400">janela de satisfação curta</strong>.
+            Se o produto demora 15 dias para chegar, o comprador já esqueceu a emoção que gerou a compra -
+            e você terá mais devoluções, reviews negativas e menos recompra.
+          </p>
+
+          <!-- Timeline de Expectativa -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-emerald-400 mb-4">⏱️ Timeline de Expectativa do Comprador</h3>
+
+            <div class="relative my-8">
+              <div class="absolute left-4 right-4 h-1 bg-dark-600 top-6"></div>
+              <div class="flex justify-between relative">
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mb-2 relative z-10">✓</div>
+                  <p class="text-xs text-neutral-400">1-2 dias</p>
+                  <p class="text-xs text-emerald-400">Ideal</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-dark-900 font-bold mb-2 relative z-10">!</div>
+                  <p class="text-xs text-neutral-400">3-5 dias</p>
+                  <p class="text-xs text-yellow-400">Aceitável</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mb-2 relative z-10">?</div>
+                  <p class="text-xs text-neutral-400">7-10 dias</p>
+                  <p class="text-xs text-orange-400">Arriscado</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mb-2 relative z-10">✗</div>
+                  <p class="text-xs text-neutral-400">15+ dias</p>
+                  <p class="text-xs text-red-400">Problemático</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-emerald-900/20 p-4 rounded-lg border border-emerald-500/30">
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Recomendação:</strong> Use fulfillment local (Brasil) ou
+                tenha estoque em centros de distribuição próximos. O TikTok Shop favorece vendedores com
+                entregas rápidas no ranking de busca.
+              </p>
+            </div>
+          </div>
+
+          <!-- Opções de Fulfillment -->
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-dark-800 p-4 rounded-xl border border-emerald-500/30">
+              <div class="text-2xl mb-2">📦</div>
+              <h4 class="font-bold text-emerald-400 mb-2">Estoque Próprio</h4>
+              <p class="text-xs text-neutral-300">Controle total, envio em 24h. Maior investimento inicial.</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl border border-blue-500/30">
+              <div class="text-2xl mb-2">🏭</div>
+              <h4 class="font-bold text-blue-400 mb-2">3PL / Fulfillment</h4>
+              <p class="text-xs text-neutral-300">Terceirizado, escala fácil. Custos por pedido.</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl border border-accent/30">
+              <div class="text-2xl mb-2">🛒</div>
+              <h4 class="font-bold text-accent mb-2">TikTok Fulfilled</h4>
+              <p class="text-xs text-neutral-300">O próprio TikTok armazena e envia. Badge de confiança.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 4: Checklist de Produto -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">✅</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Checklist: O Produto Perfeito para TikTok Shop</h2>
+            <p class="text-neutral-400">Valide antes de listar</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-primary mb-4">Características do Produto</h4>
+              <div class="space-y-3">
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+                  <span class="text-neutral-300">Preço entre $20-30 (R$ 100-150)</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+                  <span class="text-neutral-300">Visual impactante (cor, design, LED)</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+                  <span class="text-neutral-300">Demonstrável em 5-10 segundos</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+                  <span class="text-neutral-300">Resolve dor óbvia ou desejo aspiracional</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+                  <span class="text-neutral-300">Novo, sazonal ou com diferencial único</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold text-accent mb-4">Operação</h4>
+              <div class="space-y-3">
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-accent">
+                  <span class="text-neutral-300">Envio em 1-2 dias disponível</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-accent">
+                  <span class="text-neutral-300">Estoque suficiente para escala</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-accent">
+                  <span class="text-neutral-300">Margem mínima de 40% após comissões</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-accent">
+                  <span class="text-neutral-300">Possível enviar amostras para criadores</span>
+                </div>
+                <div class="flex items-center bg-dark-700/50 p-3 rounded-lg">
+                  <input type="checkbox" class="mr-3 w-5 h-5 accent-accent">
+                  <span class="text-neutral-300">Sem restrições de envio (bateria, líquido)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias que Vendem -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-accent/20 to-dark-800 rounded-2xl p-8 border border-accent/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🏆</span>
+          <div>
+            <h2 class="text-2xl font-bold text-accent">Categorias que Mais Vendem no TikTok Shop</h2>
+            <p class="text-neutral-400">Dados de performance por nicho</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-dark-800 p-4 rounded-xl">
+              <div class="flex items-center mb-3">
+                <span class="text-2xl mr-2">💄</span>
+                <span class="font-bold text-pink-400">Beleza & Skincare</span>
+              </div>
+              <p class="text-xs text-neutral-300 mb-2">Maior categoria. Produtos visuais, transformação clara.</p>
+              <p class="text-xs text-pink-400">Ex: Maëlys - $108M em vendas</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl">
+              <div class="flex items-center mb-3">
+                <span class="text-2xl mr-2">🏠</span>
+                <span class="font-bold text-amber-400">Casa & Cozinha</span>
+              </div>
+              <p class="text-xs text-neutral-300 mb-2">Gadgets demonstráveis, antes/depois, ASMR.</p>
+              <p class="text-xs text-amber-400">Ex: Cortadores, organizadores</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl">
+              <div class="flex items-center mb-3">
+                <span class="text-2xl mr-2">👗</span>
+                <span class="font-bold text-purple-400">Moda & Acessórios</span>
+              </div>
+              <p class="text-xs text-neutral-300 mb-2">Transformação visual, shapewear, looks.</p>
+              <p class="text-xs text-purple-400">Ex: PacSun - $20M+ receita</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl">
+              <div class="flex items-center mb-3">
+                <span class="text-2xl mr-2">🎧</span>
+                <span class="font-bold text-cyan-400">Tech & Gadgets</span>
+              </div>
+              <p class="text-xs text-neutral-300 mb-2">Unboxing, LED, design futurista.</p>
+              <p class="text-xs text-cyan-400">Ex: Fones, acessórios de celular</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl">
+              <div class="flex items-center mb-3">
+                <span class="text-2xl mr-2">🧹</span>
+                <span class="font-bold text-emerald-400">Limpeza</span>
+              </div>
+              <p class="text-xs text-neutral-300 mb-2">Antes/depois extremo, satisfação visual.</p>
+              <p class="text-xs text-emerald-400">Ex: Pastas mágicas, removedores</p>
+            </div>
+            <div class="bg-dark-800 p-4 rounded-xl">
+              <div class="flex items-center mb-3">
+                <span class="text-2xl mr-2">🎮</span>
+                <span class="font-bold text-red-400">Pets & Hobbies</span>
+              </div>
+              <p class="text-xs text-neutral-300 mb-2">Conteúdo emocional, reações autênticas.</p>
+              <p class="text-xs text-red-400">Ex: Brinquedos, acessórios pet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">📋 Resumo: Estratégia de Produto</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">✨</span>
+            </div>
+            <h4 class="font-bold text-blue-400 mb-2">Novidade</h4>
+            <p class="text-sm text-neutral-300">Produtos novos, sazonais ou com design diferenciado vencem best-sellers</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">💰</span>
+            </div>
+            <h4 class="font-bold text-primary mb-2">$20-30</h4>
+            <p class="text-sm text-neutral-300">Sweet spot de preço que maximiza impulso sem ativar racionalidade</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl">🚀</span>
+            </div>
+            <h4 class="font-bold text-emerald-400 mb-2">1-2 Dias</h4>
+            <p class="text-sm text-neutral-300">Fulfillment rápido sustenta a satisfação da compra por impulso</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 1: Estratégia de Produto
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme initialization
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+</body>
+</html>

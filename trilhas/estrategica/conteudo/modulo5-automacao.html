@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 5: Automação e Escala | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-cyan-400 font-semibold">Módulo 05</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 5 - AUTOMAÇÃO
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">⚡ Automação e Escala</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        Sistemas e processos para escalar sem aumentar proporcionalmente o trabalho.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-cyan-400">80%</div>
+        <div class="text-xs text-neutral-400">Tarefas Automatizáveis</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-purple-400">10x</div>
+        <div class="text-xs text-neutral-400">Escala com Sistema</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">3-5</div>
+        <div class="text-xs text-neutral-400">Ferramentas Essenciais</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-pink-400">24/7</div>
+        <div class="text-xs text-neutral-400">Operação Contínua</div>
+      </div>
+    </div>
+
+    <!-- Seção 1: Mindset de Escala -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-cyan-900/30 to-dark-800 rounded-2xl p-8 border border-cyan-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🧠</span>
+          <div>
+            <h2 class="text-2xl font-bold text-cyan-400">O Mindset de Escala</h2>
+            <p class="text-neutral-400">De operador para arquiteto de sistemas</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          A diferença entre quem fatura R$10K e R$100K/mês não é trabalhar 10x mais - é <strong class="text-cyan-400">construir
+          sistemas que multiplicam resultados</strong>. Automação não é sobre substituir trabalho, é sobre liberar tempo
+          para decisões de alto impacto.
+        </p>
+
+        <!-- Evolução -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📈 Evolução do Operador</h3>
+
+          <div class="space-y-4">
+            <!-- Nível 1 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-neutral-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
+                1
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-neutral-300">Fazedor</h4>
+                <p class="text-sm text-neutral-400">Faz tudo manualmente. 100% do tempo em execução.</p>
+                <p class="text-xs text-red-400 mt-1">Limite: ~R$10K/mês</p>
+              </div>
+            </div>
+
+            <!-- Nível 2 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
+                2
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-yellow-400">Sistematizador</h4>
+                <p class="text-sm text-neutral-400">Cria processos e checklists. 70% execução, 30% planejamento.</p>
+                <p class="text-xs text-yellow-400 mt-1">Limite: ~R$30K/mês</p>
+              </div>
+            </div>
+
+            <!-- Nível 3 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
+                3
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-cyan-400">Automatizador</h4>
+                <p class="text-sm text-neutral-400">Ferramentas fazem trabalho repetitivo. 40% execução, 60% otimização.</p>
+                <p class="text-xs text-cyan-400 mt-1">Limite: ~R$100K/mês</p>
+              </div>
+            </div>
+
+            <!-- Nível 4 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
+                4
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-emerald-400">Arquiteto</h4>
+                <p class="text-sm text-neutral-400">Time e sistemas executam. 10% execução, 90% estratégia.</p>
+                <p class="text-xs text-emerald-400 mt-1">Limite: R$500K+/mês</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Princípio -->
+        <div class="bg-cyan-900/20 p-6 rounded-xl border border-cyan-500/30">
+          <h4 class="font-bold text-cyan-400 mb-3">💡 Princípio de Pareto da Automação</h4>
+          <p class="text-neutral-300">
+            <strong>20% das suas tarefas geram 80% do resultado.</strong> Automatize os outros 80% de tarefas
+            para focar nos 20% que realmente importam: estratégia de produto, análise de dados e decisões criativas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: O que Automatizar -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🔄</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">O Que Automatizar</h2>
+            <p class="text-neutral-400">As áreas de maior impacto para automação</p>
+          </div>
+        </div>
+
+        <!-- Grid de Áreas -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <!-- Produção de Conteúdo -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🎬</span>
+              <h3 class="font-bold text-purple-400">Produção de Conteúdo</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Templates de roteiro pré-definidos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Batch creation (gravar vários de uma vez)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>IA para legendas e descrições</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Agendamento automático de posts</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Repurpose de conteúdo viral</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Gestão de Afiliados -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🤝</span>
+              <h3 class="font-bold text-pink-400">Gestão de Afiliados</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Outreach automatizado (DMs em massa)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Onboarding com sequência de emails</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Dashboard de performance por afiliado</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Upgrade automático de tier</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Pagamentos programados</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Atendimento -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">💬</span>
+              <h3 class="font-bold text-blue-400">Atendimento ao Cliente</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Respostas automáticas FAQ</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Chatbot para dúvidas comuns</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Templates de resposta</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Tracking automático de pedidos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Follow-up pós-compra</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Operações -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">📦</span>
+              <h3 class="font-bold text-orange-400">Operações e Logística</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Alertas de estoque baixo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Reposição automática com fornecedor</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Integração com fulfillment</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Relatórios automáticos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Sincronização multi-plataforma</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- O que NÃO automatizar -->
+        <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+          <h4 class="font-bold text-red-400 mb-3">⚠️ O que NÃO Automatizar</h4>
+          <div class="grid md:grid-cols-2 gap-4 text-neutral-300">
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Decisões estratégicas de produto</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Criação de hooks e conceitos criativos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Relacionamento com top afiliados</span>
+              </li>
+            </ul>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Resolução de problemas complexos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Análise de tendências e oportunidades</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Negociações importantes</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Stack de Ferramentas -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-2xl p-8 border border-purple-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🛠️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-purple-400">Stack de Ferramentas</h2>
+            <p class="text-neutral-400">As ferramentas essenciais para automação</p>
+          </div>
+        </div>
+
+        <!-- Ferramentas por Categoria -->
+        <div class="space-y-6">
+          <!-- Criação de Conteúdo -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-neutral-100 mb-4">🎬 Criação de Conteúdo</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-purple-400 mb-2">CapCut</h4>
+                <p class="text-xs text-neutral-400">Edição de vídeo</p>
+                <p class="text-sm text-neutral-300 mt-2">Templates, legendas automáticas, efeitos</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-blue-400 mb-2">Canva</h4>
+                <p class="text-xs text-neutral-400">Design e thumbnails</p>
+                <p class="text-sm text-neutral-300 mt-2">Templates prontos, brand kit</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-emerald-400 mb-2">ChatGPT/Claude</h4>
+                <p class="text-xs text-neutral-400">Roteiros e copy</p>
+                <p class="text-sm text-neutral-300 mt-2">Geração de ideias, variações de texto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agendamento -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-neutral-100 mb-4">📅 Agendamento e Publicação</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-cyan-400 mb-2">Later / Buffer</h4>
+                <p class="text-xs text-neutral-400">Agendamento social</p>
+                <p class="text-sm text-neutral-300 mt-2">Programar posts, calendário visual</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-pink-400 mb-2">TikTok Studio</h4>
+                <p class="text-xs text-neutral-400">Nativo do TikTok</p>
+                <p class="text-sm text-neutral-300 mt-2">Agendamento direto, analytics</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-orange-400 mb-2">Notion / Trello</h4>
+                <p class="text-xs text-neutral-400">Planejamento</p>
+                <p class="text-sm text-neutral-300 mt-2">Calendário editorial, workflow</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CRM e Comunicação -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-neutral-100 mb-4">💬 CRM e Comunicação</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-emerald-400 mb-2">ManyChat</h4>
+                <p class="text-xs text-neutral-400">Automação de DMs</p>
+                <p class="text-sm text-neutral-300 mt-2">Respostas automáticas, fluxos</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-blue-400 mb-2">Mailchimp / Brevo</h4>
+                <p class="text-xs text-neutral-400">Email marketing</p>
+                <p class="text-sm text-neutral-300 mt-2">Sequências, newsletters</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-purple-400 mb-2">Zendesk / Freshdesk</h4>
+                <p class="text-xs text-neutral-400">Suporte ao cliente</p>
+                <p class="text-sm text-neutral-300 mt-2">Tickets, base de conhecimento</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analytics e Gestão -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-neutral-100 mb-4">📊 Analytics e Gestão</h3>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-yellow-400 mb-2">Google Sheets</h4>
+                <p class="text-xs text-neutral-400">Dashboards customizados</p>
+                <p class="text-sm text-neutral-300 mt-2">Consolidação de dados, relatórios</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-cyan-400 mb-2">Zapier / Make</h4>
+                <p class="text-xs text-neutral-400">Integração de apps</p>
+                <p class="text-sm text-neutral-300 mt-2">Conectar ferramentas, automações</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-4">
+                <h4 class="font-bold text-pink-400 mb-2">Kalodata / Shoplus</h4>
+                <p class="text-xs text-neutral-400">Analytics TikTok Shop</p>
+                <p class="text-sm text-neutral-300 mt-2">Spy de produtos, tendências</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Workflows de Automação -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">⚙️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Workflows Automatizados</h2>
+            <p class="text-neutral-400">Processos prontos para implementar</p>
+          </div>
+        </div>
+
+        <!-- Workflow 1: Produção de Conteúdo -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-purple-400 mb-4">📽️ Workflow: Produção de Conteúdo em Lote</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">1</div>
+              <div>
+                <p class="font-bold text-neutral-100">Domingo: Planejamento (1h)</p>
+                <p class="text-sm text-neutral-400">Revisar analytics, escolher 7-10 conceitos, preencher templates de roteiro</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">2</div>
+              <div>
+                <p class="font-bold text-neutral-100">Segunda: Gravação em Lote (2-3h)</p>
+                <p class="text-sm text-neutral-400">Setup uma vez, gravar todos os vídeos da semana de uma vez</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">3</div>
+              <div>
+                <p class="font-bold text-neutral-100">Terça: Edição em Lote (2-3h)</p>
+                <p class="text-sm text-neutral-400">CapCut com templates, legendas automáticas, export em lote</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">4</div>
+              <div>
+                <p class="font-bold text-neutral-100">Quarta: Agendamento (30min)</p>
+                <p class="text-sm text-neutral-400">Upload e agendar todos os vídeos para a semana</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">✓</div>
+              <div>
+                <p class="font-bold text-emerald-400">Resultado: Semana inteira pronta em 1 dia</p>
+                <p class="text-sm text-neutral-400">Resto da semana livre para estratégia e análise</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workflow 2: Afiliados -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-pink-400 mb-4">🤝 Workflow: Recrutamento de Afiliados</h3>
+
+          <div class="bg-dark-800 rounded-lg p-4 mb-4">
+            <p class="text-sm text-neutral-400 mb-2">Trigger: Criador posta vídeo com hashtag do nicho</p>
+            <div class="flex items-center">
+              <span class="text-cyan-400">↓</span>
+              <span class="text-sm text-neutral-300 ml-2">Sistema identifica via Kalodata/monitoramento</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800 rounded-lg p-3">
+              <span class="text-pink-400 mr-3">1.</span>
+              <span class="text-sm text-neutral-300">DM automática personalizada (ManyChat)</span>
+            </div>
+            <div class="flex items-center bg-dark-800 rounded-lg p-3">
+              <span class="text-pink-400 mr-3">2.</span>
+              <span class="text-sm text-neutral-300">Se responder → Entra na sequência de onboarding</span>
+            </div>
+            <div class="flex items-center bg-dark-800 rounded-lg p-3">
+              <span class="text-pink-400 mr-3">3.</span>
+              <span class="text-sm text-neutral-300">Email automático com kit de boas-vindas</span>
+            </div>
+            <div class="flex items-center bg-dark-800 rounded-lg p-3">
+              <span class="text-pink-400 mr-3">4.</span>
+              <span class="text-sm text-neutral-300">Adiciona ao dashboard de afiliados (Sheets/Notion)</span>
+            </div>
+            <div class="flex items-center bg-dark-800 rounded-lg p-3">
+              <span class="text-pink-400 mr-3">5.</span>
+              <span class="text-sm text-neutral-300">Check-in automático após 7 dias sem atividade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workflow 3: Pedidos -->
+        <div class="bg-dark-700/50 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-emerald-400 mb-4">📦 Workflow: Gestão de Pedidos</h3>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="space-y-3">
+              <p class="font-bold text-neutral-100 text-sm">Automações de Entrada:</p>
+              <div class="flex items-center bg-dark-800 rounded-lg p-3">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span class="text-sm text-neutral-300">Novo pedido → Notificação no Slack</span>
+              </div>
+              <div class="flex items-center bg-dark-800 rounded-lg p-3">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span class="text-sm text-neutral-300">Pedido enviado → Email tracking para cliente</span>
+              </div>
+              <div class="flex items-center bg-dark-800 rounded-lg p-3">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span class="text-sm text-neutral-300">Entregue → Email pedindo review</span>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <p class="font-bold text-neutral-100 text-sm">Automações de Alerta:</p>
+              <div class="flex items-center bg-dark-800 rounded-lg p-3">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span class="text-sm text-neutral-300">Estoque &lt;20 unidades → Alerta</span>
+              </div>
+              <div class="flex items-center bg-dark-800 rounded-lg p-3">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span class="text-sm text-neutral-300">Review negativo → Notificação urgente</span>
+              </div>
+              <div class="flex items-center bg-dark-800 rounded-lg p-3">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span class="text-sm text-neutral-300">Pedido atrasado → Escalonamento</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Escalando com Time -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl p-8 border border-emerald-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">👥</span>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Escalando com Time</h2>
+            <p class="text-neutral-400">Quando e como contratar para crescer</p>
+          </div>
+        </div>
+
+        <!-- Sinais para Contratar -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">🚦 Sinais de que Você Precisa de Ajuda</h3>
+
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-start">
+              <span class="text-emerald-400 mr-2">▸</span>
+              <span>GMV acima de R$30K/mês consistentemente</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-400 mr-2">▸</span>
+              <span>Você não consegue responder clientes em &lt;24h</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-400 mr-2">▸</span>
+              <span>Tarefas operacionais tomam &gt;6h/dia</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-400 mr-2">▸</span>
+              <span>Você está deixando de criar conteúdo por falta de tempo</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-400 mr-2">▸</span>
+              <span>Oportunidades estão passando (trends, sazonalidade)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ordem de Contratação -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📋 Ordem de Contratação Recomendada</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">1</div>
+              <div>
+                <h4 class="font-bold text-emerald-400">Assistente Virtual / SAC</h4>
+                <p class="text-sm text-neutral-400">R$1.500-2.500/mês • Responde clientes, processa pedidos, resolve problemas simples</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">2</div>
+              <div>
+                <h4 class="font-bold text-cyan-400">Editor de Vídeo</h4>
+                <p class="text-sm text-neutral-400">R$2.000-4.000/mês • Edita conteúdo em lote, mantém consistência visual</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">3</div>
+              <div>
+                <h4 class="font-bold text-purple-400">Gestor de Afiliados</h4>
+                <p class="text-sm text-neutral-400">R$3.000-5.000/mês • Recruta, onboarda, acompanha performance de criadores</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">4</div>
+              <div>
+                <h4 class="font-bold text-pink-400">Social Media / Criador de Conteúdo</h4>
+                <p class="text-sm text-neutral-400">R$3.000-6.000/mês • Cria conteúdo original, gerencia calendário</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dica de Freelancers -->
+        <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+          <h4 class="font-bold text-emerald-400 mb-3">💡 Comece com Freelancers</h4>
+          <p class="text-neutral-300">
+            Antes de contratar CLT, teste com freelancers por projeto. Plataformas como <strong>Workana</strong>,
+            <strong>99Freelas</strong> e <strong>Fiverr</strong> têm profissionais para tarefas pontuais. Isso permite
+            validar a necessidade antes de comprometer com custo fixo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: Roadmap de Implementação -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🗺️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Roadmap de Implementação</h2>
+            <p class="text-neutral-400">Plano de automação em 90 dias</p>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Fase 1 -->
+          <div class="border-l-4 border-cyan-500 pl-6">
+            <h3 class="font-bold text-cyan-400 mb-2">Fase 1: Fundação (Dias 1-30)</h3>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Documentar todos os processos atuais</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Criar templates de roteiro (5-10 variações)</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Implementar batch creation de conteúdo</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Configurar agendamento de posts</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Criar FAQ e templates de resposta</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Fase 2 -->
+          <div class="border-l-4 border-purple-500 pl-6">
+            <h3 class="font-bold text-purple-400 mb-2">Fase 2: Automação Básica (Dias 31-60)</h3>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Configurar ManyChat para DMs automáticas</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Criar sequência de onboarding de afiliados</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Implementar alertas de estoque</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Configurar dashboard de métricas</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Testar primeiro freelancer (editor ou VA)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Fase 3 -->
+          <div class="border-l-4 border-emerald-500 pl-6">
+            <h3 class="font-bold text-emerald-400 mb-2">Fase 3: Escala (Dias 61-90)</h3>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Integrar ferramentas via Zapier/Make</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Automatizar relatórios semanais</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Escalar programa de afiliados</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Contratar segundo membro do time</span>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" class="mr-3 w-4 h-4 accent-primary">
+                <span>Documentar SOPs para todas as funções</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Final -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">✅ Checklist de Automação</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Processos documentados</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Batch creation implementado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Agendamento de posts configurado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Respostas automáticas ativas</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Dashboard de métricas criado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Alertas de estoque configurados</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Workflow de afiliados automatizado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Plano de contratação definido</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 5: Automação e Escala
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</body>
+</html>
