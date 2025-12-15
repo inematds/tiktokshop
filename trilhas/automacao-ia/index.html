@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha Automacao IA | TikTok Shop Academy 2025</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: {
+              900: '#111827',
+              800: '#1f2937',
+              700: '#374151',
+              600: '#4b5563'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .dark body {
+      background-color: #111827;
+    }
+
+    html:not(.dark) body {
+      background-color: #f8fafc;
+    }
+
+    html:not(.dark) .bg-dark-900 {
+      background-color: #f8fafc !important;
+    }
+
+    html:not(.dark) .bg-dark-800 {
+      background-color: #ffffff !important;
+    }
+
+    html:not(.dark) .bg-dark-700 {
+      background-color: #f1f5f9 !important;
+    }
+
+    html:not(.dark) .border-dark-600 {
+      border-color: #e2e8f0 !important;
+    }
+
+    html:not(.dark) .text-neutral-100 {
+      color: #1e293b !important;
+    }
+
+    html:not(.dark) .text-neutral-200 {
+      color: #334155 !important;
+    }
+
+    html:not(.dark) .text-neutral-300 {
+      color: #475569 !important;
+    }
+
+    html:not(.dark) .text-neutral-400 {
+      color: #64748b !important;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #8B5CF6, #EC4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-glow:hover {
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+    }
+
+    .module-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #8B5CF6, #EC4899);
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dark .modal-content {
+      background-color: #1f2937;
+      border: 1px solid #4b5563;
+    }
+
+    .dark .modal-header {
+      border-bottom: 1px solid #4b5563;
+      background: linear-gradient(135deg, #374151, #1f2937);
+    }
+
+    html:not(.dark) .modal-content {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+    }
+
+    html:not(.dark) .modal-header {
+      border-bottom: 1px solid #e2e8f0;
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+    }
+
+    html:not(.dark) .modal-header h2 {
+      color: #1e293b !important;
+    }
+
+    html:not(.dark) .modal-body {
+      color: #334155;
+    }
+
+    .modal-content {
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      max-height: 90vh;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .modal-header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-body {
+      padding: 2rem;
+      overflow-y: auto;
+      max-height: calc(90vh - 80px);
+    }
+
+    .close-modal {
+      color: #9ca3af;
+      font-size: 2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../../index.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-bold text-primary">TTS</span>
+          <span class="text-neutral-400 text-sm">Academy</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="../../index.html" class="text-neutral-400 hover:text-primary transition-colors">Inicio</a>
+          <a href="../estrategica/index.html" class="text-neutral-400 hover:text-primary transition-colors">Trilha Anterior</a>
+          <a href="../expert/index.html" class="text-neutral-400 hover:text-primary transition-colors">Proxima Trilha</a>
+        </div>
+
+        <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors">
+          <svg id="theme-toggle-light-icon" class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-16 lg:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-pink-500/5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="inline-block px-4 py-2 bg-violet-500/20 text-violet-400 rounded-full text-sm font-semibold">
+            TRILHA 3 - AUTOMACAO AVANCADA
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          Automacao com <span class="gradient-text">Inteligencia Artificial</span>
+        </h1>
+        <p class="text-xl text-neutral-400 max-w-3xl mx-auto mb-8">
+          Gere, edite e publique conteudo automaticamente usando IA + automacoes.
+          Reduza o trabalho humano a supervisao e estrategia.
+        </p>
+
+        <!-- Progress Overview -->
+        <div class="max-w-md mx-auto mb-8">
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-neutral-400">Progresso da Trilha</span>
+            <span class="text-violet-400 font-semibold">0/6 modulos</span>
+          </div>
+          <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+            <div class="progress-bar h-full rounded-full" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Stats Banner -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+          <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+            <div class="text-2xl font-bold text-violet-400">6</div>
+            <div class="text-xs text-neutral-400">Modulos</div>
+          </div>
+          <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+            <div class="text-2xl font-bold text-violet-400">100%</div>
+            <div class="text-xs text-neutral-400">Automatizado</div>
+          </div>
+          <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+            <div class="text-2xl font-bold text-violet-400">10+</div>
+            <div class="text-xs text-neutral-400">Ferramentas IA</div>
+          </div>
+          <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+            <div class="text-2xl font-bold text-violet-400">Pro</div>
+            <div class="text-xs text-neutral-400">Nivel Avancado</div>
+          </div>
+        </div>
+
+        <!-- Warning Badge -->
+        <div class="inline-flex items-center space-x-2 px-4 py-2 bg-amber-500/20 text-amber-400 rounded-lg text-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>
+          <span>Conteudo Avancado - Requer conhecimento das Trilhas 1 e 2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture -->
+  <section class="py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-violet-900/30 to-dark-800 rounded-2xl p-8 border border-violet-500/30 mb-12">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🧠</span>
+          <div>
+            <h2 class="text-2xl font-bold text-violet-400">Arquitetura do Sistema</h2>
+            <p class="text-neutral-400">Fluxo completo de automacao com IA</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-sm md:text-base">
+          <div class="bg-dark-700 px-4 py-2 rounded-lg text-cyan-400 font-semibold">Ideia</div>
+          <span class="text-violet-400">→</span>
+          <div class="bg-dark-700 px-4 py-2 rounded-lg text-blue-400 font-semibold">Roteiro IA</div>
+          <span class="text-violet-400">→</span>
+          <div class="bg-dark-700 px-4 py-2 rounded-lg text-purple-400 font-semibold">Video IA</div>
+          <span class="text-violet-400">→</span>
+          <div class="bg-dark-700 px-4 py-2 rounded-lg text-pink-400 font-semibold">Edicao</div>
+          <span class="text-violet-400">→</span>
+          <div class="bg-dark-700 px-4 py-2 rounded-lg text-orange-400 font-semibold">Publicacao</div>
+          <span class="text-violet-400">→</span>
+          <div class="bg-dark-700 px-4 py-2 rounded-lg text-emerald-400 font-semibold">Monitoramento</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modules Section -->
+  <section id="modulos" class="py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Modulos da Trilha</h2>
+        <p class="text-neutral-400">Clique nos topicos para expandir ou use os botoes para ver mais</p>
+      </div>
+
+      <!-- Module 1: Orquestracao -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">01</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Orquestracao com n8n e Make</h2>
+              <p class="text-neutral-400">O cerebro da automacao - conectando todas as ferramentas</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-semibold">4 Topicos</span>
+        </div>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>n8n vs Make - Quando Usar Cada Um</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">n8n:</strong> Open-source, self-hosted, mais controle tecnico. Ideal para quem quer customizacao total e nao quer pagar por execucao.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Make:</strong> Cloud-based, interface visual amigavel, integracao nativa com +1000 apps. Ideal para comecar rapido.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Recomendacao:</strong> Comece com Make para validar fluxos, migre para n8n quando escalar para reduzir custos.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Webhooks e Gatilhos Automaticos</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">O que sao:</strong> Webhooks sao "gatilhos" que disparam automacoes quando algo acontece (nova linha no Sheets, novo registro no Notion, etc).
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Exemplos:</strong> Nova ideia no Notion → Gera roteiro automaticamente. Novo video pronto → Publica no TikTok.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Dica:</strong> Configure webhooks para cada etapa do funil de conteudo para automacao completa.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Conectando APIs de IA (OpenAI, Claude, etc)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Setup:</strong> Crie conta na OpenAI/Anthropic → Gere API Key → Configure no n8n/Make como "HTTP Request" ou modulo nativo.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Custo medio:</strong> GPT-4: ~$0.03 por roteiro. Claude: ~$0.02 por roteiro. Escala de 1000 roteiros/mes = ~$20-30.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Dica Pro:</strong> Use GPT-3.5 para tarefas simples e GPT-4/Claude apenas para roteiros finais.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Execucao em Lote (Batch Processing)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">O que e:</strong> Processar multiplos itens de uma vez. Ex: 50 ideias → 50 roteiros em uma unica execucao.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Como fazer:</strong> Use "Split in Batches" no n8n ou "Iterator" no Make para processar listas.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Cuidado:</strong> Respeite rate limits das APIs. Configure delays de 1-2s entre requisicoes.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod1')" class="inline-flex items-center space-x-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo1-orquestracao.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Pagina Completa</span>
+          </a>
+          <a href="downloads/fluxo-n8n-exemplo.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download Template</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 2: Roteiros IA -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">02</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Geracao de Roteiros com IA</h2>
+              <p class="text-neutral-400">ChatGPT, Claude e prompts otimizados para escala</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">4 Topicos</span>
+        </div>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>APIs de IA: ChatGPT vs Claude vs Outros</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">ChatGPT (OpenAI):</strong> Melhor para copy criativa, ganchos emocionais. GPT-4 para qualidade, GPT-3.5 para volume.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Claude (Anthropic):</strong> Melhor para textos longos, instrucoes complexas. Mais consistente em formato.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Recomendacao:</strong> Use Claude para estrutura do roteiro, GPT-4 para ganchos e CTAs criativos.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Prompts Versionados e Testados</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Estrutura do Prompt:</strong> Contexto → Tarefa → Formato → Restricoes → Exemplos.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Versionamento:</strong> prompt_roteiro_v1.txt, v2, v3... Sempre documente mudancas e resultados.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Template:</strong> "Voce e um copywriter especialista em TikTok Shop. Crie um roteiro de [X]s para [produto] usando o gancho [tipo]. Formato: [0-3s] HOOK..."
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Variacoes Automaticas (Testes A/B)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Conceito:</strong> 1 ideia → 5 roteiros diferentes → 5 ganchos → 5 CTAs. Multiplique suas chances de viralizar.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Automacao:</strong> Configure o prompt para gerar 5 variacoes de uma vez, cada uma com abordagem diferente.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Tipos de variacao:</strong> Emocional vs Racional, Problema vs Solucao, Urgencia vs Curiosidade.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fluxo Completo: Ideia → Roteiros Prontos</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Entrada:</strong> Planilha com colunas: Produto, Beneficio Principal, Publico-Alvo, Tom de Voz.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Processo:</strong> n8n le planilha → Envia para ChatGPT → Recebe 5 roteiros → Salva em pasta organizada.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Saida:</strong> Pasta com roteiros prontos: produto_roteiro_v1.txt, v2.txt, etc.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod2')" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo2-roteiros-ia.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Pagina Completa</span>
+          </a>
+          <a href="downloads/prompts-roteiros.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download Prompts</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 3: Videos Avatar -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">03</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Videos com Avatar (HeyGen + Opus)</h2>
+              <p class="text-neutral-400">Crie videos "humanizados" em escala sem gravar</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">4 Topicos</span>
+        </div>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>HeyGen - Avatares Realistas com Sua Voz</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">O que e:</strong> Plataforma que cria videos com avatares IA que falam seu roteiro. Parece uma pessoa real apresentando.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Vantagens:</strong> Avatar fixo = consistencia de marca. Voz clonada = sua voz sem gravar. Escala infinita.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Custo:</strong> ~$1-2 por video de 30s. Plano Creator: $29/mes (~15 videos).
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Opus Pro - Cortes Automaticos Inteligentes</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">O que faz:</strong> Transforma videos longos em shorts automaticamente. IA identifica os melhores momentos.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Uso ideal:</strong> 1 video de 10min → 20 shorts de 30-60s. Reaproveitamento infinito de conteudo.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Dica:</strong> Grave 1 video longo por semana, deixe Opus gerar dezenas de cortes.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Clonagem de Voz - Sua Voz em Qualquer Roteiro</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Como funciona:</strong> Grave 2-5 minutos da sua voz. IA aprende seu tom, ritmo e sotaque. Gera audios novos automaticamente.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Ferramentas:</strong> ElevenLabs (melhor qualidade), HeyGen (integrado), Play.ht (mais barato).
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Etica:</strong> Use apenas sua propria voz. Nunca clone voz de terceiros sem permissao.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fluxo Completo: Roteiro → Video com Avatar</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Passo 1:</strong> Roteiro pronto (do Modulo 2) → Envia para API do HeyGen.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Passo 2:</strong> HeyGen renderiza video → Webhook avisa quando pronto.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Passo 3:</strong> Video baixado automaticamente → Opus Pro corta → Pasta final organizada.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod3')" class="inline-flex items-center space-x-2 px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg hover:bg-purple-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo3-videos-avatar.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Pagina Completa</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 4: Videos Sem Rosto -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">04</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Videos 100% Automatizados (Sem Rosto)</h2>
+              <p class="text-neutral-400">Escala massiva com kie.ai, fal.ai e replicate</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs font-semibold">4 Topicos</span>
+        </div>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Plataformas: kie.ai, fal.ai, replicate</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">kie.ai:</strong> Videos narrados com imagens IA. Ideal para conteudo educacional e motivacional.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">fal.ai:</strong> Geracao de imagens e videos via API. Preco por uso, muito escalavel.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">replicate:</strong> Acesso a modelos open-source. Mais tecnico, mais barato em escala.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Tipos de Videos Sem Rosto que Vendem</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Videos de Produto:</strong> B-roll do produto + narracao + texto animado. Funciona muito bem para TikTok Shop.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Videos Motivacionais:</strong> Imagens IA + citacoes + musica epica. Alto engajamento, facil de escalar.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">Videos Educacionais:</strong> Slides animados + narracao. Ideal para nichos de conhecimento.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>B-Roll Automatico com IA</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Conceito:</strong> IA gera clips de video baseado no seu roteiro. "Pessoa abrindo caixa" → Video de unboxing gerado.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Ferramentas:</strong> Runway ML, Pika Labs, Stable Video. Qualidade melhorando rapidamente.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">Uso atual:</strong> Ainda nao substitui 100%, mas otimo para complementar videos com cenas genericas.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Escala Massiva: 100+ Videos por Semana</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Sistema:</strong> 50 ideias → 50 roteiros (IA) → 50 videos (IA) → 100+ variacoes com cortes diferentes.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Custo estimado:</strong> ~$0.50-1 por video. 100 videos/semana = $50-100/semana = $200-400/mes.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">ROI:</strong> Se 1 em 100 viraliza e gera R$5K em vendas, o sistema ja se paga 10x.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod4')" class="inline-flex items-center space-x-2 px-4 py-2 bg-pink-500/20 text-pink-400 rounded-lg hover:bg-pink-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo4-videos-sem-rosto.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Pagina Completa</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 5: Publicacao Automatica -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">05</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Publicacao Automatica (Botato)</h2>
+              <p class="text-neutral-400">Agendamento em massa e rotacao de contas</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">4 Topicos</span>
+        </div>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Botato e Alternativas para Publicacao</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Botato:</strong> Publicacao automatica no TikTok via automacao. Agenda, posta e monitora.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Alternativas:</strong> Metricool (oficial), Later, Publer. Cada um com pros/contras.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Importante:</strong> TikTok tem API limitada. Ferramentas nao-oficiais tem risco de restricao.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Agendamento em Massa (Bulk Scheduling)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Conceito:</strong> Suba 50 videos de uma vez → Configure horarios otimos → Sistema posta automaticamente.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Horarios otimos:</strong> 7h, 12h, 18h, 21h (horarios de pico Brasil). Varie para descobrir o melhor.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Frequencia:</strong> 3-5 videos/dia por conta e o sweet spot. Mais que isso pode parecer spam.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Rotacao de Contas e Gerenciamento</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Estrategia:</strong> Multiplas contas em nichos diferentes. Se uma cai, as outras continuam.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Organizacao:</strong> Conta A = Beleza, Conta B = Casa, Conta C = Tech. Conteudo especifico para cada.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Cuidado:</strong> Nao use o mesmo dispositivo/IP para todas. TikTok detecta e pode restringir.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Prevencao de Shadowban e Boas Praticas</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Sinais de shadowban:</strong> Views caem drasticamente, videos nao aparecem na FYP, 0 views em videos novos.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Prevencao:</strong> Varie conteudo, nao poste identico em multiplas contas, use hashtags diferentes.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Recuperacao:</strong> Pause 48-72h, poste conteudo organico, interaja manualmente, volte gradualmente.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod5')" class="inline-flex items-center space-x-2 px-4 py-2 bg-orange-500/20 text-orange-400 rounded-lg hover:bg-orange-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo5-publicacao.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Pagina Completa</span>
+          </a>
+          <a href="downloads/checklist-seguranca.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Checklist Seguranca</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 6: Monitoramento -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">06</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Monitoramento e Otimizacao</h2>
+              <p class="text-neutral-400">Metricas automatizadas e melhoria continua</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold">4 Topicos</span>
+        </div>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Coleta Automatica de Metricas</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">O que coletar:</strong> Views, likes, comentarios, shares, watch time, cliques no produto, conversoes.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Como automatizar:</strong> TikTok Business API + n8n → Planilha atualizada diariamente com todas as metricas.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Dashboard:</strong> Google Sheets + Looker Studio = Dashboard visual atualizado em tempo real.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Identificacao de Videos Vencedores</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Criterios:</strong> Watch time &gt;50%, engagement &gt;5%, cliques &gt;1% = video vencedor.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Automacao:</strong> Script que identifica videos acima da media e marca para replicacao.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Acao:</strong> Videos vencedores → Criar 5 variacoes → Testar em outras contas/horarios.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Repost Automatico de Conteudo Top</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Estrategia:</strong> Videos que performaram bem ha 30-60 dias podem ser repostados com pequenas mudancas.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Mudancas:</strong> Novo gancho, nova musica, corte diferente, horario diferente.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Automacao:</strong> Sistema identifica videos antigos com bom desempenho → Agenda repost com variacoes.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Pausar Automaticamente o que Nao Performa</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Regra:</strong> Video com &lt;100 views em 24h ou watch time &lt;20% → Marcar como "nao replicar".
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Aprendizado:</strong> Analise os padroes dos videos que falham. Gancho fraco? Produto errado? Horario ruim?
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Iteracao:</strong> Dados alimentam os proximos prompts de IA para gerar conteudo cada vez melhor.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod6')" class="inline-flex items-center space-x-2 px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-lg hover:bg-emerald-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo6-monitoramento.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Pagina Completa</span>
+          </a>
+          <a href="downloads/planilha-controle.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Planilha Controle</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Warning Section -->
+  <section class="py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-amber-900/20 rounded-2xl p-8 border border-amber-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">⚠️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-amber-400">Aviso Importante</h2>
+            <p class="text-neutral-400">Conheca os limites e riscos</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-emerald-900/20 p-4 rounded-xl border border-emerald-500/30">
+            <h4 class="font-bold text-emerald-400 mb-2">Permitido</h4>
+            <ul class="text-sm text-neutral-300 space-y-1">
+              <li>• Agendamento via API oficial</li>
+              <li>• IA para criar conteudo</li>
+              <li>• Automacao de processos internos</li>
+            </ul>
+          </div>
+          <div class="bg-yellow-900/20 p-4 rounded-xl border border-yellow-500/30">
+            <h4 class="font-bold text-yellow-400 mb-2">Zona Cinza</h4>
+            <ul class="text-sm text-neutral-300 space-y-1">
+              <li>• Publicacao via ferramentas nao-oficiais</li>
+              <li>• Multiplas contas por pessoa</li>
+              <li>• Automacao de engajamento</li>
+            </ul>
+          </div>
+          <div class="bg-red-900/20 p-4 rounded-xl border border-red-500/30">
+            <h4 class="font-bold text-red-400 mb-2">Proibido</h4>
+            <ul class="text-sm text-neutral-300 space-y-1">
+              <li>• Compra de seguidores/likes</li>
+              <li>• Bots de comentarios</li>
+              <li>• Spam em massa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-br from-violet-500/10 via-dark-800 to-pink-500/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Pronto para Automatizar?</h2>
+      <p class="text-neutral-400 mb-8">
+        Complete as Trilhas 1 e 2 antes de comecar. Esta trilha requer conhecimento previo solido.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="../estrategica/index.html" class="px-8 py-4 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors border border-dark-600">
+          Revisar Trilha Estrategica
+        </a>
+        <a href="../expert/index.html" class="px-8 py-4 bg-violet-500 text-white rounded-lg font-bold hover:bg-violet-600 transition-colors">
+          Proxima: Trilha Expert
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <!-- Modal 1 -->
+  <div id="modal-mod1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">01 Orquestracao com n8n e Make</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">O cerebro da automacao - conectando todas as ferramentas.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold">Webhooks</span>
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold">APIs</span>
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold">Batch</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-cyan-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-cyan-500/30">
+          <h3 class="text-xl font-bold text-cyan-400 mb-3">Fluxo Exemplo</h3>
+          <div class="bg-dark-700/50 p-4 rounded text-sm text-neutral-300">
+            <p>Google Sheets (ideias) → n8n → ChatGPT (roteiro) → HeyGen (video) → Pasta Final</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-dark-700 p-4 rounded-lg">
+            <p class="font-bold text-cyan-400 mb-2">n8n</p>
+            <p class="text-sm text-neutral-400">Open-source, self-hosted, mais controle</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg">
+            <p class="font-bold text-cyan-400 mb-2">Make</p>
+            <p class="text-sm text-neutral-400">Cloud, visual, +1000 integracoes</p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Comece Simples</h3>
+          <p class="mb-4 text-sm text-white/80">Valide com Make, escale com n8n quando o custo justificar.</p>
+          <button onclick="closeModal('modal-mod1')" class="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div id="modal-mod2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">02 Geracao de Roteiros com IA</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Escale a criacao de roteiros com prompts otimizados.</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-blue-500/30">
+          <h3 class="text-xl font-bold text-blue-400 mb-3">Formula Magica</h3>
+          <p class="text-neutral-300 text-center text-lg">1 ideia → 5 roteiros → 5 ganchos → 5 CTAs</p>
+          <p class="text-neutral-400 text-center text-sm mt-2">= 25 variacoes de conteudo</p>
+        </div>
+        <div class="bg-dark-700 p-4 rounded-lg mb-4">
+          <p class="font-bold text-blue-400 mb-2">Template de Prompt</p>
+          <p class="text-sm text-neutral-300 font-mono">"Voce e um copywriter especialista em TikTok Shop. Crie um roteiro de 30s para [produto] usando gancho de [tipo]..."</p>
+        </div>
+        <div class="bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Custo Real</h3>
+          <p class="mb-4 text-sm text-white/80">~$0.02-0.03 por roteiro. 1000 roteiros/mes = ~$20-30.</p>
+          <button onclick="closeModal('modal-mod2')" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div id="modal-mod3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">03 Videos com Avatar</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Crie videos "humanizados" sem nunca gravar.</p>
+        </div>
+        <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-purple-500/30">
+          <h3 class="text-xl font-bold text-purple-400 mb-3">HeyGen + Opus Pro</h3>
+          <p class="text-neutral-300">Avatar fixo + voz clonada = consistencia de marca em escala infinita.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-dark-700 p-4 rounded-lg">
+            <p class="font-bold text-purple-400 mb-2">HeyGen</p>
+            <p class="text-sm text-neutral-400">~$1-2/video, avatar realista</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg">
+            <p class="font-bold text-purple-400 mb-2">Opus Pro</p>
+            <p class="text-sm text-neutral-400">1 video longo → 20 shorts</p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg p-6 text-center">
+          <button onclick="closeModal('modal-mod3')" class="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div id="modal-mod4" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">04 Videos Sem Rosto</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Escala massiva: 100+ videos por semana sem aparecer.</p>
+        </div>
+        <div class="bg-gradient-to-br from-pink-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-pink-500/30">
+          <h3 class="text-xl font-bold text-pink-400 mb-3">Tipos que Vendem</h3>
+          <ul class="text-neutral-300 space-y-2">
+            <li>• Videos de produto (B-roll + narracao)</li>
+            <li>• Videos motivacionais (imagens IA + citacoes)</li>
+            <li>• Videos educacionais (slides + narracao)</li>
+          </ul>
+        </div>
+        <div class="bg-dark-700 p-4 rounded-lg mb-4">
+          <p class="font-bold text-pink-400 mb-2">ROI</p>
+          <p class="text-sm text-neutral-300">100 videos = ~$50-100. Se 1 viraliza = R$5K+. Sistema se paga 10x.</p>
+        </div>
+        <div class="bg-gradient-to-br from-pink-600 to-red-600 text-white rounded-lg p-6 text-center">
+          <button onclick="closeModal('modal-mod4')" class="inline-block bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div id="modal-mod5" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">05 Publicacao Automatica</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Agendamento em massa e gerenciamento de contas.</p>
+        </div>
+        <div class="bg-gradient-to-br from-orange-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-orange-500/30">
+          <h3 class="text-xl font-bold text-orange-400 mb-3">Frequencia Ideal</h3>
+          <p class="text-neutral-300">3-5 videos/dia por conta. Horarios: 7h, 12h, 18h, 21h.</p>
+        </div>
+        <div class="bg-amber-900/20 p-4 rounded-lg mb-4 border border-amber-500/30">
+          <p class="font-bold text-amber-400 mb-2">⚠️ Cuidado com Shadowban</p>
+          <p class="text-sm text-neutral-300">Varie conteudo, use hashtags diferentes, nao poste identico em multiplas contas.</p>
+        </div>
+        <div class="bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-lg p-6 text-center">
+          <button onclick="closeModal('modal-mod5')" class="inline-block bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div id="modal-mod6" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">06 Monitoramento e Otimizacao</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Metricas automatizadas e melhoria continua.</p>
+        </div>
+        <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-emerald-500/30">
+          <h3 class="text-xl font-bold text-emerald-400 mb-3">Ciclo de Otimizacao</h3>
+          <div class="text-neutral-300 text-center">
+            Coletar metricas → Identificar vencedores → Replicar → Pausar perdedores → Repetir
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <div class="bg-emerald-900/20 p-4 rounded-lg border border-emerald-500/30">
+            <p class="font-bold text-emerald-400 mb-2">Vencedor</p>
+            <p class="text-sm text-neutral-400">Watch time &gt;50%, engagement &gt;5%</p>
+          </div>
+          <div class="bg-red-900/20 p-4 rounded-lg border border-red-500/30">
+            <p class="font-bold text-red-400 mb-2">Perdedor</p>
+            <p class="text-sm text-neutral-400">&lt;100 views em 24h, watch time &lt;20%</p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-emerald-600 to-green-600 text-white rounded-lg p-6 text-center">
+          <button onclick="closeModal('modal-mod6')" class="inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Trilha Automacao com IA
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+
+    themeToggle.addEventListener('click', function() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // Topic Accordion
+    document.addEventListener('click', function(e) {
+      const topicButton = e.target.closest('.topic-button');
+
+      if (topicButton) {
+        const topicItem = topicButton.closest('.topic-item');
+        const explanation = topicItem.querySelector('.topic-explanation');
+        const arrow = topicButton.querySelector('svg');
+
+        if (explanation) {
+          const moduleCard = topicItem.closest('.module-card');
+          moduleCard.querySelectorAll('.topic-explanation').forEach(exp => {
+            if (exp !== explanation) {
+              exp.classList.add('hidden');
+              const otherArrow = exp.closest('.topic-item').querySelector('.topic-button svg');
+              if (otherArrow) otherArrow.classList.remove('rotate-180');
+            }
+          });
+
+          explanation.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-180');
+        }
+      }
+    });
+
+    // Modal Functions
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('modal')) {
+        e.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      if (e.target.classList.contains('close-modal')) {
+        const modal = e.target.closest('.modal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const activeModals = document.querySelectorAll('.modal.active');
+        activeModals.forEach(modal => {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

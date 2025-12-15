@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 6: Monitoramento e Otimização | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-primary font-semibold">Módulo 06</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-semibold mb-4">
+        MÓDULO 6 - MONITORAMENTO
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">📊 Monitoramento e Otimização</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        Automatize a coleta de métricas, identifique vencedores e escale o que funciona.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-primary">24/7</div>
+        <div class="text-xs text-neutral-400">Coleta de Dados</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-violet-400">Auto</div>
+        <div class="text-xs text-neutral-400">Identificação de Virais</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">2x</div>
+        <div class="text-xs text-neutral-400">Repost Automático</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-pink-400">0</div>
+        <div class="text-xs text-neutral-400">Trabalho Manual</div>
+      </div>
+    </div>
+
+    <!-- Seção 1: Por que Automatizar Monitoramento -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-primary/20 to-dark-800 rounded-2xl p-8 border border-primary/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🔍</span>
+          <div>
+            <h2 class="text-2xl font-bold text-primary">Por Que Automatizar o Monitoramento?</h2>
+            <p class="text-neutral-400">Dados em tempo real = decisões melhores</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          Com dezenas de vídeos publicados por dia em múltiplas contas, é <strong class="text-primary">impossível
+          monitorar manualmente</strong>. A automação identifica padrões, alerta sobre problemas e encontra
+          oportunidades que você perderia.
+        </p>
+
+        <!-- O que automatizar -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-emerald-400 mb-4">📈 Automatizar Coleta</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Views, likes, comentários, shares</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Taxa de conversão (cliques no carrinho)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Vendas por vídeo/produto</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Performance por horário/dia</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-violet-400 mb-4">🤖 Automatizar Ações</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-violet-400 mr-2">▸</span>
+                <span>Alertas de vídeo viral</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-violet-400 mr-2">▸</span>
+                <span>Repost automático de winners</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-violet-400 mr-2">▸</span>
+                <span>Pausar o que não performa</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-violet-400 mr-2">▸</span>
+                <span>Relatórios diários/semanais</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ciclo de Otimização -->
+        <div class="bg-primary/10 p-6 rounded-xl border border-primary/30">
+          <h4 class="font-bold text-primary mb-3">🔄 Ciclo de Otimização Automática</h4>
+          <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+            <span class="bg-violet-500/20 text-violet-400 px-3 py-2 rounded-lg">Publicar</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-2 rounded-lg">Coletar Dados</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-pink-500/20 text-pink-400 px-3 py-2 rounded-lg">Analisar</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-emerald-500/20 text-emerald-400 px-3 py-2 rounded-lg">Escalar Winners</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-orange-500/20 text-orange-400 px-3 py-2 rounded-lg">Pausar Losers</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-violet-500/20 text-violet-400 px-3 py-2 rounded-lg">Repetir</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Métricas Chave -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">📊</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Métricas Chave para Monitorar</h2>
+            <p class="text-neutral-400">Os números que realmente importam</p>
+          </div>
+        </div>
+
+        <!-- Métricas de Engajamento -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-cyan-400 mb-4">📱 Métricas de Engajamento</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-600">
+                  <th class="text-left py-3 px-4 text-neutral-400">Métrica</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">O que mede</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Meta</th>
+                </tr>
+              </thead>
+              <tbody class="text-neutral-300">
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">Watch Time</td>
+                  <td class="py-3 px-4">Retenção do vídeo</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;50% do vídeo</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">Engagement Rate</td>
+                  <td class="py-3 px-4">(likes+comments+shares)/views</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;5%</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">Share Rate</td>
+                  <td class="py-3 px-4">Potencial viral</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;1%</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">Comment/View</td>
+                  <td class="py-3 px-4">Engajamento profundo</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;0.5%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Métricas de Conversão -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-emerald-400 mb-4">💰 Métricas de Conversão</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-600">
+                  <th class="text-left py-3 px-4 text-neutral-400">Métrica</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Fórmula</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Meta</th>
+                </tr>
+              </thead>
+              <tbody class="text-neutral-300">
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">CTR Carrinho</td>
+                  <td class="py-3 px-4">Cliques / Views</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;2%</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">CVR (Conversão)</td>
+                  <td class="py-3 px-4">Vendas / Cliques</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;3%</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">GMV/Video</td>
+                  <td class="py-3 px-4">Receita por vídeo</td>
+                  <td class="py-3 px-4 text-emerald-400">Depende do nicho</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold">ROAS</td>
+                  <td class="py-3 px-4">Receita / Custo produção</td>
+                  <td class="py-3 px-4 text-emerald-400">&gt;3x</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Dica -->
+        <div class="bg-violet-900/20 p-6 rounded-xl border border-violet-500/30">
+          <h4 class="font-bold text-violet-400 mb-3">💡 A Métrica Mais Importante</h4>
+          <p class="text-neutral-300">
+            <strong>GMV por 1000 views</strong> é a métrica que une engajamento e conversão. Ela mostra quanto
+            dinheiro você gera para cada 1000 pessoas que veem seu conteúdo. Foque em aumentar esse número.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Identificando Vídeos Vencedores -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl p-8 border border-emerald-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🏆</span>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Identificando Vídeos Vencedores</h2>
+            <p class="text-neutral-400">Automação para encontrar winners</p>
+          </div>
+        </div>
+
+        <!-- Critérios de Winner -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">✨ Critérios de Vídeo Vencedor</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">📈</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Views acima da média</p>
+                  <p class="text-sm text-neutral-400">2x+ a média dos últimos 20 vídeos</p>
+                </div>
+              </div>
+              <span class="text-emerald-400 font-bold">+2x</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">💬</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Engajamento alto</p>
+                  <p class="text-sm text-neutral-400">Taxa &gt;8% (likes+comments/views)</p>
+                </div>
+              </div>
+              <span class="text-emerald-400 font-bold">&gt;8%</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">🔄</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Share rate alto</p>
+                  <p class="text-sm text-neutral-400">Indicador de potencial viral</p>
+                </div>
+              </div>
+              <span class="text-emerald-400 font-bold">&gt;2%</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">🛒</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Conversão acima da média</p>
+                  <p class="text-sm text-neutral-400">CTR carrinho superior</p>
+                </div>
+              </div>
+              <span class="text-emerald-400 font-bold">&gt;3%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automação de Identificação -->
+        <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+          <h4 class="font-bold text-emerald-400 mb-3">⚙️ Workflow de Identificação Automática</h4>
+          <div class="space-y-2 text-sm text-neutral-300">
+            <p><strong>1. Trigger:</strong> A cada 6 horas, n8n busca métricas dos últimos vídeos</p>
+            <p><strong>2. Filtro:</strong> Compara com média histórica da conta</p>
+            <p><strong>3. Se winner:</strong> Envia alerta no Slack/Telegram + adiciona à lista de repost</p>
+            <p><strong>4. Se loser:</strong> Marca para análise posterior (por que não funcionou?)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Repost Automático -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🔁</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Repost Automático de Winners</h2>
+            <p class="text-neutral-400">Escale o que já provou funcionar</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          Vídeos vencedores têm <strong class="text-pink-400">80% de chance de performar bem novamente</strong>
+          em outras contas ou em horários diferentes. O repost automático maximiza o ROI do conteúdo.
+        </p>
+
+        <!-- Estratégias de Repost -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-pink-400 mb-4">🔄 Tipos de Repost</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span><strong>Mesma conta, horário diferente:</strong> 2-3 semanas depois</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span><strong>Outra conta, mesmo nicho:</strong> Imediatamente</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span><strong>Com variação:</strong> Novo gancho, mesmo conteúdo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span><strong>Cross-platform:</strong> TikTok → Reels → Shorts</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-cyan-400 mb-4">⚙️ Workflow Automático</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-cyan-400 mr-2">1.</span>
+                <span>Sistema identifica winner (critérios acima)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cyan-400 mr-2">2.</span>
+                <span>Adiciona à fila de repost</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cyan-400 mr-2">3.</span>
+                <span>Agenda em conta secundária</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cyan-400 mr-2">4.</span>
+                <span>Monitora performance do repost</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Regras -->
+        <div class="bg-yellow-900/20 p-6 rounded-xl border border-yellow-500/30">
+          <h4 class="font-bold text-yellow-400 mb-3">⚠️ Regras de Repost Seguro</h4>
+          <ul class="grid md:grid-cols-2 gap-4 text-sm text-neutral-300">
+            <li class="flex items-start">
+              <span class="text-yellow-400 mr-2">▸</span>
+              <span>Nunca mesmo vídeo em 2 contas no mesmo dia</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-yellow-400 mr-2">▸</span>
+              <span>Altere pelo menos thumbnail ou caption</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-yellow-400 mr-2">▸</span>
+              <span>Espere 2+ semanas para repost na mesma conta</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-yellow-400 mr-2">▸</span>
+              <span>Max 30% do conteúdo pode ser repost</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Pausar o que Não Performa -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-red-900/30 to-dark-800 rounded-2xl p-8 border border-red-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">⏸️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-red-400">Pausar o que Não Performa</h2>
+            <p class="text-neutral-400">Corte perdas automaticamente</p>
+          </div>
+        </div>
+
+        <!-- Critérios de Loser -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">❌ Critérios de Vídeo "Loser"</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">📉</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Views muito abaixo</p>
+                  <p class="text-sm text-neutral-400">&lt;50% da média após 24h</p>
+                </div>
+              </div>
+              <span class="text-red-400 font-bold">&lt;50%</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">😶</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Zero engajamento</p>
+                  <p class="text-sm text-neutral-400">Taxa &lt;1%</p>
+                </div>
+              </div>
+              <span class="text-red-400 font-bold">&lt;1%</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div class="flex items-center">
+                <span class="text-2xl mr-3">🛒</span>
+                <div>
+                  <p class="font-bold text-neutral-100">Zero cliques no carrinho</p>
+                  <p class="text-sm text-neutral-400">Após 1000+ views</p>
+                </div>
+              </div>
+              <span class="text-red-400 font-bold">0 cliques</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ações Automáticas -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+            <h4 class="font-bold text-red-400 mb-3">🤖 Ações Automáticas</h4>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Marca vídeo como "não repostar"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Remove de filas de agendamento futuras</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Adiciona à análise de "por que falhou"</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+            <h4 class="font-bold text-emerald-400 mb-3">📚 Aprendizado</h4>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Identifique padrões de falha</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Ajuste prompts de IA para evitar</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Atualize blacklist de formatos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: Dashboard e Relatórios -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">📋</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Dashboard e Relatórios Automáticos</h2>
+            <p class="text-neutral-400">Visão consolidada de todas as operações</p>
+          </div>
+        </div>
+
+        <!-- Tipos de Relatório -->
+        <div class="space-y-6 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">📅</span>
+              <h3 class="font-bold text-violet-400">Relatório Diário (Automático)</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+              <div class="bg-dark-800 rounded-lg p-3">
+                <p class="text-neutral-400 mb-1">Enviado às</p>
+                <p class="font-bold text-neutral-100">9h da manhã</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-3">
+                <p class="text-neutral-400 mb-1">Contém</p>
+                <p class="font-bold text-neutral-100">Top 3 vídeos + alertas</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-3">
+                <p class="text-neutral-400 mb-1">Canal</p>
+                <p class="font-bold text-neutral-100">Telegram/Slack</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">📊</span>
+              <h3 class="font-bold text-cyan-400">Relatório Semanal (Automático)</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+              <div class="bg-dark-800 rounded-lg p-3">
+                <p class="text-neutral-400 mb-1">Enviado</p>
+                <p class="font-bold text-neutral-100">Segunda 8h</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-3">
+                <p class="text-neutral-400 mb-1">Contém</p>
+                <p class="font-bold text-neutral-100">Métricas + tendências + ROI</p>
+              </div>
+              <div class="bg-dark-800 rounded-lg p-3">
+                <p class="text-neutral-400 mb-1">Formato</p>
+                <p class="font-bold text-neutral-100">PDF + Google Sheets</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🚨</span>
+              <h3 class="font-bold text-orange-400">Alertas em Tempo Real</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4 text-sm text-neutral-300">
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">🟢</span>
+                  <span>Vídeo passou 10K views</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">🟢</span>
+                  <span>Nova venda realizada</span>
+                </li>
+              </ul>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">🔴</span>
+                  <span>Conta pode estar em shadowban</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-yellow-400 mr-2">🟡</span>
+                  <span>Estoque baixo de produto</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ferramentas -->
+        <div class="bg-primary/10 p-6 rounded-xl border border-primary/30">
+          <h4 class="font-bold text-primary mb-3">🛠️ Stack de Monitoramento</h4>
+          <div class="grid md:grid-cols-4 gap-4 text-center text-sm">
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="font-bold text-neutral-100">n8n/Make</p>
+              <p class="text-xs text-neutral-400">Automação</p>
+            </div>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="font-bold text-neutral-100">Google Sheets</p>
+              <p class="text-xs text-neutral-400">Database</p>
+            </div>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="font-bold text-neutral-100">Looker Studio</p>
+              <p class="text-xs text-neutral-400">Dashboard</p>
+            </div>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="font-bold text-neutral-100">Telegram</p>
+              <p class="text-xs text-neutral-400">Alertas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Final -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">✅ Checklist de Monitoramento</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Métricas-chave definidas</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Coleta automática configurada</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Critérios de winner definidos</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Workflow de repost ativo</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Alertas de shadowban configurados</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Relatório diário ativo</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Dashboard consolidado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Processo de otimização rodando</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 6: Monitoramento e Otimização
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1: Orquestração com n8n e Make | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-violet-400 font-semibold">Módulo 01</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-violet-500/20 text-violet-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 1 - ORQUESTRAÇÃO
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">⚙️ Orquestração com n8n e Make</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        O cérebro da automação: conecte ferramentas de IA e crie fluxos inteligentes.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-violet-400">100+</div>
+        <div class="text-xs text-neutral-400">Integrações Nativas</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-pink-400">24/7</div>
+        <div class="text-xs text-neutral-400">Execução Automática</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">10x</div>
+        <div class="text-xs text-neutral-400">Produtividade</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-cyan-400">$0</div>
+        <div class="text-xs text-neutral-400">n8n Self-hosted</div>
+      </div>
+    </div>
+
+    <!-- Seção 1: Conceito de Orquestração -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-violet-900/30 to-dark-800 rounded-2xl p-8 border border-violet-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🧠</span>
+          <div>
+            <h2 class="text-2xl font-bold text-violet-400">O Que É Orquestração?</h2>
+            <p class="text-neutral-400">O maestro da sua operação automatizada</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          Orquestração é o processo de <strong class="text-violet-400">conectar múltiplas ferramentas e APIs em fluxos automatizados</strong>.
+          Em vez de você fazer manualmente cada etapa, o orquestrador executa todo o processo quando um gatilho é acionado.
+        </p>
+
+        <!-- Fluxo Macro -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📊 Fluxo Macro de Automação</h3>
+
+          <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+            <span class="bg-violet-500/20 text-violet-400 px-3 py-2 rounded-lg font-semibold">Ideia</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-pink-500/20 text-pink-400 px-3 py-2 rounded-lg font-semibold">Roteiro</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-2 rounded-lg font-semibold">Vídeo IA</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-emerald-500/20 text-emerald-400 px-3 py-2 rounded-lg font-semibold">Edição</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-orange-500/20 text-orange-400 px-3 py-2 rounded-lg font-semibold">Publicação</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-primary/20 text-primary px-3 py-2 rounded-lg font-semibold">Monitoramento</span>
+          </div>
+        </div>
+
+        <!-- Exemplo Real -->
+        <div class="bg-violet-900/20 p-6 rounded-xl border border-violet-500/30">
+          <h4 class="font-bold text-violet-400 mb-3">💡 Exemplo de Fluxo Real</h4>
+          <div class="space-y-2 text-neutral-300">
+            <p><strong>1.</strong> Nova linha adicionada no Google Sheets / Notion</p>
+            <p><strong>2.</strong> n8n/Make aciona API do ChatGPT para gerar roteiro</p>
+            <p><strong>3.</strong> Roteiro é enviado para geração de vídeo (HeyGen/kie.ai)</p>
+            <p><strong>4.</strong> Vídeo finalizado retorna link para publicação</p>
+            <p><strong>5.</strong> Sistema agenda post no TikTok automaticamente</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: n8n vs Make -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">⚔️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">n8n vs Make: Qual Escolher?</h2>
+            <p class="text-neutral-400">Comparativo das duas principais ferramentas</p>
+          </div>
+        </div>
+
+        <!-- Comparativo -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <!-- n8n -->
+          <div class="bg-gradient-to-br from-orange-900/30 to-dark-700 rounded-xl p-6 border border-orange-500/30">
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">🔧</span>
+              <h3 class="text-xl font-bold text-orange-400">n8n</h3>
+            </div>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Open source</strong> - pode hospedar você mesmo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Custo zero</strong> no self-hosted</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Sem limites</strong> de execuções</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Código customizado</strong> em JavaScript</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">~</span>
+                <span>Requer conhecimento técnico para setup</span>
+              </li>
+            </ul>
+            <p class="text-xs text-orange-400 mt-4">Melhor para: Quem tem conhecimento técnico ou quer escala infinita</p>
+          </div>
+
+          <!-- Make -->
+          <div class="bg-gradient-to-br from-purple-900/30 to-dark-700 rounded-xl p-6 border border-purple-500/30">
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">🟣</span>
+              <h3 class="text-xl font-bold text-purple-400">Make (Integromat)</h3>
+            </div>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Interface visual</strong> mais intuitiva</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Zero setup</strong> - funciona na nuvem</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Muitos templates</strong> prontos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span><strong>Suporte</strong> e comunidade ativa</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">~</span>
+                <span>Custo mensal (planos a partir de $9/mês)</span>
+              </li>
+            </ul>
+            <p class="text-xs text-purple-400 mt-4">Melhor para: Iniciantes ou quem quer começar rápido</p>
+          </div>
+        </div>
+
+        <!-- Recomendação -->
+        <div class="bg-primary/10 p-6 rounded-xl border border-primary/30">
+          <h4 class="font-bold text-primary mb-3">🎯 Nossa Recomendação</h4>
+          <p class="text-neutral-300">
+            <strong>Começando?</strong> Use o Make para validar suas automações. <strong>Escala confirmada?</strong>
+            Migre para n8n self-hosted e elimine custos mensais. O tempo de aprendizado é similar, mas a flexibilidade
+            do n8n vale a pena no longo prazo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Webhooks e Gatilhos -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-cyan-900/30 to-dark-800 rounded-2xl p-8 border border-cyan-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🎯</span>
+          <div>
+            <h2 class="text-2xl font-bold text-cyan-400">Webhooks e Gatilhos</h2>
+            <p class="text-neutral-400">Como iniciar suas automações automaticamente</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          <strong class="text-cyan-400">Gatilhos</strong> são eventos que iniciam seu fluxo. Podem ser ações do usuário,
+          horários programados ou dados recebidos de outras plataformas via <strong class="text-cyan-400">webhooks</strong>.
+        </p>
+
+        <!-- Tipos de Gatilho -->
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="text-2xl mb-3">⏰</div>
+            <h4 class="font-bold text-neutral-100 mb-2">Agendados (Cron)</h4>
+            <p class="text-sm text-neutral-400">Executa em horários fixos. Ex: Todo dia às 9h buscar trending topics.</p>
+          </div>
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="text-2xl mb-3">🔔</div>
+            <h4 class="font-bold text-neutral-100 mb-2">Webhook</h4>
+            <p class="text-sm text-neutral-400">Acionado por requisição HTTP. Ex: Nova venda no TikTok Shop dispara fluxo.</p>
+          </div>
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="text-2xl mb-3">📊</div>
+            <h4 class="font-bold text-neutral-100 mb-2">Trigger de App</h4>
+            <p class="text-sm text-neutral-400">Evento em outro app. Ex: Nova linha no Google Sheets inicia processo.</p>
+          </div>
+        </div>
+
+        <!-- Exemplo de Webhook -->
+        <div class="bg-dark-700/50 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📝 Exemplo: Webhook de Novo Conteúdo</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">1</div>
+              <div>
+                <p class="font-bold text-neutral-100">Crie o webhook no n8n/Make</p>
+                <p class="text-sm text-neutral-400">Você recebe uma URL única ex: https://n8n.suaempresa.com/webhook/abc123</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">2</div>
+              <div>
+                <p class="font-bold text-neutral-100">Configure o Google Sheets</p>
+                <p class="text-sm text-neutral-400">Use Apps Script para enviar dados para o webhook quando nova linha for adicionada</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">3</div>
+              <div>
+                <p class="font-bold text-neutral-100">Dados chegam automaticamente</p>
+                <p class="text-sm text-neutral-400">Título, descrição, hashtags - tudo disponível para o próximo passo do fluxo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Conectando APIs de IA -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🤖</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Conectando APIs de IA</h2>
+            <p class="text-neutral-400">Integrando ChatGPT, Claude e geradores de vídeo</p>
+          </div>
+        </div>
+
+        <!-- APIs Principais -->
+        <div class="space-y-6 mb-6">
+          <!-- OpenAI -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">💚</span>
+              <h3 class="font-bold text-emerald-400">OpenAI (ChatGPT)</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-neutral-300 mb-3">Usos principais:</p>
+                <ul class="space-y-1 text-sm text-neutral-400">
+                  <li>• Geração de roteiros</li>
+                  <li>• Criação de variações de copy</li>
+                  <li>• Análise de comentários</li>
+                  <li>• Tradução de conteúdo</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-sm text-neutral-300 mb-3">Config no n8n/Make:</p>
+                <ul class="space-y-1 text-sm text-neutral-400">
+                  <li>• API Key da OpenAI</li>
+                  <li>• Modelo: gpt-4 ou gpt-3.5-turbo</li>
+                  <li>• Temperature: 0.7 (criativo)</li>
+                  <li>• Max tokens: 500-1000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Claude -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🟠</span>
+              <h3 class="font-bold text-orange-400">Anthropic (Claude)</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-neutral-300 mb-3">Vantagens:</p>
+                <ul class="space-y-1 text-sm text-neutral-400">
+                  <li>• Contexto maior (100K tokens)</li>
+                  <li>• Melhor em análises longas</li>
+                  <li>• Respostas mais detalhadas</li>
+                  <li>• Bom para revisar conteúdo</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-sm text-neutral-300 mb-3">Quando usar:</p>
+                <ul class="space-y-1 text-sm text-neutral-400">
+                  <li>• Análise de múltiplos vídeos</li>
+                  <li>• Revisão de roteiros longos</li>
+                  <li>• Estratégia de conteúdo</li>
+                  <li>• Pesquisa de mercado</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- HeyGen/Video -->
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <div class="flex items-center mb-4">
+              <span class="text-2xl mr-3">🎬</span>
+              <h3 class="font-bold text-pink-400">APIs de Vídeo (HeyGen, kie.ai)</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-sm text-neutral-300 mb-3">Fluxo típico:</p>
+                <ul class="space-y-1 text-sm text-neutral-400">
+                  <li>1. Enviar texto/roteiro via API</li>
+                  <li>2. Selecionar avatar/template</li>
+                  <li>3. Aguardar processamento (webhook callback)</li>
+                  <li>4. Receber URL do vídeo finalizado</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-sm text-neutral-300 mb-3">Considerações:</p>
+                <ul class="space-y-1 text-sm text-neutral-400">
+                  <li>• Tempo de processamento: 2-10 min</li>
+                  <li>• Use filas para múltiplos vídeos</li>
+                  <li>• Mantenha créditos monitorados</li>
+                  <li>• Configure webhook de retorno</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dica de Prompts -->
+        <div class="bg-purple-900/20 p-6 rounded-xl border border-purple-500/30">
+          <h4 class="font-bold text-purple-400 mb-3">💡 Dica: Versionamento de Prompts</h4>
+          <p class="text-neutral-300">
+            Guarde seus prompts em variáveis ou arquivos separados. Quando encontrar um prompt que funciona bem,
+            <strong>versione-o</strong> (v1, v2, v3). Isso permite testar variações e sempre poder voltar para
+            uma versão que funcionava.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Execução em Lote (Batch) -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl p-8 border border-emerald-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">📦</span>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Execução em Lote (Batch)</h2>
+            <p class="text-neutral-400">Processando múltiplos itens de uma vez</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          Em vez de processar um item por vez, a <strong class="text-emerald-400">execução em lote</strong> permite
+          enviar dezenas de roteiros, gerar múltiplos vídeos e publicar tudo de forma coordenada.
+        </p>
+
+        <!-- Exemplo de Batch -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">🔄 Workflow de Batch Processing</h3>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-600">
+                  <th class="text-left py-3 px-4 text-neutral-400">Etapa</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Ação</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Volume</th>
+                </tr>
+              </thead>
+              <tbody class="text-neutral-300">
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold text-violet-400">1. Input</td>
+                  <td class="py-3 px-4">Ler planilha com 20 ideias</td>
+                  <td class="py-3 px-4">20 linhas</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold text-pink-400">2. Roteiro</td>
+                  <td class="py-3 px-4">GPT gera roteiro para cada ideia</td>
+                  <td class="py-3 px-4">20 roteiros</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold text-cyan-400">3. Vídeo</td>
+                  <td class="py-3 px-4">HeyGen/kie.ai processa em paralelo</td>
+                  <td class="py-3 px-4">20 vídeos</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4 font-semibold text-emerald-400">4. Output</td>
+                  <td class="py-3 px-4">Links salvos em pasta do Drive</td>
+                  <td class="py-3 px-4">20 arquivos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Dicas de Batch -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+            <h4 class="font-bold text-emerald-400 mb-3">✓ Boas Práticas</h4>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Limite batches em 20-50 itens</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Adicione delays entre requisições API</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Implemente retry em caso de falha</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Monitore rate limits das APIs</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+            <h4 class="font-bold text-red-400 mb-3">✗ Erros Comuns</h4>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Enviar 100+ requisições simultâneas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Não tratar erros individuais</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Ignorar timeouts de API</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">▸</span>
+                <span>Não logar resultados para debug</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: Fluxo Completo Exemplo -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🗺️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Fluxo Completo: Ideia → Vídeo Publicado</h2>
+            <p class="text-neutral-400">Automação end-to-end em ação</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Passo 1 -->
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">1</div>
+            <div class="flex-1 bg-dark-700/50 rounded-xl p-4">
+              <h4 class="font-bold text-violet-400">Trigger: Nova Ideia na Planilha</h4>
+              <p class="text-sm text-neutral-400">Google Sheets → Webhook → n8n inicia execução</p>
+            </div>
+          </div>
+
+          <!-- Passo 2 -->
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">2</div>
+            <div class="flex-1 bg-dark-700/50 rounded-xl p-4">
+              <h4 class="font-bold text-pink-400">Geração de Roteiro</h4>
+              <p class="text-sm text-neutral-400">OpenAI API → Prompt com contexto do produto → Retorna roteiro formatado</p>
+            </div>
+          </div>
+
+          <!-- Passo 3 -->
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">3</div>
+            <div class="flex-1 bg-dark-700/50 rounded-xl p-4">
+              <h4 class="font-bold text-cyan-400">Criação do Vídeo</h4>
+              <p class="text-sm text-neutral-400">HeyGen API → Avatar + roteiro → Processamento (5min) → Webhook callback</p>
+            </div>
+          </div>
+
+          <!-- Passo 4 -->
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">4</div>
+            <div class="flex-1 bg-dark-700/50 rounded-xl p-4">
+              <h4 class="font-bold text-emerald-400">Armazenamento</h4>
+              <p class="text-sm text-neutral-400">Download do vídeo → Upload para Google Drive → Link salvo na planilha</p>
+            </div>
+          </div>
+
+          <!-- Passo 5 -->
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">5</div>
+            <div class="flex-1 bg-dark-700/50 rounded-xl p-4">
+              <h4 class="font-bold text-orange-400">Agendamento de Publicação</h4>
+              <p class="text-sm text-neutral-400">Botato/Later API → Agendar para horário ideal → Confirmar slot</p>
+            </div>
+          </div>
+
+          <!-- Passo 6 -->
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-dark-900 font-bold mr-4 flex-shrink-0">6</div>
+            <div class="flex-1 bg-dark-700/50 rounded-xl p-4">
+              <h4 class="font-bold text-primary">Notificação</h4>
+              <p class="text-sm text-neutral-400">Slack/Telegram → "Vídeo #47 agendado para 14h" → Atualiza status na planilha</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Final -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">✅ Checklist de Orquestração</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">n8n ou Make configurado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">API Key da OpenAI ativa</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Webhook de entrada criado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Google Sheets conectado</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Prompt de roteiro testado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">API de vídeo integrada</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Fluxo de batch configurado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Notificações ativas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 1: Orquestração com n8n e Make
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</body>
+</html>

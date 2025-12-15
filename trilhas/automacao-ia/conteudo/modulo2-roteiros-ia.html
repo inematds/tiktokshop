@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 2: Geração de Roteiros e Copy com IA | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-pink-400 font-semibold">Módulo 02</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 2 - ROTEIROS E COPY
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">✍️ Geração de Roteiros e Copy com IA</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        Transforme uma ideia em dezenas de roteiros otimizados para conversão.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-pink-400">1→5</div>
+        <div class="text-xs text-neutral-400">Ideia → Roteiros</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-violet-400">A/B</div>
+        <div class="text-xs text-neutral-400">Testes Automáticos</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">30s</div>
+        <div class="text-xs text-neutral-400">Por Roteiro</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-cyan-400">∞</div>
+        <div class="text-xs text-neutral-400">Variações</div>
+      </div>
+    </div>
+
+    <!-- Seção 1: Poder da IA na Copy -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-pink-900/30 to-dark-800 rounded-2xl p-8 border border-pink-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🚀</span>
+          <div>
+            <h2 class="text-2xl font-bold text-pink-400">O Poder da IA na Criação de Copy</h2>
+            <p class="text-neutral-400">De horas para segundos, de 1 para dezenas</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          A IA não substitui sua criatividade - ela <strong class="text-pink-400">amplifica sua capacidade de execução</strong>.
+          Em vez de criar 1 roteiro por hora, você cria 10 variações em 5 minutos, testa todas e descobre o que funciona.
+        </p>
+
+        <!-- Multiplicador -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📊 O Efeito Multiplicador</h3>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="text-center p-4 bg-dark-800 rounded-xl">
+              <p class="text-sm text-neutral-400 mb-2">Sem IA</p>
+              <p class="text-3xl font-bold text-red-400">1 ideia</p>
+              <p class="text-sm text-neutral-400 mt-1">→ 1 roteiro → 1 vídeo</p>
+            </div>
+            <div class="text-center p-4 bg-emerald-900/30 rounded-xl border border-emerald-500/30">
+              <p class="text-sm text-neutral-400 mb-2">Com IA</p>
+              <p class="text-3xl font-bold text-emerald-400">1 ideia</p>
+              <p class="text-sm text-neutral-400 mt-1">→ 5 roteiros → 5 ganchos → 5 CTAs = 125 combinações</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fórmula -->
+        <div class="bg-pink-900/20 p-6 rounded-xl border border-pink-500/30">
+          <h4 class="font-bold text-pink-400 mb-3">💡 A Fórmula de Automação</h4>
+          <p class="text-neutral-300 text-lg text-center font-mono">
+            1 ideia × 5 roteiros × 5 ganchos × 5 CTAs = <span class="text-pink-400 font-bold">125 variações possíveis</span>
+          </p>
+          <p class="text-sm text-neutral-400 text-center mt-3">
+            Teste todas e deixe o algoritmo escolher o vencedor
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: Ferramentas de IA -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🛠️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Ferramentas de IA para Copy</h2>
+            <p class="text-neutral-400">ChatGPT, Claude e como usar cada um</p>
+          </div>
+        </div>
+
+        <!-- Ferramentas -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <!-- ChatGPT -->
+          <div class="bg-gradient-to-br from-emerald-900/30 to-dark-700 rounded-xl p-6 border border-emerald-500/30">
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">💚</span>
+              <h3 class="text-xl font-bold text-emerald-400">ChatGPT (GPT-4)</h3>
+            </div>
+            <p class="text-sm text-neutral-300 mb-4">Melhor para criação rápida e variações</p>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Ganchos criativos e virais</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Roteiros curtos (15-60s)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Variações A/B rápidas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>CTAs persuasivos</span>
+              </li>
+            </ul>
+            <p class="text-xs text-emerald-400 mt-4">API: gpt-4-turbo ou gpt-3.5-turbo</p>
+          </div>
+
+          <!-- Claude -->
+          <div class="bg-gradient-to-br from-orange-900/30 to-dark-700 rounded-xl p-6 border border-orange-500/30">
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">🟠</span>
+              <h3 class="text-xl font-bold text-orange-400">Claude (Anthropic)</h3>
+            </div>
+            <p class="text-sm text-neutral-300 mb-4">Melhor para análise e conteúdo longo</p>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-start">
+                <span class="text-orange-400 mr-2">▸</span>
+                <span>Roteiros detalhados</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-400 mr-2">▸</span>
+                <span>Análise de concorrentes</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-400 mr-2">▸</span>
+                <span>Estratégia de conteúdo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-400 mr-2">▸</span>
+                <span>Revisão e melhoria de textos</span>
+              </li>
+            </ul>
+            <p class="text-xs text-orange-400 mt-4">API: claude-3-opus ou claude-3-sonnet</p>
+          </div>
+        </div>
+
+        <!-- Quando usar cada um -->
+        <div class="bg-dark-700/50 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-neutral-100 mb-4">🎯 Quando Usar Cada Um</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dark-600">
+                  <th class="text-left py-3 px-4 text-neutral-400">Tarefa</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Ferramenta</th>
+                  <th class="text-left py-3 px-4 text-neutral-400">Motivo</th>
+                </tr>
+              </thead>
+              <tbody class="text-neutral-300">
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4">10 ganchos rápidos</td>
+                  <td class="py-3 px-4 text-emerald-400">ChatGPT</td>
+                  <td class="py-3 px-4 text-neutral-400">Velocidade e criatividade</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4">Roteiro de 3 minutos</td>
+                  <td class="py-3 px-4 text-orange-400">Claude</td>
+                  <td class="py-3 px-4 text-neutral-400">Contexto longo, coerência</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4">Variações de CTA</td>
+                  <td class="py-3 px-4 text-emerald-400">ChatGPT</td>
+                  <td class="py-3 px-4 text-neutral-400">Quantidade e variedade</td>
+                </tr>
+                <tr class="border-b border-dark-700">
+                  <td class="py-3 px-4">Análise de viral</td>
+                  <td class="py-3 px-4 text-orange-400">Claude</td>
+                  <td class="py-3 px-4 text-neutral-400">Profundidade de análise</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Prompts Versionados -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-violet-900/30 to-dark-800 rounded-2xl p-8 border border-violet-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">📝</span>
+          <div>
+            <h2 class="text-2xl font-bold text-violet-400">Prompts Versionados</h2>
+            <p class="text-neutral-400">A chave para consistência e evolução</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          <strong class="text-violet-400">Versionamento de prompts</strong> significa tratar seus prompts como código:
+          salvar versões, testar mudanças e sempre poder voltar ao que funcionava.
+        </p>
+
+        <!-- Estrutura de Prompt -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">🧩 Estrutura de um Prompt Eficiente</h3>
+
+          <div class="space-y-4">
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-violet-500">
+              <h4 class="font-bold text-violet-400 mb-2">1. Contexto (Role)</h4>
+              <p class="text-sm text-neutral-400">"Você é um copywriter especializado em TikTok Shop que cria roteiros virais para produtos de beleza..."</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-pink-500">
+              <h4 class="font-bold text-pink-400 mb-2">2. Tarefa (Task)</h4>
+              <p class="text-sm text-neutral-400">"Crie 5 variações de roteiro para um vídeo de 30 segundos sobre [PRODUTO]..."</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-cyan-500">
+              <h4 class="font-bold text-cyan-400 mb-2">3. Formato (Format)</h4>
+              <p class="text-sm text-neutral-400">"Cada roteiro deve ter: Gancho (3s), Problema (5s), Solução (10s), Prova (7s), CTA (5s)..."</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-emerald-500">
+              <h4 class="font-bold text-emerald-400 mb-2">4. Exemplos (Examples)</h4>
+              <p class="text-sm text-neutral-400">"Exemplo de gancho bom: 'Isso salvou minha pele em 3 dias'..."</p>
+            </div>
+
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-orange-500">
+              <h4 class="font-bold text-orange-400 mb-2">5. Restrições (Constraints)</h4>
+              <p class="text-sm text-neutral-400">"Não use: 'clique no link', 'compre agora'. Use linguagem informal, max 150 palavras..."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exemplo de Versionamento -->
+        <div class="bg-violet-900/20 p-6 rounded-xl border border-violet-500/30">
+          <h4 class="font-bold text-violet-400 mb-3">📁 Exemplo de Versionamento</h4>
+          <div class="font-mono text-sm text-neutral-300 space-y-1">
+            <p>prompts/</p>
+            <p class="pl-4">├── roteiro-v1.txt (original)</p>
+            <p class="pl-4">├── roteiro-v2.txt (adicionou exemplos)</p>
+            <p class="pl-4">├── roteiro-v3.txt (ajustou tom) ← <span class="text-emerald-400">atual</span></p>
+            <p class="pl-4">└── roteiro-v4-test.txt (testando)</p>
+          </div>
+          <p class="text-sm text-neutral-400 mt-4">
+            Sempre documente o que mudou em cada versão e qual teve melhor performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Automação 1→5 -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🔄</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Automação: 1 Ideia → 5 Roteiros</h2>
+            <p class="text-neutral-400">O fluxo completo de multiplicação</p>
+          </div>
+        </div>
+
+        <!-- Fluxo Visual -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📊 Workflow de Multiplicação</h3>
+
+          <div class="space-y-6">
+            <!-- Input -->
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">1</div>
+              <div class="flex-1">
+                <h4 class="font-bold text-pink-400">Input: 1 Ideia Base</h4>
+                <p class="text-sm text-neutral-400 mb-2">Você fornece:</p>
+                <ul class="text-sm text-neutral-300 space-y-1">
+                  <li>• Produto/serviço</li>
+                  <li>• Benefício principal</li>
+                  <li>• Público-alvo</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Roteiros -->
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">2</div>
+              <div class="flex-1">
+                <h4 class="font-bold text-violet-400">IA Gera: 5 Roteiros</h4>
+                <p class="text-sm text-neutral-400 mb-2">Cada roteiro com abordagem diferente:</p>
+                <div class="grid grid-cols-5 gap-2 text-xs">
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Problema</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Tutorial</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Storytime</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Review</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Antes/Depois</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ganchos -->
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">3</div>
+              <div class="flex-1">
+                <h4 class="font-bold text-cyan-400">Para Cada Roteiro: 5 Ganchos</h4>
+                <p class="text-sm text-neutral-400 mb-2">Variações de abertura:</p>
+                <div class="grid grid-cols-5 gap-2 text-xs">
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Pergunta</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Choque</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Curiosidade</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Promessa</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Polêmica</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">4</div>
+              <div class="flex-1">
+                <h4 class="font-bold text-emerald-400">Para Cada Combinação: 5 CTAs</h4>
+                <p class="text-sm text-neutral-400 mb-2">Chamadas para ação:</p>
+                <div class="grid grid-cols-5 gap-2 text-xs">
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Urgência</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Escassez</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Social</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Benefício</span>
+                  <span class="bg-dark-800 p-2 rounded text-center text-neutral-300">Direto</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Output -->
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-dark-900 font-bold mr-4 flex-shrink-0">5</div>
+              <div class="flex-1">
+                <h4 class="font-bold text-primary">Output: 125 Combinações</h4>
+                <p class="text-sm text-neutral-400">5 × 5 × 5 = 125 variações únicas para testar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dica -->
+        <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+          <h4 class="font-bold text-emerald-400 mb-3">💡 Estratégia de Teste</h4>
+          <p class="text-neutral-300">
+            Não publique 125 vídeos. Selecione as <strong>5-10 melhores combinações</strong> (sua intuição + IA),
+            teste por 48h, analise qual performa melhor e então escale as variações vencedoras.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Tipos de Gancho -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-cyan-900/30 to-dark-800 rounded-2xl p-8 border border-cyan-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🪝</span>
+          <div>
+            <h2 class="text-2xl font-bold text-cyan-400">Tipos de Gancho que Convertem</h2>
+            <p class="text-neutral-400">Os primeiros 3 segundos decidem tudo</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <!-- Gancho 1 -->
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="flex items-center mb-3">
+              <span class="text-2xl mr-3">❓</span>
+              <h4 class="font-bold text-neutral-100">Pergunta Intrigante</h4>
+            </div>
+            <p class="text-sm text-neutral-400 mb-3">Ativa a curiosidade do espectador</p>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="text-sm text-cyan-400 italic">"Você sabia que 90% das pessoas usam esse produto errado?"</p>
+            </div>
+          </div>
+
+          <!-- Gancho 2 -->
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="flex items-center mb-3">
+              <span class="text-2xl mr-3">😱</span>
+              <h4 class="font-bold text-neutral-100">Choque/Surpresa</h4>
+            </div>
+            <p class="text-sm text-neutral-400 mb-3">Quebra padrão, prende atenção</p>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="text-sm text-pink-400 italic">"Joguei fora TODOS os meus produtos depois de descobrir isso"</p>
+            </div>
+          </div>
+
+          <!-- Gancho 3 -->
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="flex items-center mb-3">
+              <span class="text-2xl mr-3">🤫</span>
+              <h4 class="font-bold text-neutral-100">Segredo/Exclusivo</h4>
+            </div>
+            <p class="text-sm text-neutral-400 mb-3">Cria sensação de privilégio</p>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="text-sm text-violet-400 italic">"O truque que as dermatologistas não contam..."</p>
+            </div>
+          </div>
+
+          <!-- Gancho 4 -->
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="flex items-center mb-3">
+              <span class="text-2xl mr-3">⚡</span>
+              <h4 class="font-bold text-neutral-100">Resultado Rápido</h4>
+            </div>
+            <p class="text-sm text-neutral-400 mb-3">Promessa de transformação</p>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="text-sm text-emerald-400 italic">"Em 3 dias minha pele mudou completamente"</p>
+            </div>
+          </div>
+
+          <!-- Gancho 5 -->
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="flex items-center mb-3">
+              <span class="text-2xl mr-3">🔥</span>
+              <h4 class="font-bold text-neutral-100">Polêmica Leve</h4>
+            </div>
+            <p class="text-sm text-neutral-400 mb-3">Gera engajamento nos comentários</p>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="text-sm text-orange-400 italic">"Vocês vão me odiar por isso, mas skincare caro é golpe"</p>
+            </div>
+          </div>
+
+          <!-- Gancho 6 -->
+          <div class="bg-dark-700/50 rounded-xl p-5">
+            <div class="flex items-center mb-3">
+              <span class="text-2xl mr-3">👆</span>
+              <h4 class="font-bold text-neutral-100">Comando Direto</h4>
+            </div>
+            <p class="text-sm text-neutral-400 mb-3">Cria urgência imediata</p>
+            <div class="bg-dark-800 rounded-lg p-3">
+              <p class="text-sm text-yellow-400 italic">"PARA TUDO e presta atenção nisso"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prompt para Ganchos -->
+        <div class="bg-cyan-900/20 p-6 rounded-xl border border-cyan-500/30">
+          <h4 class="font-bold text-cyan-400 mb-3">📝 Prompt para Gerar Ganchos</h4>
+          <div class="bg-dark-800 rounded-lg p-4 font-mono text-sm text-neutral-300">
+            <p>Crie 10 ganchos para vídeo de TikTok sobre [PRODUTO].</p>
+            <p class="mt-2">Use estes formatos:</p>
+            <p>- 2 perguntas intrigantes</p>
+            <p>- 2 com elemento de choque</p>
+            <p>- 2 revelando "segredo"</p>
+            <p>- 2 com promessa de resultado</p>
+            <p>- 2 com tom polêmico leve</p>
+            <p class="mt-2">Max 10 palavras cada. Tom informal, direto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: CTAs que Convertem -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🎯</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">CTAs que Convertem no TikTok Shop</h2>
+            <p class="text-neutral-400">Fechando a venda sem parecer vendedor</p>
+          </div>
+        </div>
+
+        <!-- O que evitar -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+            <h4 class="font-bold text-red-400 mb-4">✗ CTAs que NÃO funcionam</h4>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>"Clique no link da bio"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>"Compre agora" (genérico)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>"Link na descrição"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>"Acesse nosso site"</span>
+              </li>
+            </ul>
+            <p class="text-xs text-neutral-400 mt-4">Parecem spam e reduzem alcance</p>
+          </div>
+
+          <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+            <h4 class="font-bold text-emerald-400 mb-4">✓ CTAs que FUNCIONAM</h4>
+            <ul class="space-y-2 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>"Toca no carrinho amarelo"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>"Salva pra não perder"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>"Comenta 'EU QUERO' que te mando"</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>"Últimas X unidades"</span>
+              </li>
+            </ul>
+            <p class="text-xs text-neutral-400 mt-4">Naturais e com urgência real</p>
+          </div>
+        </div>
+
+        <!-- Tipos de CTA -->
+        <div class="bg-dark-700/50 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-neutral-100 mb-4">📋 5 Tipos de CTA por Objetivo</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div>
+                <h4 class="font-bold text-orange-400">Urgência</h4>
+                <p class="text-sm text-neutral-400">"Só hoje por esse preço"</p>
+              </div>
+              <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded">Conversão alta</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div>
+                <h4 class="font-bold text-purple-400">Escassez</h4>
+                <p class="text-sm text-neutral-400">"Restam só 47 unidades"</p>
+              </div>
+              <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">FOMO</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div>
+                <h4 class="font-bold text-blue-400">Prova Social</h4>
+                <p class="text-sm text-neutral-400">"3.000 pessoas já compraram essa semana"</p>
+              </div>
+              <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Confiança</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div>
+                <h4 class="font-bold text-emerald-400">Benefício</h4>
+                <p class="text-sm text-neutral-400">"Sua pele vai agradecer em 7 dias"</p>
+              </div>
+              <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded">Valor</span>
+            </div>
+
+            <div class="flex items-center justify-between bg-dark-800 rounded-lg p-4">
+              <div>
+                <h4 class="font-bold text-pink-400">Engajamento</h4>
+                <p class="text-sm text-neutral-400">"Comenta qual cor você quer"</p>
+              </div>
+              <span class="text-xs bg-pink-500/20 text-pink-400 px-2 py-1 rounded">Alcance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Final -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">✅ Checklist de Roteiros com IA</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">API de IA configurada</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Prompt base estruturado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Sistema de versionamento</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Templates de gancho</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Biblioteca de CTAs</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Fluxo 1→5 automatizado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Planilha de testes A/B</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Métricas de performance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 2: Geração de Roteiros e Copy com IA
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</body>
+</html>

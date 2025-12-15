@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 3: Vídeos com Avatar (HeyGen + Opus Pro) | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-cyan-400 font-semibold">Módulo 03</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 3 - AVATARES DE IA
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">🎥 Vídeos com Avatar (HeyGen + Opus)</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        Escale produção de vídeos "humanizados" sem precisar gravar.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-cyan-400">100+</div>
+        <div class="text-xs text-neutral-400">Avatares Disponíveis</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-pink-400">40+</div>
+        <div class="text-xs text-neutral-400">Idiomas/Vozes</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">5min</div>
+        <div class="text-xs text-neutral-400">Render por Vídeo</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-violet-400">∞</div>
+        <div class="text-xs text-neutral-400">Escala Possível</div>
+      </div>
+    </div>
+
+    <!-- Seção 1: O que são Avatares de IA -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-cyan-900/30 to-dark-800 rounded-2xl p-8 border border-cyan-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🤖</span>
+          <div>
+            <h2 class="text-2xl font-bold text-cyan-400">O Que São Avatares de IA?</h2>
+            <p class="text-neutral-400">Vídeos com apresentador virtual realista</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          Avatares de IA são <strong class="text-cyan-400">apresentadores virtuais gerados por inteligência artificial</strong>
+          que falam seu texto com sincronização labial perfeita, expressões faciais e gestos naturais. Parece uma pessoa real,
+          mas é 100% gerado por computador.
+        </p>
+
+        <!-- Vantagens -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-emerald-400 mb-4">✓ Vantagens</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Não precisa aparecer no vídeo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Consistência visual em todos os vídeos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Produção 24/7 sem cansaço</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Múltiplos idiomas sem sotaque</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Escala massiva possível</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-yellow-400 mb-4">⚠️ Considerações</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span>Custo por minuto de vídeo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span>Movimentos ainda não 100% perfeitos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span>Espectadores podem perceber</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span>Tempo de renderização (2-10 min)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-400 mr-2">▸</span>
+                <span>Personalização limitada</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quando usar -->
+        <div class="bg-cyan-900/20 p-6 rounded-xl border border-cyan-500/30">
+          <h4 class="font-bold text-cyan-400 mb-3">🎯 Quando Usar Avatares</h4>
+          <p class="text-neutral-300">
+            Ideal para: <strong>vídeos educacionais, reviews de produto, FAQs, tutoriais</strong>. Não recomendado para:
+            conteúdo muito pessoal, depoimentos autênticos ou quando a conexão humana real é diferencial.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 2: HeyGen -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🟢</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">HeyGen: A Ferramenta Principal</h2>
+            <p class="text-neutral-400">O padrão da indústria para avatares de IA</p>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid md:grid-cols-3 gap-4 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-5 text-center">
+            <div class="text-3xl mb-3">👤</div>
+            <h4 class="font-bold text-neutral-100 mb-2">Avatares Premium</h4>
+            <p class="text-sm text-neutral-400">100+ avatares realistas, diversidade de gêneros e etnias</p>
+          </div>
+          <div class="bg-dark-700/50 rounded-xl p-5 text-center">
+            <div class="text-3xl mb-3">🎤</div>
+            <h4 class="font-bold text-neutral-100 mb-2">Vozes Naturais</h4>
+            <p class="text-sm text-neutral-400">300+ vozes em 40+ idiomas incluindo português BR</p>
+          </div>
+          <div class="bg-dark-700/50 rounded-xl p-5 text-center">
+            <div class="text-3xl mb-3">🔧</div>
+            <h4 class="font-bold text-neutral-100 mb-2">API Robusta</h4>
+            <p class="text-sm text-neutral-400">Integração fácil com n8n/Make para automação</p>
+          </div>
+        </div>
+
+        <!-- Workflow HeyGen -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📋 Workflow no HeyGen</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">1</div>
+              <div>
+                <p class="font-bold text-neutral-100">Escolha seu Avatar</p>
+                <p class="text-sm text-neutral-400">Selecione um avatar que combine com sua marca e público-alvo</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">2</div>
+              <div>
+                <p class="font-bold text-neutral-100">Defina a Voz</p>
+                <p class="text-sm text-neutral-400">Use a mesma voz sempre para criar consistência (pode clonar sua própria voz)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">3</div>
+              <div>
+                <p class="font-bold text-neutral-100">Cole seu Roteiro</p>
+                <p class="text-sm text-neutral-400">O texto gerado pela IA no módulo anterior vai aqui</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">4</div>
+              <div>
+                <p class="font-bold text-neutral-100">Configure Background</p>
+                <p class="text-sm text-neutral-400">Use fundo verde para editar depois ou um cenário pronto</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">5</div>
+              <div>
+                <p class="font-bold text-neutral-100">Renderize e Baixe</p>
+                <p class="text-sm text-neutral-400">2-5 minutos de processamento, download automático ou via webhook</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preços -->
+        <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+          <h4 class="font-bold text-emerald-400 mb-3">💰 Preços HeyGen (2024/2025)</h4>
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div class="text-center">
+              <p class="font-bold text-neutral-100">Free</p>
+              <p class="text-neutral-400">1 min/mês, marca d'água</p>
+            </div>
+            <div class="text-center">
+              <p class="font-bold text-emerald-400">Creator $29/mês</p>
+              <p class="text-neutral-400">15 min/mês, sem marca</p>
+            </div>
+            <div class="text-center">
+              <p class="font-bold text-violet-400">Business $89/mês</p>
+              <p class="text-neutral-400">30 min/mês, API inclusa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 3: Avatar Personalizado -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-violet-900/30 to-dark-800 rounded-2xl p-8 border border-violet-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">✨</span>
+          <div>
+            <h2 class="text-2xl font-bold text-violet-400">Criando seu Avatar Personalizado</h2>
+            <p class="text-neutral-400">Clone digital seu ou de um porta-voz</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          O HeyGen permite criar um <strong class="text-violet-400">avatar customizado</strong> baseado em um vídeo
+          de referência. Você grava 2-5 minutos de si mesmo (ou de um porta-voz contratado) e a IA cria um clone digital.
+        </p>
+
+        <!-- Passos -->
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <h3 class="text-xl font-bold text-neutral-100 mb-4">📹 Como Criar um Avatar Custom</h3>
+
+          <div class="space-y-4">
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-violet-500">
+              <h4 class="font-bold text-violet-400 mb-2">1. Grave o Vídeo Base</h4>
+              <ul class="text-sm text-neutral-400 space-y-1">
+                <li>• Iluminação profissional (luz frontal)</li>
+                <li>• Fundo limpo (verde ou neutro)</li>
+                <li>• 2-5 minutos falando naturalmente</li>
+                <li>• Movimento variado de cabeça e expressões</li>
+              </ul>
+            </div>
+
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-pink-500">
+              <h4 class="font-bold text-pink-400 mb-2">2. Upload e Treinamento</h4>
+              <ul class="text-sm text-neutral-400 space-y-1">
+                <li>• Faça upload no HeyGen Studio</li>
+                <li>• IA processa por 1-2 horas</li>
+                <li>• Você recebe avatar pronto para uso</li>
+              </ul>
+            </div>
+
+            <div class="bg-dark-800 rounded-lg p-4 border-l-4 border-cyan-500">
+              <h4 class="font-bold text-cyan-400 mb-2">3. Clone de Voz (Opcional)</h4>
+              <ul class="text-sm text-neutral-400 space-y-1">
+                <li>• Grave 3+ minutos de áudio limpo</li>
+                <li>• IA clona sua voz exata</li>
+                <li>• Avatar fala com sua voz real</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerta Legal -->
+        <div class="bg-yellow-900/20 p-6 rounded-xl border border-yellow-500/30">
+          <h4 class="font-bold text-yellow-400 mb-3">⚠️ Aviso Legal Importante</h4>
+          <p class="text-neutral-300">
+            Só crie avatares de pessoas que <strong>consentiram por escrito</strong>. Usar a imagem de terceiros
+            sem autorização pode resultar em processos. Se contratar um porta-voz, inclua cláusula de cessão de imagem digital.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 4: Opus Pro -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">✂️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Opus Pro: Cortes Automáticos</h2>
+            <p class="text-neutral-400">Transforme vídeos longos em shorts virais</p>
+          </div>
+        </div>
+
+        <p class="text-lg text-neutral-300 mb-6">
+          O <strong class="text-pink-400">Opus Pro</strong> (opus.pro) usa IA para identificar os melhores momentos
+          de vídeos longos e transformá-los automaticamente em clipes curtos otimizados para TikTok.
+        </p>
+
+        <!-- Features Opus -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-pink-400 mb-4">🎯 O que o Opus faz</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span>Analisa vídeos longos (10min-2h)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span>Identifica momentos de alto engajamento</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span>Corta automaticamente em clips de 30-60s</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span>Adiciona legendas animadas</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">▸</span>
+                <span>Reformata para 9:16 (vertical)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-dark-700/50 rounded-xl p-6">
+            <h3 class="font-bold text-emerald-400 mb-4">✓ Casos de uso</h3>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Podcasts → 10-20 clips por episódio</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Lives → Melhores momentos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Webinars → Shorts educacionais</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Reviews longos → Destaques</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">▸</span>
+                <span>Tutoriais → Dicas rápidas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Workflow Opus -->
+        <div class="bg-dark-700/50 rounded-xl p-6">
+          <h3 class="text-lg font-bold text-neutral-100 mb-4">🔄 Workflow de Reaproveitamento</h3>
+
+          <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+            <span class="bg-violet-500/20 text-violet-400 px-3 py-2 rounded-lg">Vídeo Longo (30min)</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-pink-500/20 text-pink-400 px-3 py-2 rounded-lg">Opus Pro</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-2 rounded-lg">10-15 Shorts</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-emerald-500/20 text-emerald-400 px-3 py-2 rounded-lg">Agendar</span>
+            <span class="text-neutral-500">→</span>
+            <span class="bg-primary/20 text-primary px-3 py-2 rounded-lg">2 semanas de conteúdo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 5: Fluxo Completo -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl p-8 border border-emerald-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🔗</span>
+          <div>
+            <h2 class="text-2xl font-bold text-emerald-400">Fluxo Completo: Roteiro → Shorts</h2>
+            <p class="text-neutral-400">Integrando HeyGen + Opus Pro</p>
+          </div>
+        </div>
+
+        <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+          <div class="space-y-6">
+            <!-- Etapa 1 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">1</div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-4">
+                <h4 class="font-bold text-violet-400">Roteiro Gerado (Módulo 2)</h4>
+                <p class="text-sm text-neutral-400">5 variações de roteiro prontas da IA</p>
+              </div>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">2</div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-4">
+                <h4 class="font-bold text-cyan-400">HeyGen Renderiza</h4>
+                <p class="text-sm text-neutral-400">Avatar apresenta cada roteiro → 5 vídeos de 1-3 min</p>
+              </div>
+            </div>
+
+            <!-- Etapa 3 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">3</div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-4">
+                <h4 class="font-bold text-pink-400">Opus Pro Corta</h4>
+                <p class="text-sm text-neutral-400">Cada vídeo gera 3-5 shorts → 15-25 clips totais</p>
+              </div>
+            </div>
+
+            <!-- Etapa 4 -->
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">4</div>
+              <div class="flex-1 bg-dark-800 rounded-xl p-4">
+                <h4 class="font-bold text-emerald-400">Pasta Final</h4>
+                <p class="text-sm text-neutral-400">Todos os clips prontos para agendamento</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+          <h4 class="font-bold text-emerald-400 mb-3">📊 Resultado</h4>
+          <div class="grid md:grid-cols-3 gap-4 text-center">
+            <div>
+              <p class="text-3xl font-bold text-neutral-100">1</p>
+              <p class="text-sm text-neutral-400">Ideia original</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-pink-400">5</p>
+              <p class="text-sm text-neutral-400">Vídeos longos</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-emerald-400">15-25</p>
+              <p class="text-sm text-neutral-400">Shorts prontos</p>
+            </div>
+          </div>
+          <p class="text-sm text-neutral-400 text-center mt-4">
+            = 2-3 semanas de conteúdo com uma única ideia
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção 6: Dicas de Qualidade -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">💡</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Dicas para Máxima Qualidade</h2>
+            <p class="text-neutral-400">Fazendo avatares parecerem mais naturais</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+            <h4 class="font-bold text-emerald-400 mb-4">✓ Faça</h4>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Use roteiros curtos (máx 60s)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Adicione B-roll sobre o avatar</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Mantenha mesmo avatar/voz sempre</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Use legendas para distrair do rosto</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-400 mr-2">✓</span>
+                <span>Escolha avatar com boa movimentação</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+            <h4 class="font-bold text-red-400 mb-4">✗ Evite</h4>
+            <ul class="space-y-3 text-sm text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Vídeos muito longos (>3min)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Close extremo no rosto</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Trocar avatar a cada vídeo</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Palavras muito técnicas/difíceis</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-400 mr-2">✗</span>
+                <span>Tentar esconder que é avatar</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Dica Pro -->
+        <div class="bg-violet-900/20 p-6 rounded-xl border border-violet-500/30">
+          <h4 class="font-bold text-violet-400 mb-3">🎬 Dica Pro: Estilo "Split Screen"</h4>
+          <p class="text-neutral-300">
+            Use o avatar em apenas 1/3 da tela (canto) enquanto o resto mostra produto, demonstração ou imagens.
+            Isso distrai do avatar, adiciona valor visual e parece mais profissional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo Final -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">✅ Checklist de Vídeos com Avatar</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Conta HeyGen ativa</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Avatar fixo escolhido</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Voz consistente definida</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">API configurada no n8n/Make</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Conta Opus Pro ativa</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Fluxo HeyGen→Opus testado</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Pasta de outputs organizada</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Primeiro lote de vídeos gerado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 3: Vídeos com Avatar (HeyGen + Opus Pro)
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</body>
+</html>
