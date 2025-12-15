@@ -97,6 +97,90 @@
     .progress-bar {
       background: linear-gradient(90deg, #3B82F6, #E040FB);
     }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dark .modal-content {
+      background-color: #1f2937;
+      border: 1px solid #4b5563;
+    }
+
+    .dark .modal-header {
+      border-bottom: 1px solid #4b5563;
+      background: linear-gradient(135deg, #374151, #1f2937);
+    }
+
+    html:not(.dark) .modal-content {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+    }
+
+    html:not(.dark) .modal-header {
+      border-bottom: 1px solid #e2e8f0;
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+    }
+
+    html:not(.dark) .modal-header h2 {
+      color: #1e293b !important;
+    }
+
+    html:not(.dark) .modal-body {
+      color: #334155;
+    }
+
+    .modal-content {
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      max-height: 90vh;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .modal-header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-body {
+      padding: 2rem;
+      overflow-y: auto;
+      max-height: calc(90vh - 80px);
+    }
+
+    .close-modal {
+      color: #9ca3af;
+      font-size: 2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .close-modal:hover {
+      color: #ef4444;
+    }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
@@ -187,202 +271,764 @@
       </div>
 
       <!-- Module 1: Estratégia de Produto -->
-      <a href="conteudo/modulo1-produto.html" class="block">
-        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-6 border border-dark-600 card-glow cursor-pointer">
-          <div class="flex items-start justify-between mb-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">🏷️</span>
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-neutral-100">Módulo 1: Estratégia de Produto</h2>
-                <p class="text-neutral-400">O que vender e como selecionar produtos vencedores</p>
-              </div>
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">01</span>
             </div>
-            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">DISPONÍVEL</span>
-          </div>
-
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Foco na Novidade</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Precificação $20-30</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Fulfillment 1-2 dias</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Checklist de Validação</h4>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Estratégia de Produto</h2>
+              <p class="text-neutral-400">O que vender e como selecionar produtos vencedores</p>
             </div>
           </div>
+          <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">4 Tópicos</span>
         </div>
-      </a>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Foco na Novidade - O Fator #1 de Viralização</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">O que é:</strong> O TikTok Shop favorece produtos com fator "novidade". Itens que geram curiosidade, que o consumidor nunca viu antes ou que resolvem problemas de formas inesperadas.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Por que importa:</strong> Produtos "normais" competem por preço. Produtos "novidade" competem por atenção - e ganham margens maiores.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Ferramentas:</strong> Use Kalodata e Shoplus para identificar produtos trending antes da saturação.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Precificação para Compra por Impulso (R$50-100)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">O que é:</strong> A faixa de R$50-100 é o "sweet spot" para compras por impulso no TikTok. Barato o suficiente para não precisar de aprovação, caro o suficiente para ter margem.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Margem mínima:</strong> Sempre garanta pelo menos 40% de margem bruta para cobrir custos de marketing e operação.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Regra de ouro:</strong> Se o cliente precisa "pensar" antes de comprar, o preço está alto demais para o TikTok.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fulfillment Rápido - Entrega em 1-2 Dias</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">O que é:</strong> O TikTok Shop prioriza vendedores com fulfillment rápido. Entregas longas = baixa avaliação = menos distribuição.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Impacto:</strong> Vendedores com entrega em 1-2 dias recebem até 3x mais impressões que vendedores com entrega em 7+ dias.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Solução:</strong> Use fulfillment centers locais ou trabalhe apenas com fornecedores que garantam estoque no Brasil.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Checklist de Validação de Produto</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-orange-900/20 rounded-lg border-l-4 border-orange-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-orange-400">Antes de começar:</strong> Todo produto deve passar por este checklist antes de investir em conteúdo.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-orange-400">Critérios:</strong> ✓ Fator novidade | ✓ Preço R$50-100 | ✓ Margem 40%+ | ✓ Fulfillment 1-2 dias | ✓ Demonstrável em vídeo | ✓ Resolve problema real
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod1')" class="inline-flex items-center space-x-2 px-4 py-2 bg-orange-500/20 text-orange-400 rounded-lg hover:bg-orange-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo1-produto.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Página Completa</span>
+          </a>
+          <a href="downloads/checklist-produto.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download MD</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Module 2: Volume é Tudo -->
-      <a href="conteudo/modulo2-volume.html" class="block">
-        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-6 border border-dark-600 card-glow cursor-pointer">
-          <div class="flex items-start justify-between mb-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">📈</span>
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-neutral-100">Módulo 2: Volume é Tudo</h2>
-                <p class="text-neutral-400">A métrica que escala receita de forma linear</p>
-              </div>
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">02</span>
             </div>
-            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">DISPONÍVEL</span>
-          </div>
-
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">200-300 vídeos/mês</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Correlação GMV</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Batch Creation</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Roadmap de Escala</h4>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Volume é Tudo</h2>
+              <p class="text-neutral-400">A métrica que escala receita de forma linear</p>
             </div>
           </div>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-semibold">4 Tópicos</span>
         </div>
-      </a>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>A Meta: 200-300 Vídeos por Mês</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">O que é:</strong> Vendedores de sucesso no TikTok Shop produzem entre 200-300 vídeos por mês (próprios + afiliados combinados).
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Por que funciona:</strong> Volume = oportunidades de viralização. Cada vídeo é um bilhete de loteria. Mais bilhetes = mais chances de ganhar.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Divisão típica:</strong> 50 vídeos próprios + 150-250 de afiliados = 200-300 total/mês.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Correlação Direta Volume → GMV</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Descoberta chave:</strong> A correlação entre volume de conteúdo e GMV é quase linear. Dobrar vídeos ≈ dobrar receita.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Dados reais:</strong> Marcas que aumentaram de 50 para 200 vídeos/mês viram GMV aumentar de R$15K para R$60K+ em média.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Implicação:</strong> Escala no TikTok é previsível - diferente de outras plataformas onde qualidade > quantidade.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Batch Creation - Produção em Escala</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">O que é:</strong> Técnica de produzir múltiplos vídeos em uma única sessão de gravação. 1 dia de gravação = 15-20 vídeos.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Como fazer:</strong> Prepare 10 roteiros → Grave todos em sequência → Edite em lote com templates do CapCut → Agende publicação.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Resultado:</strong> 2 dias de produção por semana = 40 vídeos = 160/mês só de conteúdo próprio.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Roadmap de Escala: Semana a Semana</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-purple-900/20 rounded-lg border-l-4 border-purple-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Semana 1-2:</strong> 7 vídeos (1/dia) - Aprenda o básico, teste formatos.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-purple-400">Semana 3-4:</strong> 14 vídeos (2/dia) - Implemente batch creation, identifique top 3 formatos.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-purple-400">Mês 2+:</strong> 21+ vídeos (3/dia) - Escale o que funciona, recrute afiliados para multiplicar.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod2')" class="inline-flex items-center space-x-2 px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg hover:bg-purple-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo2-volume.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Página Completa</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Module 3: Parcerias com Criadores -->
-      <a href="conteudo/modulo3-parcerias.html" class="block">
-        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-6 border border-dark-600 card-glow cursor-pointer">
-          <div class="flex items-start justify-between mb-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">🤝</span>
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-neutral-100">Módulo 3: Parcerias com Criadores</h2>
-                <p class="text-neutral-400">A verdade sobre afiliados e como recrutar em escala</p>
-              </div>
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">03</span>
             </div>
-            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs font-semibold">DISPONÍVEL</span>
-          </div>
-
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Princípio de Pareto</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Plateau 50K seguidores</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Tiers de Comissão</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Recrutamento em Massa</h4>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Parcerias com Criadores</h2>
+              <p class="text-neutral-400">A verdade sobre afiliados e como recrutar em escala</p>
             </div>
           </div>
+          <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs font-semibold">4 Tópicos</span>
         </div>
-      </a>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Princípio de Pareto nos Afiliados (80/20)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Realidade:</strong> 80% da sua receita de afiliados virá de 20% dos criadores. A maioria não vai performar - e isso é normal.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Implicação:</strong> Recrute em volume. Se você quer 10 afiliados que vendem, precisa recrutar 50+.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">Estratégia:</strong> Não invista muito tempo em cada afiliado individualmente no início. Automatize o onboarding e deixe os dados mostrarem quem merece atenção especial.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>O Plateau dos 50K Seguidores</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Descoberta:</strong> Criadores entre 1K-50K seguidores frequentemente têm melhor ROI que influenciadores grandes. Acima de 50K, o retorno por seguidor cai.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Por quê:</strong> Micro-criadores têm audiência mais engajada, cobram menos e são mais fáceis de recrutar.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">Foco:</strong> Priorize criadores na faixa 5K-30K seguidores. Melhor custo-benefício.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Estrutura de Tiers de Comissão</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Tier Básico (10-15%):</strong> Para novos afiliados, sem histórico comprovado.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Tier Médio (15-20%):</strong> Afiliados com 5+ vendas ou engajamento consistente.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">Tier Premium (20-25%):</strong> Top performers. Priorize retenção destes com comissões altas + bônus.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Recrutamento em Massa com DMs</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-pink-900/20 rounded-lg border-l-4 border-pink-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Meta:</strong> Envie 20+ DMs personalizadas por dia para criadores do seu nicho.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-pink-400">Taxa de conversão:</strong> Espere 5-10% de aceitação. 20 DMs = 1-2 novos afiliados.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-pink-400">Script:</strong> Seja direto: "Vi seu conteúdo sobre [tema], temos um produto que combina. Oferecemos [X]% de comissão + produto grátis. Interesse?"
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod3')" class="inline-flex items-center space-x-2 px-4 py-2 bg-pink-500/20 text-pink-400 rounded-lg hover:bg-pink-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo3-parcerias.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Página Completa</span>
+          </a>
+          <a href="downloads/estrutura-comissoes.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download MD</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Module 4: Analytics e Métricas -->
-      <a href="conteudo/modulo4-analytics.html" class="block">
-        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-6 border border-dark-600 card-glow cursor-pointer">
-          <div class="flex items-start justify-between mb-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">📊</span>
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-neutral-100">Módulo 4: Analytics e Métricas</h2>
-                <p class="text-neutral-400">Os números que realmente importam para escalar</p>
-              </div>
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">04</span>
             </div>
-            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">DISPONÍVEL</span>
-          </div>
-
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">GMV, CVR, AOV, ROAS</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Watch Time Metrics</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Funil de Vendas</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Dashboard Essencial</h4>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Analytics e Métricas</h2>
+              <p class="text-neutral-400">Os números que realmente importam para escalar</p>
             </div>
           </div>
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">4 Tópicos</span>
         </div>
-      </a>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>As 4 Métricas Fundamentais: GMV, CVR, AOV, ROAS</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">GMV:</strong> Volume total de vendas. Benchmark: R$50K-100K/mês para considerar escala.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">CVR:</strong> Taxa de conversão. Meta: 2-5% (média TikTok Shop).
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">AOV:</strong> Ticket médio. Benchmark: R$50-80. Otimize com bundles e upsell.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">ROAS:</strong> Retorno sobre ads. Mínimo 3x para escalar com segurança.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Watch Time e Métricas de Conteúdo</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Watch Time %:</strong> Meta 75%+ de conclusão. Principal sinal de qualidade para o algoritmo.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Engagement Rate:</strong> Curtidas + comentários + shares / views. Meta: 5%+.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Click-through Rate:</strong> Cliques no produto / views. Meta: 1-3%.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Diagnóstico de Problemas pelo Funil</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Views baixas:</strong> Problema no hook (3s), horário errado ou shadowban.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Poucos cliques:</strong> CTA fraco, produto não destacado, audiência errada.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Add-to-cart baixo:</strong> Preço alto, fotos ruins, frete caro.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Abandono de carrinho:</strong> Checkout complexo, frete surpresa, falta de confiança.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Rotinas de Análise: Diária, Semanal, Mensal</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Diário (10min):</strong> GMV do dia, pedidos, top vídeos 24h, alertas de estoque.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-blue-400">Semanal (30min):</strong> Comparativo GMV, top 5 vídeos, performance por afiliado, taxa de retorno.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-blue-400">Mensal (1h):</strong> GMV total, margem líquida real, ROI por canal, projeção próximo mês.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod4')" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo4-analytics.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Página Completa</span>
+          </a>
+          <a href="downloads/dashboard-metricas.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download MD</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Module 5: Automação e Escala -->
-      <a href="conteudo/modulo5-automacao.html" class="block">
-        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-6 border border-dark-600 card-glow cursor-pointer">
-          <div class="flex items-start justify-between mb-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">⚡</span>
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-neutral-100">Módulo 5: Automação e Escala</h2>
-                <p class="text-neutral-400">Sistemas para escalar sem aumentar trabalho</p>
-              </div>
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">05</span>
             </div>
-            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-semibold">DISPONÍVEL</span>
-          </div>
-
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Mindset de Escala</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Stack de Ferramentas</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Workflows Prontos</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-dark-600">
-              <h4 class="font-semibold text-neutral-200 text-sm">Escala com Time</h4>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Automação e Escala</h2>
+              <p class="text-neutral-400">Sistemas para escalar sem aumentar trabalho</p>
             </div>
           </div>
+          <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-semibold">4 Tópicos</span>
         </div>
-      </a>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Mindset de Escala: Sistemas vs. Esforço</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Princípio:</strong> Escala real vem de sistemas, não de trabalhar mais horas. Cada tarefa repetitiva é candidata a automação.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Regra 3x:</strong> Se você faz algo 3+ vezes, documente. Se faz 10+ vezes, automatize.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Meta:</strong> Operação funcionando com &lt;4h/dia do seu tempo direto.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Stack de Ferramentas Essenciais</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Conteúdo:</strong> CapCut (templates), Canva, ChatGPT (roteiros).
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Agendamento:</strong> TikTok Business, Later, Metricool.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Automação:</strong> Zapier, Make (Integromat), n8n.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Analytics:</strong> Kalodata, Shoplus, planilhas customizadas.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Workflows Prontos para Copiar</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Onboarding Afiliados:</strong> Formulário → Email automático com kit → Adição ao grupo.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Pós-Venda:</strong> Pedido → Email tracking → Follow-up 7 dias → Pedido de review.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Alertas:</strong> Estoque baixo → Notificação → Reposição automática.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Quando e Como Contratar</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-cyan-900/20 rounded-lg border-l-4 border-cyan-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Sinal para contratar:</strong> GMV &gt;R$30K/mês E você está gastando &gt;6h/dia na operação.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-cyan-400">Primeiro contratado:</strong> Editor de vídeo ou VA (assistente virtual) para tarefas repetitivas.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-cyan-400">Antes de contratar:</strong> Documente SOPs (procedimentos) para tudo. Sem SOPs = treinamento caótico.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod5')" class="inline-flex items-center space-x-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo5-automacao.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Página Completa</span>
+          </a>
+        </div>
+      </div>
 
       <!-- Module 6: Checklist de Implementação -->
-      <a href="conteudo/modulo6-implementacao.html" class="block">
-        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-6 border border-dark-600 card-glow cursor-pointer">
-          <div class="flex items-start justify-between mb-6">
-            <div class="flex items-center space-x-4">
-              <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
-                <span class="text-2xl">✅</span>
-              </div>
-              <div>
-                <h2 class="text-2xl font-bold text-neutral-100">Módulo 6: Checklist de Implementação</h2>
-                <p class="text-neutral-400">Plano de ação completo em 90 dias</p>
-              </div>
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl">06</span>
             </div>
-            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold">DISPONÍVEL</span>
-          </div>
-
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-primary/30">
-              <h4 class="font-semibold text-primary text-sm">Fase 1: Fundação</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-purple-500/30">
-              <h4 class="font-semibold text-purple-400 text-sm">Fase 2: Volume</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-pink-500/30">
-              <h4 class="font-semibold text-pink-400 text-sm">Fase 3-5: Otimização</h4>
-            </div>
-            <div class="p-3 bg-dark-700/50 rounded-lg border border-emerald-500/30">
-              <h4 class="font-semibold text-emerald-400 text-sm">Fase 6: Escala</h4>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Checklist de Implementação</h2>
+              <p class="text-neutral-400">Plano de ação completo em 90 dias</p>
             </div>
           </div>
+          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold">6 Fases</span>
         </div>
-      </a>
+
+        <ul class="topics-list space-y-1">
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fase 1-2: Fundação de Produto (Semana 1-2)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Seleção:</strong> Pesquise produtos trending, identifique 3-5 na faixa R$50-100, verifique margem 40%+.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Setup:</strong> Cadastre no TikTok Shop, fotos de qualidade, descrição com benefícios, política de frete.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Marco:</strong> 1 produto ativo pronto para tráfego.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fase 2: Volume de Conteúdo (Semana 3-4)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Setup:</strong> Crie 5-10 templates de roteiro, monte kit de gravação, configure CapCut.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Metas:</strong> Semana 1: 7 vídeos → Semana 2: 14 → Semana 3: 14+ → Semana 4: 21 (3/dia).
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Marco:</strong> 50+ vídeos publicados, 3 formatos identificados.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fase 3: Programa de Afiliados (Semana 5-6)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Estrutura:</strong> Defina tiers (10-25%), crie kit de onboarding, templates de abordagem.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Recrutamento:</strong> Liste 50+ criadores, envie 20 DMs/dia, onboarde 5-10 afiliados.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Marco:</strong> 20+ afiliados ativos produzindo conteúdo.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fase 4: Analytics (Semana 7-8)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Setup:</strong> Conta Business, dashboard personalizado, metas (GMV, CVR, AOV).
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Rotinas:</strong> Check diário 10min, análise semanal 30min, review mensal 1h.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Marco:</strong> Dashboard funcionando, rotinas estabelecidas.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fase 5: Automação (Semana 9-10)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Conteúdo:</strong> Batch creation, agendamento automático, IA para roteiros.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Comunicação:</strong> FAQ automático, onboarding automatizado, follow-up pós-compra.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Marco:</strong> Tarefas repetitivas automatizadas.
+              </p>
+            </div>
+          </li>
+
+          <li class="topic-item">
+            <button class="topic-button w-full text-left px-4 py-3 bg-dark-700 hover:bg-dark-600 rounded-lg transition-colors font-medium text-neutral-200 flex items-center justify-between">
+              <span>Fase 6: Escala (Semana 11-12)</span>
+              <svg class="w-5 h-5 text-neutral-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="topic-explanation hidden mt-2 ml-4 p-4 bg-emerald-900/20 rounded-lg border-l-4 border-emerald-500">
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Volume:</strong> 50+ vídeos próprios/semana, 50+ afiliados, 200+ vídeos/mês no ecossistema.
+              </p>
+              <p class="text-sm mb-2 text-neutral-300">
+                <strong class="text-emerald-400">Metas:</strong> GMV &gt;R$30K/mês, margem &gt;25%, crescimento &gt;20% mês a mês.
+              </p>
+              <p class="text-sm text-neutral-300">
+                <strong class="text-emerald-400">Marco:</strong> Operação lucrativa e escalável com &lt;4h/dia.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-dark-600">
+          <button onclick="openModal('modal-mod6')" class="inline-flex items-center space-x-2 px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-lg hover:bg-emerald-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+            <span>Ver em Modal</span>
+          </button>
+          <a href="conteudo/modulo6-implementacao.html" class="inline-flex items-center space-x-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Página Completa</span>
+          </a>
+          <a href="downloads/plano-90-dias.md" download class="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 text-accent rounded-lg hover:bg-accent/30 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download MD</span>
+          </a>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -405,6 +1051,252 @@
     </div>
   </section>
 
+  <!-- Modal Módulo 1: Estratégia de Produto -->
+  <div id="modal-mod1" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">01 Estratégia de Produto</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">O que vender e como selecionar produtos vencedores no TikTok Shop.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">4 Conceitos</span>
+            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">Checklist Incluso</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-orange-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-orange-500/30">
+          <h3 class="text-xl font-bold text-orange-400 mb-3">Foco na Novidade</h3>
+          <p class="text-neutral-300 mb-3">O TikTok Shop favorece produtos com fator "novidade" - itens que geram curiosidade e resolvem problemas de formas inesperadas.</p>
+          <p class="text-sm text-neutral-400">Use Kalodata e Shoplus para identificar produtos trending antes da saturação.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Precificação R$50-100</h3>
+          <p class="text-neutral-300 mb-3">Sweet spot para compra por impulso. Barato o suficiente para não precisar de aprovação, caro o suficiente para ter margem.</p>
+          <p class="text-sm text-orange-400">Regra: Se o cliente precisa "pensar" antes de comprar, o preço está alto demais.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Fulfillment 1-2 Dias</h3>
+          <p class="text-neutral-300">Vendedores com entrega rápida recebem até 3x mais impressões. Use fulfillment centers locais ou fornecedores com estoque no Brasil.</p>
+        </div>
+        <div class="bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Checklist de Validação</h3>
+          <p class="mb-4 text-sm text-white/80">Fator novidade | Preço R$50-100 | Margem 40%+ | Fulfillment 1-2 dias | Demonstrável em vídeo</p>
+          <button onclick="closeModal('modal-mod1')" class="inline-block bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Módulo 2: Volume é Tudo -->
+  <div id="modal-mod2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">02 Volume é Tudo</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">A métrica que escala receita de forma linear e previsível.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">200-300 vídeos/mês</span>
+            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">Correlação GMV</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-purple-500/30">
+          <h3 class="text-xl font-bold text-purple-400 mb-3">Meta: 200-300 Vídeos/Mês</h3>
+          <p class="text-neutral-300 mb-3">Vendedores de sucesso produzem 200-300 vídeos por mês (próprios + afiliados). Cada vídeo é um bilhete de loteria.</p>
+          <p class="text-sm text-neutral-400">Divisão típica: 50 próprios + 150-250 de afiliados = 200-300 total.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Correlação Volume → GMV</h3>
+          <p class="text-neutral-300">Dobrar vídeos ≈ dobrar receita. Marcas que foram de 50 para 200 vídeos viram GMV ir de R$15K para R$60K+.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Batch Creation</h3>
+          <p class="text-neutral-300">1 dia de gravação = 15-20 vídeos. 2 dias/semana = 40 vídeos = 160/mês só de conteúdo próprio.</p>
+        </div>
+        <div class="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Escala Previsível</h3>
+          <p class="mb-4 text-sm text-white/80">No TikTok, escala é previsível - diferente de outras plataformas onde qualidade > quantidade.</p>
+          <button onclick="closeModal('modal-mod2')" class="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Módulo 3: Parcerias com Criadores -->
+  <div id="modal-mod3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">03 Parcerias com Criadores</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">A verdade sobre afiliados e como recrutar em escala.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">Princípio 80/20</span>
+            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">Tiers de Comissão</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-pink-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-pink-500/30">
+          <h3 class="text-xl font-bold text-pink-400 mb-3">Princípio de Pareto (80/20)</h3>
+          <p class="text-neutral-300 mb-3">80% da receita vem de 20% dos afiliados. Se quer 10 que vendem, recrute 50+.</p>
+          <p class="text-sm text-neutral-400">Automatize o onboarding e deixe os dados mostrarem quem merece atenção especial.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Plateau dos 50K Seguidores</h3>
+          <p class="text-neutral-300">Criadores entre 1K-50K têm melhor ROI que influenciadores grandes. Foque na faixa 5K-30K seguidores.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Estrutura de Tiers</h3>
+          <div class="grid grid-cols-3 gap-2 text-center text-sm">
+            <div class="bg-dark-700 p-3 rounded"><p class="text-pink-400 font-bold">Básico</p><p class="text-neutral-400">10-15%</p></div>
+            <div class="bg-dark-700 p-3 rounded"><p class="text-pink-400 font-bold">Médio</p><p class="text-neutral-400">15-20%</p></div>
+            <div class="bg-dark-700 p-3 rounded"><p class="text-pink-400 font-bold">Premium</p><p class="text-neutral-400">20-25%</p></div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-pink-600 to-red-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Recrutamento em Massa</h3>
+          <p class="mb-4 text-sm text-white/80">20 DMs/dia = 1-2 novos afiliados. Script direto: produto + comissão + produto grátis.</p>
+          <button onclick="closeModal('modal-mod3')" class="inline-block bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Módulo 4: Analytics e Métricas -->
+  <div id="modal-mod4" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">04 Analytics e Métricas</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Os números que realmente importam para escalar.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold">4 Métricas Core</span>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold">Dashboard Incluso</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-blue-500/30">
+          <h3 class="text-xl font-bold text-blue-400 mb-3">4 Métricas Fundamentais</h3>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="bg-dark-700/50 p-3 rounded"><p class="text-blue-400 font-bold">GMV</p><p class="text-neutral-400">Meta: R$50K-100K/mês</p></div>
+            <div class="bg-dark-700/50 p-3 rounded"><p class="text-blue-400 font-bold">CVR</p><p class="text-neutral-400">Meta: 2-5%</p></div>
+            <div class="bg-dark-700/50 p-3 rounded"><p class="text-blue-400 font-bold">AOV</p><p class="text-neutral-400">Meta: R$50-80</p></div>
+            <div class="bg-dark-700/50 p-3 rounded"><p class="text-blue-400 font-bold">ROAS</p><p class="text-neutral-400">Mínimo: 3x</p></div>
+          </div>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Diagnóstico pelo Funil</h3>
+          <ul class="space-y-2 text-sm text-neutral-300">
+            <li><span class="text-red-400">Views baixas:</span> Hook fraco ou horário errado</li>
+            <li><span class="text-red-400">Poucos cliques:</span> CTA fraco ou produto não destacado</li>
+            <li><span class="text-red-400">Add-to-cart baixo:</span> Preço alto ou fotos ruins</li>
+            <li><span class="text-red-400">Abandono:</span> Checkout complexo ou frete surpresa</li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Rotinas de Análise</h3>
+          <p class="mb-4 text-sm text-white/80">Diário: 10min | Semanal: 30min | Mensal: 1h</p>
+          <button onclick="closeModal('modal-mod4')" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Módulo 5: Automação e Escala -->
+  <div id="modal-mod5" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">05 Automação e Escala</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Sistemas para escalar sem aumentar trabalho.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold">Stack de Ferramentas</span>
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold">Workflows Prontos</span>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-cyan-900/30 to-dark-800 rounded-lg p-6 mb-4 border border-cyan-500/30">
+          <h3 class="text-xl font-bold text-cyan-400 mb-3">Mindset de Escala</h3>
+          <p class="text-neutral-300 mb-3">Escala real vem de sistemas, não de trabalhar mais horas. Regra 3x: faz 3+ vezes → documente. Faz 10+ vezes → automatize.</p>
+          <p class="text-sm text-cyan-400">Meta: Operação funcionando com &lt;4h/dia do seu tempo.</p>
+        </div>
+        <div class="bg-dark-800 rounded-lg p-6 mb-4 border border-dark-600">
+          <h3 class="text-xl font-bold text-neutral-100 mb-3">Stack de Ferramentas</h3>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div><p class="text-cyan-400 font-bold">Conteúdo</p><p class="text-neutral-400">CapCut, Canva, ChatGPT</p></div>
+            <div><p class="text-cyan-400 font-bold">Agendamento</p><p class="text-neutral-400">TikTok Business, Later</p></div>
+            <div><p class="text-cyan-400 font-bold">Automação</p><p class="text-neutral-400">Zapier, Make, n8n</p></div>
+            <div><p class="text-cyan-400 font-bold">Analytics</p><p class="text-neutral-400">Kalodata, Shoplus</p></div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-lg p-6 text-center">
+          <h3 class="text-xl font-bold mb-3">Quando Contratar</h3>
+          <p class="mb-4 text-sm text-white/80">GMV &gt;R$30K/mês E &gt;6h/dia na operação. Primeiro: editor de vídeo ou VA.</p>
+          <button onclick="closeModal('modal-mod5')" class="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Módulo 6: Checklist de Implementação -->
+  <div id="modal-mod6" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="text-2xl font-bold text-neutral-100">06 Checklist de Implementação</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-6">
+          <p class="text-lg text-neutral-200 mb-3 font-semibold">Plano de ação completo em 90 dias.</p>
+          <div class="flex gap-3 flex-wrap">
+            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold">6 Fases</span>
+            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold">Plano Completo</span>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div class="bg-dark-700 p-4 rounded-lg border-l-4 border-orange-500">
+            <p class="font-bold text-orange-400">Fase 1-2 (Sem 1-2): Fundação</p>
+            <p class="text-sm text-neutral-400">Selecionar produto, cadastrar na loja, testar fluxo de compra.</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg border-l-4 border-purple-500">
+            <p class="font-bold text-purple-400">Fase 2 (Sem 3-4): Volume</p>
+            <p class="text-sm text-neutral-400">50+ vídeos publicados, identificar top 3 formatos.</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg border-l-4 border-pink-500">
+            <p class="font-bold text-pink-400">Fase 3 (Sem 5-6): Afiliados</p>
+            <p class="text-sm text-neutral-400">20+ afiliados ativos produzindo conteúdo.</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg border-l-4 border-blue-500">
+            <p class="font-bold text-blue-400">Fase 4 (Sem 7-8): Analytics</p>
+            <p class="text-sm text-neutral-400">Dashboard funcionando, rotinas estabelecidas.</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg border-l-4 border-cyan-500">
+            <p class="font-bold text-cyan-400">Fase 5 (Sem 9-10): Automação</p>
+            <p class="text-sm text-neutral-400">Tarefas repetitivas automatizadas.</p>
+          </div>
+          <div class="bg-dark-700 p-4 rounded-lg border-l-4 border-emerald-500">
+            <p class="font-bold text-emerald-400">Fase 6 (Sem 11-12): Escala</p>
+            <p class="text-sm text-neutral-400">GMV &gt;R$30K/mês, margem &gt;25%, &lt;4h/dia.</p>
+          </div>
+        </div>
+        <div class="bg-gradient-to-br from-emerald-600 to-green-600 text-white rounded-lg p-6 text-center mt-4">
+          <h3 class="text-xl font-bold mb-3">Metas em 90 Dias</h3>
+          <p class="mb-4 text-sm text-white/80">50+ vídeos/semana | 50+ afiliados | R$30K+ GMV | 3%+ CVR</p>
+          <button onclick="closeModal('modal-mod6')" class="inline-block bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors">Voltar ao Curso</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="bg-dark-900 border-t border-dark-700 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -414,8 +1306,9 @@
     </div>
   </footer>
 
-  <!-- Theme Toggle Script -->
+  <!-- JavaScript -->
   <script>
+    // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
 
     // Check for saved theme preference or default to dark
@@ -432,6 +1325,75 @@
       } else {
         document.documentElement.classList.add('dark');
         localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // Topic Accordion
+    document.addEventListener('click', function(e) {
+      const topicButton = e.target.closest('.topic-button');
+
+      if (topicButton) {
+        const topicItem = topicButton.closest('.topic-item');
+        const explanation = topicItem.querySelector('.topic-explanation');
+        const arrow = topicButton.querySelector('svg');
+
+        if (explanation) {
+          // Close other topics in the same module
+          const moduleCard = topicItem.closest('.module-card');
+          moduleCard.querySelectorAll('.topic-explanation').forEach(exp => {
+            if (exp !== explanation) {
+              exp.classList.add('hidden');
+              const otherArrow = exp.closest('.topic-item').querySelector('.topic-button svg');
+              if (otherArrow) otherArrow.classList.remove('rotate-180');
+            }
+          });
+
+          // Toggle current
+          explanation.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-180');
+        }
+      }
+    });
+
+    // Modal Functions
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Close modal on backdrop click or X button
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('modal')) {
+        e.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      if (e.target.classList.contains('close-modal')) {
+        const modal = e.target.closest('.modal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close modal with ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const activeModals = document.querySelectorAll('.modal.active');
+        activeModals.forEach(modal => {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        });
       }
     });
   </script>
