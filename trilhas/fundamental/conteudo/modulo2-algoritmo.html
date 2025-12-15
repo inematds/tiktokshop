@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 2: O Algoritmo Desvendado | TikTok Shop Academy 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: { 900: '#0a0a0a', 800: '#141414', 700: '#1f1f1f', 600: '#2a2a2a' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #0a0a0a; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../index.html" class="flex items-center space-x-2 text-neutral-400 hover:text-primary transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Voltar para Trilha</span>
+        </a>
+        <span class="text-primary font-semibold">Módulo 02</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold mb-4">
+        MÓDULO 2 - ALGORITMO
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">⚙️ O Algoritmo Desvendado</h1>
+      <p class="text-xl text-neutral-400 max-w-2xl mx-auto">
+        Entenda exatamente como o TikTok decide quem vê seu conteúdo e como "hackear" o sistema de forma ética.
+      </p>
+    </div>
+
+    <!-- Stats Banner -->
+    <div class="grid grid-cols-4 gap-4 mb-12">
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-blue-400">75%+</div>
+        <div class="text-xs text-neutral-400">Watch Time Ideal</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-primary">60min</div>
+        <div class="text-xs text-neutral-400">Janela Crítica</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-accent">8</div>
+        <div class="text-xs text-neutral-400">Sinais Principais</div>
+      </div>
+      <div class="bg-dark-800 rounded-xl p-4 text-center border border-dark-600">
+        <div class="text-2xl font-bold text-emerald-400">3s</div>
+        <div class="text-xs text-neutral-400">Hook Decisivo</div>
+      </div>
+    </div>
+
+    <!-- Conceito 1: Como o Algoritmo Funciona -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-2xl p-8 border border-blue-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🤖</span>
+          <div>
+            <h2 class="text-2xl font-bold text-blue-400">Como o Algoritmo Realmente Funciona</h2>
+            <p class="text-neutral-400">A máquina de recomendação mais sofisticada do mundo</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            O algoritmo do TikTok é um <strong class="text-blue-400">sistema de recomendação baseado em Machine Learning</strong> que analisa milhares de sinais em tempo real para decidir qual conteúdo mostrar para cada usuário. Diferente de outras redes, ele prioriza <strong>interesse sobre conexões sociais</strong>.
+          </p>
+
+          <!-- Diagrama do Algoritmo -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-blue-400 mb-4">🔄 O Ciclo de Distribuição</h3>
+
+            <div class="grid md:grid-cols-4 gap-4 mb-6">
+              <div class="text-center p-4 bg-dark-800 rounded-xl border-2 border-blue-500/50">
+                <div class="text-3xl mb-2">1️⃣</div>
+                <p class="font-bold text-blue-400">Upload</p>
+                <p class="text-xs text-neutral-400 mt-1">Vídeo entra na fila de análise</p>
+              </div>
+              <div class="text-center p-4 bg-dark-800 rounded-xl border-2 border-emerald-500/50">
+                <div class="text-3xl mb-2">2️⃣</div>
+                <p class="font-bold text-emerald-400">Teste Inicial</p>
+                <p class="text-xs text-neutral-400 mt-1">300-500 visualizações teste</p>
+              </div>
+              <div class="text-center p-4 bg-dark-800 rounded-xl border-2 border-primary/50">
+                <div class="text-3xl mb-2">3️⃣</div>
+                <p class="font-bold text-primary">Avaliação</p>
+                <p class="text-xs text-neutral-400 mt-1">Métricas são analisadas</p>
+              </div>
+              <div class="text-center p-4 bg-dark-800 rounded-xl border-2 border-accent/50">
+                <div class="text-3xl mb-2">4️⃣</div>
+                <p class="font-bold text-accent">Escala</p>
+                <p class="text-xs text-neutral-400 mt-1">Expansão ou morte</p>
+              </div>
+            </div>
+
+            <div class="bg-blue-900/20 p-4 rounded-lg border border-blue-500/30">
+              <p class="text-neutral-300 text-sm">
+                <strong class="text-blue-400">Importante:</strong> O algoritmo NÃO considera quantos seguidores você tem no teste inicial.
+                Um vídeo de conta nova tem as MESMAS chances de viralizar que um de conta com milhões de seguidores.
+              </p>
+            </div>
+          </div>
+
+          <!-- Os 8 Sinais -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-blue-400 mb-4">📊 Os 8 Sinais que o Algoritmo Monitora</h3>
+
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="space-y-3">
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">⏱️</span>
+                  <div>
+                    <p class="font-bold text-emerald-400">1. Watch Time</p>
+                    <p class="text-sm text-neutral-300">% do vídeo assistido. Acima de 75% = excelente</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">🔁</span>
+                  <div>
+                    <p class="font-bold text-emerald-400">2. Replay Rate</p>
+                    <p class="text-sm text-neutral-300">Quantas vezes o vídeo foi reassistido</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">💬</span>
+                  <div>
+                    <p class="font-bold text-emerald-400">3. Comentários</p>
+                    <p class="text-sm text-neutral-300">Engajamento ativo > reações passivas</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">📤</span>
+                  <div>
+                    <p class="font-bold text-emerald-400">4. Compartilhamentos</p>
+                    <p class="text-sm text-neutral-300">Sinal mais forte de valor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">❤️</span>
+                  <div>
+                    <p class="font-bold text-accent">5. Likes</p>
+                    <p class="text-sm text-neutral-300">Validação rápida de qualidade</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">➕</span>
+                  <div>
+                    <p class="font-bold text-accent">6. Follows</p>
+                    <p class="text-sm text-neutral-300">Novo seguidor após ver o vídeo</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">🔖</span>
+                  <div>
+                    <p class="font-bold text-accent">7. Saves</p>
+                    <p class="text-sm text-neutral-300">Indica conteúdo de referência</p>
+                  </div>
+                </div>
+                <div class="flex items-start bg-dark-800/50 p-3 rounded-lg">
+                  <span class="text-2xl mr-3">👁️</span>
+                  <div>
+                    <p class="font-bold text-accent">8. Profile Views</p>
+                    <p class="text-sm text-neutral-300">Curiosidade gerada pelo conteúdo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-primary/10 rounded-lg border border-primary/30">
+              <p class="text-sm text-neutral-300">
+                <strong class="text-primary">Hierarquia de Peso:</strong>
+                Compartilhamento > Comentário > Save > Like > Watch Time > Follow
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 2: Watch Time -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">⏱️</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">A Métrica Rainha: Watch Time</h2>
+            <p class="text-neutral-400">Por que segundos importam mais que likes</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            O <strong class="text-primary">Watch Time Completion Rate</strong> é o fator mais importante para o algoritmo.
+            Não basta ter visualizações - você precisa que as pessoas assistam ATÉ O FINAL.
+          </p>
+
+          <!-- Benchmark Visual -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-primary mb-4">📈 Benchmarks de Watch Time</h3>
+
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">Abaixo de 30%</span>
+                  <span class="text-sm text-red-400">Distribuição cortada</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-red-500 h-4 rounded-full" style="width: 30%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">30% - 50%</span>
+                  <span class="text-sm text-yellow-400">Alcance limitado</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-yellow-500 h-4 rounded-full" style="width: 50%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">50% - 75%</span>
+                  <span class="text-sm text-blue-400">Bom desempenho</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm text-neutral-300">75%+ (META)</span>
+                  <span class="text-sm text-emerald-400">Potencial viral</span>
+                </div>
+                <div class="w-full bg-dark-600 rounded-full h-4">
+                  <div class="bg-gradient-to-r from-emerald-500 to-primary h-4 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Técnicas para Watch Time -->
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+              <h4 class="font-bold text-emerald-400 mb-4">✓ Técnicas que Aumentam</h4>
+              <ul class="space-y-3 text-neutral-300">
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Loops perfeitos:</strong> Final que conecta ao início</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Pattern interrupts:</strong> Mudanças a cada 2-3 segundos</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Open loops:</strong> "Espera até o final..."</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Resultado primeiro:</strong> Mostra antes, explica depois</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-400 mr-2">✓</span>
+                  <span><strong>Texto dinâmico:</strong> Legendas que prendem</span>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+              <h4 class="font-bold text-red-400 mb-4">✗ Erros que Destroem</h4>
+              <ul class="space-y-3 text-neutral-300">
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Intros longas:</strong> "Oi gente, tudo bem?"</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Ritmo lento:</strong> Cenas muito longas</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Áudio ruim:</strong> Difícil de entender</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Promessa quebrada:</strong> Hook não entregue</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-400 mr-2">✗</span>
+                  <span><strong>Final previsível:</strong> Sem surpresa</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 3: Os Primeiros 3 Segundos -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-accent/30 to-dark-800 rounded-2xl p-8 border border-accent/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">⚡</span>
+          <div>
+            <h2 class="text-2xl font-bold text-accent">A Regra dos 3 Segundos</h2>
+            <p class="text-neutral-400">Você tem 3 segundos. Use-os bem.</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            Pesquisas mostram que <strong class="text-accent">65% dos espectadores decidem continuar ou não nos primeiros 3 segundos</strong>.
+            Seu hook precisa ser um soco no estômago - impossível de ignorar.
+          </p>
+
+          <!-- Framework de Hook -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-accent mb-4">🪝 Framework do Hook Perfeito</h3>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <div class="bg-dark-800 p-4 rounded-lg border-l-4 border-accent">
+                <p class="font-bold text-accent mb-2">Segundo 0-1</p>
+                <p class="text-sm text-neutral-300">VISUAL IMPACTANTE</p>
+                <p class="text-xs text-neutral-400 mt-1">Movimento, cor, close extremo</p>
+              </div>
+              <div class="bg-dark-800 p-4 rounded-lg border-l-4 border-primary">
+                <p class="font-bold text-primary mb-2">Segundo 1-2</p>
+                <p class="text-sm text-neutral-300">TEXTO/ÁUDIO HOOK</p>
+                <p class="text-xs text-neutral-400 mt-1">"PARE!", "Isso muda tudo..."</p>
+              </div>
+              <div class="bg-dark-800 p-4 rounded-lg border-l-4 border-blue-400">
+                <p class="font-bold text-blue-400 mb-2">Segundo 2-3</p>
+                <p class="text-sm text-neutral-300">PROMESSA/CURIOSIDADE</p>
+                <p class="text-xs text-neutral-400 mt-1">O que vão ganhar assistindo</p>
+              </div>
+            </div>
+
+            <div class="bg-accent/10 p-4 rounded-lg border border-accent/30">
+              <h4 class="font-bold text-accent mb-2">Exemplos de Hooks Validados:</h4>
+              <ul class="space-y-2 text-neutral-300 text-sm">
+                <li>• <strong>"POV:"</strong> você acabou de descobrir que... [curiosidade]</li>
+                <li>• <strong>"PARE!"</strong> Você precisa ver isso antes de... [urgência]</li>
+                <li>• <strong>"Meu marido disse"</strong> pra jogar fora... [conflito]</li>
+                <li>• <strong>"Testei por 30 dias"</strong> e olha o resultado... [prova]</li>
+                <li>• <strong>"Ninguém fala sobre"</strong> esse segredo de... [exclusividade]</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dados de Pesquisa -->
+          <div class="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30">
+            <h4 class="font-bold text-blue-400 mb-3">📊 Dados do TikTok (2025)</h4>
+            <ul class="space-y-3 text-neutral-300">
+              <li class="flex items-start">
+                <span class="text-blue-400 mr-2 mt-1">•</span>
+                <span>Vídeos com <strong>texto nos primeiros 2 segundos</strong> têm 40% mais retenção</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-400 mr-2 mt-1">•</span>
+                <span><strong>Movimento nos primeiros frames</strong> aumenta em 25% a chance de não ser pulado</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-400 mr-2 mt-1">•</span>
+                <span>Hooks que <strong>criam curiosidade</strong> têm 2x mais watch time que hooks informativos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 4: Velocity -->
+    <section class="mb-12">
+      <div class="bg-dark-800 rounded-2xl p-8 border border-dark-600">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🚀</span>
+          <div>
+            <h2 class="text-2xl font-bold text-neutral-100">Engagement Velocity: A Janela de 60 Minutos</h2>
+            <p class="text-neutral-400">Por que a primeira hora decide tudo</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            O algoritmo não apenas mede O QUE acontece, mas <strong class="text-primary">QUÃO RÁPIDO acontece</strong>.
+            A velocidade do engajamento nos primeiros 60 minutos cria um efeito composto que determina o alcance final.
+          </p>
+
+          <!-- Timeline Velocity -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-primary mb-4">⏰ Timeline de Distribuição</h3>
+
+            <div class="relative my-8">
+              <div class="absolute left-4 right-4 h-1 bg-dark-600 top-6"></div>
+              <div class="flex justify-between relative">
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mb-2 relative z-10">0</div>
+                  <p class="text-xs text-neutral-400">Upload</p>
+                  <p class="text-xs text-red-400">Fila</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-dark-900 font-bold mb-2 relative z-10">15</div>
+                  <p class="text-xs text-neutral-400">Minutos</p>
+                  <p class="text-xs text-yellow-400">Teste 1</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mb-2 relative z-10">30</div>
+                  <p class="text-xs text-neutral-400">Minutos</p>
+                  <p class="text-xs text-blue-400">Teste 2</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mb-2 relative z-10">60</div>
+                  <p class="text-xs text-neutral-400">Minutos</p>
+                  <p class="text-xs text-emerald-400">Decisão</p>
+                </div>
+                <div class="text-center">
+                  <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-dark-900 font-bold mb-2 relative z-10">∞</div>
+                  <p class="text-xs text-neutral-400">Horas/Dias</p>
+                  <p class="text-xs text-primary">Escala</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4 mt-6">
+              <div class="bg-dark-800/50 p-4 rounded-lg">
+                <p class="font-semibold text-primary mb-2">Se nos primeiros 60 min:</p>
+                <ul class="text-sm text-neutral-300 space-y-1">
+                  <li>• Watch Time > 75%</li>
+                  <li>• Engajamento acima da média</li>
+                  <li>• Compartilhamentos acontecendo</li>
+                </ul>
+                <p class="text-emerald-400 mt-2 font-bold">→ Expansão para audiências maiores</p>
+              </div>
+              <div class="bg-dark-800/50 p-4 rounded-lg">
+                <p class="font-semibold text-red-400 mb-2">Se nos primeiros 60 min:</p>
+                <ul class="text-sm text-neutral-300 space-y-1">
+                  <li>• Watch Time < 50%</li>
+                  <li>• Poucos comentários</li>
+                  <li>• Zero compartilhamentos</li>
+                </ul>
+                <p class="text-red-400 mt-2 font-bold">→ Distribuição cortada</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dicas para Velocity -->
+          <div class="bg-primary/10 p-6 rounded-xl border border-primary/30">
+            <h4 class="font-bold text-primary mb-3">💡 Como Maximizar Velocity</h4>
+            <ol class="space-y-3 text-neutral-300">
+              <li><strong>1. Poste nos horários de pico</strong> - Quando sua audiência está mais ativa</li>
+              <li><strong>2. Engaje nos comentários IMEDIATAMENTE</strong> - Responda nos primeiros 30 min</li>
+              <li><strong>3. Compartilhe em outros canais</strong> - Stories do Instagram, WhatsApp, etc</li>
+              <li><strong>4. Peça ações específicas</strong> - "Comenta X se você também..."</li>
+              <li><strong>5. Use CTAs no início E no final</strong> - Dupla chance de engajamento</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conceito 5: Interest Graph -->
+    <section class="mb-12">
+      <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-2xl p-8 border border-purple-500/30">
+        <div class="flex items-center mb-6">
+          <span class="text-4xl mr-4">🎯</span>
+          <div>
+            <h2 class="text-2xl font-bold text-purple-400">O Interest Graph: Como o TikTok Te Classifica</h2>
+            <p class="text-neutral-400">Por que nicho específico vence audiência genérica</p>
+          </div>
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+          <p class="text-neutral-300 text-lg mb-6">
+            O TikTok agrupa usuários em <strong class="text-purple-400">"clusters de interesse"</strong>, não por dados demográficos.
+            Seu vídeo é testado em clusters específicos, e o sucesso depende de ACERTAR o cluster certo.
+          </p>
+
+          <!-- Diagrama de Clusters -->
+          <div class="bg-dark-700/50 rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-bold text-purple-400 mb-4">🕸️ Como Clusters Funcionam</h3>
+
+            <div class="grid grid-cols-3 gap-4 mb-6">
+              <div class="text-center p-4 bg-dark-800 rounded-xl">
+                <div class="text-3xl mb-2">👩‍🍳</div>
+                <p class="text-sm font-bold text-purple-400">Cluster: Cozinha</p>
+                <p class="text-xs text-neutral-400 mt-1">Air fryer, gadgets, receitas</p>
+              </div>
+              <div class="text-center p-4 bg-dark-800 rounded-xl">
+                <div class="text-3xl mb-2">💄</div>
+                <p class="text-sm font-bold text-purple-400">Cluster: Beleza</p>
+                <p class="text-xs text-neutral-400 mt-1">Skincare, makeup, GRWM</p>
+              </div>
+              <div class="text-center p-4 bg-dark-800 rounded-xl">
+                <div class="text-3xl mb-2">🎮</div>
+                <p class="text-sm font-bold text-purple-400">Cluster: Tech</p>
+                <p class="text-xs text-neutral-400 mt-1">Gadgets, unboxing, reviews</p>
+              </div>
+            </div>
+
+            <div class="bg-purple-900/20 p-4 rounded-lg border border-purple-500/30">
+              <p class="text-neutral-300 text-sm">
+                <strong class="text-purple-400">Importante:</strong> Se seu conteúdo é GENÉRICO demais, o algoritmo não sabe em qual cluster testar.
+                Resultado? Distribuição fraca para audiências aleatórias que não engajam.
+              </p>
+            </div>
+          </div>
+
+          <!-- Estratégia de Nicho -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-red-900/20 p-6 rounded-xl border border-red-500/30">
+              <h4 class="font-bold text-red-400 mb-3">❌ Erro Comum</h4>
+              <p class="text-neutral-300 text-sm mb-3">
+                "Vou fazer conteúdo pra TODO MUNDO porque assim alcanço mais gente"
+              </p>
+              <p class="text-red-400 text-sm font-bold">
+                Resultado: Algoritmo confuso → Distribuição fraca → Nenhum engajamento
+              </p>
+            </div>
+            <div class="bg-emerald-900/20 p-6 rounded-xl border border-emerald-500/30">
+              <h4 class="font-bold text-emerald-400 mb-3">✓ Estratégia Correta</h4>
+              <p class="text-neutral-300 text-sm mb-3">
+                "Vou dominar O NICHO de gadgets de cozinha para mães ocupadas"
+              </p>
+              <p class="text-emerald-400 text-sm font-bold">
+                Resultado: Cluster perfeito → Alta retenção → Expansão orgânica
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo -->
+    <section class="mb-12">
+      <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30">
+        <h2 class="text-2xl font-bold text-primary mb-6 text-center">📋 Checklist do Algoritmo</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Hook impactante nos primeiros 3 segundos</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Watch time projetado acima de 75%</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">CTA claro para comentários/compartilhamento</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Postando em horário de pico da audiência</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Nicho bem definido (cluster claro)</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Usando editor NATIVO do TikTok</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Plano para engajar nos primeiros 30 min</span>
+            </div>
+            <div class="flex items-center bg-dark-800/50 p-3 rounded-lg">
+              <input type="checkbox" class="mr-3 w-5 h-5 accent-primary">
+              <span class="text-neutral-300">Loop perfeito ou final surpreendente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="../index.html" class="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-dark-900 rounded-lg font-bold hover:bg-primary/90 transition-colors">
+            <span>Voltar para o Curso</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Módulo 2: O Algoritmo Desvendado
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme initialization
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+</body>
+</html>
