@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha Estrategica | TikTok Shop Academy 2025</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: {
+              900: '#0a0a0a',
+              800: '#141414',
+              700: '#1f1f1f',
+              600: '#2a2a2a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #3B82F6, #E040FB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-glow:hover {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+    }
+
+    .module-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .topic-button {
+      transition: all 0.2s ease;
+    }
+
+    .topic-explanation {
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #3B82F6, #E040FB);
+    }
+
+    .coming-soon-badge {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../../index.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-bold text-primary">TTS</span>
+          <span class="text-neutral-400 text-sm">Academy</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="../../index.html" class="text-neutral-400 hover:text-primary transition-colors">Inicio</a>
+          <a href="../fundamental/index.html" class="text-neutral-400 hover:text-primary transition-colors">Trilha Anterior</a>
+          <a href="../expert/index.html" class="text-neutral-400 hover:text-primary transition-colors">Proxima Trilha</a>
+        </div>
+
+        <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors">
+          <svg id="theme-toggle-light-icon" class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-16 lg:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-accent/5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold">
+            TRILHA ESTRATEGICA
+          </span>
+          <span class="coming-soon-badge inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold">
+            EM DESENVOLVIMENTO
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          Estrategias de <span class="gradient-text">Produto & Escala</span>
+        </h1>
+        <p class="text-xl text-neutral-400 max-w-3xl mx-auto mb-8">
+          Aprenda a selecionar produtos vencedores, precificar para compra por impulso,
+          e escalar suas operacoes com volume massivo de conteudo.
+        </p>
+
+        <!-- Progress Overview -->
+        <div class="max-w-md mx-auto mb-8">
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-neutral-400">Progresso da Trilha</span>
+            <span class="text-blue-400 font-semibold">Em breve</span>
+          </div>
+          <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+            <div class="progress-bar h-full rounded-full" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex items-center space-x-2 text-neutral-400">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 Modulos</span>
+          </div>
+          <div class="flex items-center space-x-2 text-neutral-400">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>20+ Topicos</span>
+          </div>
+          <div class="flex items-center space-x-2 text-neutral-400">
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span>Nivel Intermediario</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preview Modules Section -->
+  <section id="modulos" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Conteudo em Desenvolvimento</h2>
+        <p class="text-neutral-400">Veja o que esta por vir nesta trilha</p>
+      </div>
+
+      <!-- Module 1: Estrategia de Produto -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow opacity-80">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl text-blue-400">01</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Estrategia de Produto</h2>
+              <p class="text-neutral-400">O que vender e como selecionar produtos vencedores</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Foco na Novidade</h4>
+            <p class="text-sm text-neutral-400">Produtos novos, sazonais ou de nicho performam melhor que best-sellers estabelecidos.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Precificacao de Impulso</h4>
+            <p class="text-sm text-neutral-400">Sweet spot validado: $20-$30. Produtos abaixo de $60 capitalizam compra impulsiva.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Fulfillment Rapido</h4>
+            <p class="text-sm text-neutral-400">Envio em 1-2 dias e crucial para sustentar o impulso gerado pelo video.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Curva de Conversao</h4>
+            <p class="text-sm text-neutral-400">Analise de como o preco afeta a taxa de conversao por faixa.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 2: Volume e Escala -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow opacity-80">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl text-blue-400">02</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Volume e Tudo</h2>
+              <p class="text-neutral-400">A metrica que escala receita de forma linear</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Benchmark: 200-300 videos/mes</h4>
+            <p class="text-sm text-neutral-400">Para ter uma chance real de sucesso, mire nesse volume atraves de parcerias com criadores.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Meta $1M/mes: 1.000+ videos</h4>
+            <p class="text-sm text-neutral-400">Marcas que geram $1 milhao em receita mensal produzem mais de mil videos por mes.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Correlacao Linear</h4>
+            <p class="text-sm text-neutral-400">Dados internos do TikTok mostram correlacao quase linear entre volume e GMV.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Competicao Feroz</h4>
+            <p class="text-sm text-neutral-400">Reality check: criadores profissionais postam 10 videos/dia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 3: Parcerias com Criadores -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow opacity-80">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl text-blue-400">03</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Parcerias com Criadores</h2>
+              <p class="text-neutral-400">A verdade sobre influenciadores e como recrutar em escala</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Plato de 50k Seguidores</h4>
+            <p class="text-sm text-neutral-400">Criadores com 50k performam igual aos de 1M em receita por video.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Principio de Pareto</h4>
+            <p class="text-sm text-neutral-400">Top 10% dos criadores geram 90% da sua receita. Identifique e re-incentive.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Funil de Recrutamento</h4>
+            <p class="text-sm text-neutral-400">Espere 1-2% de taxa de sucesso. Para 200 criadores, contate 2.000.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-dark-600">
+            <h4 class="font-semibold text-neutral-200 mb-2">Incentivos que Funcionam</h4>
+            <p class="text-sm text-neutral-400">Alem da comissao: amostras gratis, bonus de performance, flat fee hibrido.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Module 4: Checklist de Implementacao -->
+      <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 mb-8 border border-dark-600 card-glow opacity-80">
+        <div class="flex items-start justify-between mb-6">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <span class="text-2xl text-blue-400">04</span>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-neutral-100">Checklist de Implementacao</h2>
+              <p class="text-neutral-400">Plano de acao dividido em semanas e meses</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-primary/30">
+            <h4 class="font-semibold text-primary mb-2">Semana 01</h4>
+            <p class="text-xs text-neutral-400">Setup & Fundacao: Configurar Seller Center, selecionar produtos hero, enviar amostras.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-blue-500/30">
+            <h4 class="font-semibold text-blue-400 mb-2">Semana 02</h4>
+            <p class="text-xs text-neutral-400">Launch & Conteudo: Produzir 20 videos, postar 3x ao dia, monitorar retencao.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-purple-500/30">
+            <h4 class="font-semibold text-purple-400 mb-2">Mes 01</h4>
+            <p class="text-xs text-neutral-400">Otimizacao & Ads: Identificar top videos, iniciar Spark Ads, recrutar afiliados.</p>
+          </div>
+          <div class="p-4 bg-dark-700/50 rounded-lg border border-accent/30">
+            <h4 class="font-semibold text-accent mb-2">Mes 03</h4>
+            <p class="text-xs text-neutral-400">Escala Massiva: Automacao de fulfillment, Live Shopping diario, 300+ videos/mes.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Notification Sign Up -->
+  <section class="py-16 bg-gradient-to-br from-blue-500/10 via-dark-800 to-accent/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Quer ser Notificado?</h2>
+      <p class="text-neutral-400 mb-8">
+        Esta trilha esta em desenvolvimento ativo. Volte em breve para conferir o conteudo completo!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="../fundamental/index.html" class="px-8 py-4 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors border border-dark-600">
+          Voltar para Trilha Fundamental
+        </a>
+        <a href="../../index.html" class="px-8 py-4 bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600 transition-colors">
+          Ver Todas as Trilhas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Estrategias Validadas para o Sucesso
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

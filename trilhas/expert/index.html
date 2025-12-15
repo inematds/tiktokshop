@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trilha Expert | TikTok Shop Academy 2025</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#CDDC39',
+            accent: '#E040FB',
+            dark: {
+              900: '#0a0a0a',
+              800: '#141414',
+              700: '#1f1f1f',
+              600: '#2a2a2a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #8B5CF6, #E040FB);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-glow:hover {
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+    }
+
+    .module-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #8B5CF6, #E040FB);
+    }
+
+    .coming-soon-badge {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .case-card {
+      transition: all 0.3s ease;
+    }
+
+    .case-card:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="../../index.html" class="flex items-center space-x-2">
+          <span class="text-2xl font-bold text-primary">TTS</span>
+          <span class="text-neutral-400 text-sm">Academy</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="../../index.html" class="text-neutral-400 hover:text-primary transition-colors">Inicio</a>
+          <a href="../estrategica/index.html" class="text-neutral-400 hover:text-primary transition-colors">Trilha Anterior</a>
+        </div>
+
+        <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors">
+          <svg id="theme-toggle-light-icon" class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-16 lg:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-accent/5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="inline-block px-4 py-2 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">
+            TRILHA EXPERT
+          </span>
+          <span class="coming-soon-badge inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold">
+            EM DESENVOLVIMENTO
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="gradient-text">Cases de Sucesso</span><br>& Masterclass
+        </h1>
+        <p class="text-xl text-neutral-400 max-w-3xl mx-auto mb-8">
+          Analise profunda dos casos reais que geraram milhoes. Live Shopping avancado,
+          Spark Ads estrategico e os 5 pilares definitivos do sucesso.
+        </p>
+
+        <!-- Progress Overview -->
+        <div class="max-w-md mx-auto mb-8">
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-neutral-400">Progresso da Trilha</span>
+            <span class="text-purple-400 font-semibold">Em breve</span>
+          </div>
+          <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+            <div class="progress-bar h-full rounded-full" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex items-center space-x-2 text-neutral-400">
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>3 Modulos</span>
+          </div>
+          <div class="flex items-center space-x-2 text-neutral-400">
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 Cases Reais</span>
+          </div>
+          <div class="flex items-center space-x-2 text-neutral-400">
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+            <span>Nivel Avancado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases de Sucesso Preview -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Cases de Sucesso Validados</h2>
+        <p class="text-neutral-400">Resultados reais de marcas que dominaram o TikTok Shop</p>
+      </div>
+
+      <!-- Cases Grid -->
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+
+        <!-- PacSun Case -->
+        <div class="case-card bg-dark-800 rounded-2xl p-6 border border-dark-600 card-glow">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Fashion</span>
+            <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold">PACSUN</span>
+          </div>
+          <div class="text-4xl font-bold text-primary mb-2">$20M+</div>
+          <p class="text-neutral-400 text-sm mb-4">Receita gerada no TikTok Shop</p>
+          <div class="p-4 bg-dark-700/50 rounded-lg">
+            <p class="text-sm text-neutral-300">
+              <strong class="text-primary">O Poder do Micro:</strong> Um criador com apenas 5k seguidores vendeu 11.000 unidades em 48 horas. Prova de que engajamento > seguidores.
+            </p>
+          </div>
+        </div>
+
+        <!-- Crocs Case -->
+        <div class="case-card bg-dark-800 rounded-2xl p-6 border border-dark-600 card-glow">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Footwear</span>
+            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">CROCS</span>
+          </div>
+          <div class="text-4xl font-bold text-accent mb-2">$1M</div>
+          <p class="text-neutral-400 text-sm mb-4">Em 24 horas de Live Shopping</p>
+          <div class="p-4 bg-dark-700/50 rounded-lg">
+            <p class="text-sm text-neutral-300">
+              <strong class="text-accent">Live Shopping:</strong> Evento ao vivo gerou um aumento de 28.300% nas vendas comparado a media diaria. O futuro e ao vivo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Maelys Case -->
+        <div class="case-card bg-dark-800 rounded-2xl p-6 border border-dark-600 card-glow">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Beauty</span>
+            <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs font-semibold">MAELYS</span>
+          </div>
+          <div class="text-4xl font-bold text-pink-400 mb-2">#1</div>
+          <p class="text-neutral-400 text-sm mb-4">Body Care Brand - $108.5M em vendas</p>
+          <div class="p-4 bg-dark-700/50 rounded-lg">
+            <p class="text-sm text-neutral-300">
+              <strong class="text-pink-400">Escala Massiva:</strong> Atingiu o topo focando exclusivamente em problemas reais (ex: estrias). Programa de incentivos com premios de ate $275.000.
+            </p>
+          </div>
+        </div>
+
+        <!-- WNRS Case -->
+        <div class="case-card bg-dark-800 rounded-2xl p-6 border border-dark-600 card-glow">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Games</span>
+            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-semibold">WNRS</span>
+          </div>
+          <div class="text-4xl font-bold text-cyan-400 mb-2">400x</div>
+          <p class="text-neutral-400 text-sm mb-4">Crescimento de receita em 60 dias</p>
+          <div class="p-4 bg-dark-700/50 rounded-lg">
+            <p class="text-sm text-neutral-300">
+              <strong class="text-cyan-400">Viral Loop:</strong> O jogo de cartas "We're Not Really Strangers" usou cortes virais de emocao genuina. Agir como criador, nao como marca.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modules Preview -->
+      <div class="space-y-8">
+
+        <!-- Module 1: Analise de Cases -->
+        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 border border-dark-600 card-glow opacity-80">
+          <div class="flex items-start justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                <span class="text-2xl text-purple-400">01</span>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-neutral-100">Analise Profunda de Cases</h2>
+                <p class="text-neutral-400">Destrinchando as estrategias que geraram milhoes</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+          </div>
+          <p class="text-neutral-300">
+            Analise detalhada de cada case de sucesso: qual foi a estrategia de conteudo, como recrutaram criadores, qual foi o mix de organico vs. pago, e quais foram os pontos de virada.
+          </p>
+        </div>
+
+        <!-- Module 2: Live Shopping & Spark Ads -->
+        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 border border-dark-600 card-glow opacity-80">
+          <div class="flex items-start justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                <span class="text-2xl text-purple-400">02</span>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-neutral-100">Live Shopping & Spark Ads</h2>
+                <p class="text-neutral-400">Estrategias avancadas de vendas em tempo real e ads</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+          </div>
+          <p class="text-neutral-300">
+            Como estruturar lives de vendas que convertem, quando e como usar Spark Ads para amplificar conteudo organico vencedor, e estrategias de retargeting.
+          </p>
+        </div>
+
+        <!-- Module 3: Os 5 Pilares -->
+        <div class="module-card bg-dark-800 rounded-2xl p-6 lg:p-8 border border-primary/30 card-glow opacity-80">
+          <div class="flex items-start justify-between mb-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
+                <span class="text-2xl text-primary">03</span>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-neutral-100">Os 5 Pilares do Sucesso</h2>
+                <p class="text-neutral-400">O framework resumido para dominar o TikTok Shop</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold">EM BREVE</span>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+            <div class="text-center p-4 bg-dark-700/50 rounded-lg border border-primary/20">
+              <div class="text-2xl mb-2">01</div>
+              <h4 class="font-semibold text-primary text-sm">Mentalidade</h4>
+              <p class="text-xs text-neutral-500 mt-1">Efeito Halo, Visao 90 Dias</p>
+            </div>
+            <div class="text-center p-4 bg-dark-700/50 rounded-lg border border-blue-500/20">
+              <div class="text-2xl mb-2">02</div>
+              <h4 class="font-semibold text-blue-400 text-sm">Algoritmo</h4>
+              <p class="text-xs text-neutral-500 mt-1">3s, 31s, 75% Conclusao</p>
+            </div>
+            <div class="text-center p-4 bg-dark-700/50 rounded-lg border border-purple-500/20">
+              <div class="text-2xl mb-2">03</div>
+              <h4 class="font-semibold text-purple-400 text-sm">Conteudo</h4>
+              <p class="text-xs text-neutral-500 mt-1">Hooks, 5 Gatilhos</p>
+            </div>
+            <div class="text-center p-4 bg-dark-700/50 rounded-lg border border-pink-500/20">
+              <div class="text-2xl mb-2">04</div>
+              <h4 class="font-semibold text-pink-400 text-sm">Produto</h4>
+              <p class="text-xs text-neutral-500 mt-1">$20-$30, Novidade</p>
+            </div>
+            <div class="text-center p-4 bg-dark-700/50 rounded-lg border border-accent/20">
+              <div class="text-2xl mb-2">05</div>
+              <h4 class="font-semibold text-accent text-sm">Escala</h4>
+              <p class="text-xs text-neutral-500 mt-1">Volume, Pareto</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-br from-purple-500/10 via-dark-800 to-accent/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">O Momento e Agora</h2>
+      <p class="text-neutral-400 mb-4 max-w-2xl mx-auto">
+        A janela de oportunidade para dominar o TikTok Shop no Brasil esta aberta.
+        O algoritmo ainda privilegia novos entrantes, os subsidios estao ativos, e a concorrencia profissional ainda e baixa.
+      </p>
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <div class="flex items-center space-x-2 text-emerald-400">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-sm">Alcance Organico Alto</span>
+        </div>
+        <div class="flex items-center space-x-2 text-emerald-400">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-sm">Subsidios Ativos</span>
+        </div>
+        <div class="flex items-center space-x-2 text-emerald-400">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-sm">Oceano Azul</span>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="../fundamental/index.html" class="px-8 py-4 bg-purple-500 text-white rounded-lg font-bold hover:bg-purple-600 transition-colors">
+          Comecar pela Trilha Fundamental
+        </a>
+        <a href="../../index.html" class="px-8 py-4 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition-colors border border-dark-600">
+          Ver Todas as Trilhas
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-900 border-t border-dark-700 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-neutral-500 text-sm">
+        TikTok Shop Academy 2025 - Estrategias Validadas para o Sucesso
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
