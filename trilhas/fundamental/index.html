@@ -33,7 +33,20 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Light Mode (default) */
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    /* Dark Mode */
+    .dark body,
+    html.dark body {
       background-color: #0a0a0a;
+      color: #f1f5f9;
     }
 
     .gradient-text {
@@ -72,6 +85,21 @@
       background: linear-gradient(90deg, #CDDC39, #E040FB);
     }
 
+    /* Light Mode Overrides */
+    html:not(.dark) .bg-dark-900 { background-color: #f8fafc !important; }
+    html:not(.dark) .bg-dark-800 { background-color: #ffffff !important; }
+    html:not(.dark) .bg-dark-700 { background-color: #f1f5f9 !important; }
+    html:not(.dark) .bg-dark-600 { background-color: #e2e8f0 !important; }
+    html:not(.dark) .border-dark-600 { border-color: #e2e8f0 !important; }
+    html:not(.dark) .border-dark-700 { border-color: #cbd5e1 !important; }
+    html:not(.dark) .text-neutral-100 { color: #1e293b !important; }
+    html:not(.dark) .text-neutral-200 { color: #334155 !important; }
+    html:not(.dark) .text-neutral-300 { color: #475569 !important; }
+    html:not(.dark) .text-neutral-400 { color: #64748b !important; }
+    html:not(.dark) .text-neutral-500 { color: #94a3b8 !important; }
+    html:not(.dark) nav { background-color: rgba(248, 250, 252, 0.95) !important; }
+    html:not(.dark) footer { background-color: #f1f5f9 !important; }
+
     /* Modal Styles */
     .modal {
       display: none;
@@ -92,8 +120,37 @@
       justify-content: center;
     }
 
-    .modal-content {
+    /* Modal Dark Mode */
+    .dark .modal-content {
       background-color: #141414;
+      border: 1px solid #2a2a2a;
+    }
+
+    .dark .modal-header {
+      border-bottom: 1px solid #2a2a2a;
+      background: linear-gradient(135deg, #1a1a1a, #141414);
+    }
+
+    /* Modal Light Mode */
+    html:not(.dark) .modal-content {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+    }
+
+    html:not(.dark) .modal-header {
+      border-bottom: 1px solid #e2e8f0;
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+    }
+
+    html:not(.dark) .modal-header h2 {
+      color: #1e293b !important;
+    }
+
+    html:not(.dark) .modal-body {
+      color: #334155;
+    }
+
+    .modal-content {
       margin: auto;
       padding: 0;
       width: 90%;
@@ -101,17 +158,14 @@
       max-height: 90vh;
       border-radius: 1rem;
       overflow: hidden;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      border: 1px solid #2a2a2a;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     }
 
     .modal-header {
       padding: 1.5rem 2rem;
-      border-bottom: 1px solid #2a2a2a;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(135deg, #1a1a1a, #141414);
     }
 
     .modal-body {
@@ -1912,15 +1966,39 @@
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    themeToggleBtn.addEventListener('click', function() {
-      themeToggleDarkIcon.classList.toggle('hidden');
-      themeToggleLightIcon.classList.toggle('hidden');
-      document.documentElement.classList.toggle('dark');
-
-      if (document.documentElement.classList.contains('dark')) {
-        localStorage.setItem('color-theme', 'dark');
+    // Initialize theme based on localStorage or system preference
+    function initTheme() {
+      if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.remove('dark');
+        themeToggleDarkIcon.classList.remove('hidden');
+        themeToggleLightIcon.classList.add('hidden');
+      } else if (localStorage.getItem('color-theme') === 'dark' ||
+                 (!('color-theme' in localStorage) &&
+                  window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        themeToggleDarkIcon.classList.add('hidden');
+        themeToggleLightIcon.classList.remove('hidden');
       } else {
+        // Default to dark
+        document.documentElement.classList.add('dark');
+        themeToggleDarkIcon.classList.add('hidden');
+        themeToggleLightIcon.classList.remove('hidden');
+      }
+    }
+
+    initTheme();
+
+    themeToggleBtn.addEventListener('click', function() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
         localStorage.setItem('color-theme', 'light');
+        themeToggleDarkIcon.classList.remove('hidden');
+        themeToggleLightIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        themeToggleDarkIcon.classList.add('hidden');
+        themeToggleLightIcon.classList.remove('hidden');
       }
     });
 
